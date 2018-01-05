@@ -5,6 +5,9 @@ pages:
         - Guide for Instructors: instructors.md
         - Guide for Lab Authors: lab.md
         - Features: features.md
+        - API:
+            - Overview: api-overview.md
+            - Reference: api-interface.md
     - Tango:
         - Getting Started: tango.md
         - Tango CLI: tango-cli.md 
