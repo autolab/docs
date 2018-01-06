@@ -8,10 +8,19 @@ All endpoints expect the HTTP GET method unless otherwise specified.
 
 All parameters listed below are required unless denoted [OPTIONAL].
 
-All success responses are in JSON format. The reference below details the keys and their respective value types that the client can expect from each endpoint.
+All responses are in JSON format.
+
+* If the request is completed successfully, the HTTP response code will be 200. The reference below details the keys and their respective value types that the client can expect from each endpoint.
+* If an error occurs, the response code will *not* be 200. The returned JSON will be an object with the key 'error'. Its value will be a string that explains the error.
+
+**Notes on return value types**
 
 All datetime formats are strings in the form of 'YYYY-MM-DDThh:mm:ss.sTZD'.<br>
 e.g. '2017-10-23T04:17:41.000-04:00', which means 4:17:41 AM on October 23rd, 2017 US Eastern Time.
+
+JSON spec only has a 'number' type, but the spec below distinguishes between integers and floats for ease of use in certain languages.
+
+If a field does not exist, the value is generally null. Please be sure to check if a value is null before using it.
 
 ## Interface
 
@@ -60,8 +69,8 @@ A list of courses. Each course contains:
 | name | string | The unique url-safe name. |
 | display_name | string | The full name of the course. |
 | semester | string | The semester this course is being offered. |
-| late_slack | number | The number of seconds after a deadline that the server will still accept a submission and not count it as late. |
-| grace_days | number | AKA late days. The total number of days (over the entire semester) a student is allowed to submit an assessment late. |
+| late_slack | integer | The number of seconds after a deadline that the server will still accept a submission and not count it as late. |
+| grace_days | integer | AKA late days. The total number of days (over the entire semester) a student is allowed to submit an assessment late. |
 | auth_level | string | The user's level of access for this course. One of 'student', 'course_assistant', 'instructor', of 'administrator'. |
 
 ---
@@ -88,11 +97,11 @@ A list of assessments. If the user is only a student of the course, only release
 | due_at | datetime | Students can submit before this time without being penalized or using grace days. |
 | end_at | datetime | Last possible time that students can submit (except those granted extensions.) |
 | updated_at | datetime | The last time an update was made to the assessment. |
-| max_grace_days | number | Maximum number of grace days that a student can spend on this assessment. |
-| max_submissions | number | The maximum number of times a student can submit the assessment.<br>-1 means unlimited submissions. |
+| max_grace_days | integer | Maximum number of grace days that a student can spend on this assessment. |
+| max_submissions | integer | The maximum number of times a student can submit the assessment.<br>-1 means unlimited submissions. |
 | disable_handins | boolean | Are handins disallowed by students? |
 | category_name | string | Name of the category this assessment belongs to. |
-| group_size | number | The maximum size of groups for this assessment. |
+| group_size | integer | The maximum size of groups for this assessment. |
 | has_scoreboard | boolean | Does this assessment have a scoreboard? |
 | has_autograder | boolean | Does this assessment use an autograder? |
 | grading_deadline | string | *Not available if the user is a student.*<br>Time after which final scores are included in the gradebook. |
@@ -116,7 +125,7 @@ A list of problems. Each problem contains:
 | --- | ---- | ----------- |
 | name | string | Full name of the problem. |
 | description | string | Brief description of the problem. |
-| max_score | number | Maximum possible score for this problem. |
+| max_score | float | Maximum possible score for this problem. |
 | optional | boolean | Is this problem optional? |
 
 ---
@@ -175,7 +184,7 @@ Make a submission to an assessment.
 
 | key | type | description |
 | --- | ---- | ----------- |
-| version | number | The version number of the newly submitted submission. |
+| version | integer | The version number of the newly submitted submission. |
 | filename | string | The final filename the submitted file is referred to as. |
 
 **Failure Response:**
@@ -201,10 +210,10 @@ A list of submissions. Each submission includes:
 
 | key | type | description |
 | --- | ---- | ----------- |
-| version | number | The version number of this submission. |
+| version | integer | The version number of this submission. |
 | filename | string | The final filename the submitted file is referred to as. |
 | created_at | datetime | The time this submission was made. |
-| scores | object | A dictionary containing the scores of each problem.<br>The keys are the names of the problems, and the value is either the score (a number), or the string 'unreleased' if the score for this problem is not yet released. |
+| scores | object | A dictionary containing the scores of each problem.<br>The keys are the names of the problems, and the value is either the score (a float), or the string 'unreleased' if the score for this problem is not yet released. |
 
 ---
 ### feedback
