@@ -1,5 +1,3 @@
-## Overview
-
 The Autolab REST API allows developers to create clients that can access features of Autolab on behalf of Autolab users.
 
 V1 of the API allows clients to:
@@ -8,8 +6,6 @@ V1 of the API allows clients to:
 * View courses and assessments
 * Submit to assessments
 * View scores and feedback
-
-All clients are required to be registered with the admin of your specific Autolab deployment in order to obtain a unique client_id and client_secret pair.
 
 ## Authorization
 
@@ -83,3 +79,28 @@ Success Response:
 * code: the authorization code that should be used to obtain an access token.
 
 The client could then perform steps 4 and 5 of the Authorization Code Grant Flow.
+
+## Getting Started
+
+Autolab requires all client applications to be registered clients. Upon registration, a client_id and client_secret pair will be provided to the developers for use in the app as identification to the server. Please contact the administrators of your specific Autolab deployment for registration.
+
+!!! warning "Security Concerns"
+    Please make sure to keep the client_secret secret. Leaking this code may allow third-parties to impersonate your app.
+
+### Scopes
+
+The scopes of an API client specifies the permissions it has, and must be specified during client registration (can be modified later). Currently, Autolab offers the following scopes for third-party clients:
+
+* user_info: Access your basic info (e.g. name, email, school, year).
+* user_courses: Access your courses and assessments.
+* user_scores: Access your submissions, scores, and feedback.
+* user_submit: Submit to assessments on your behalf.
+* instructor_all: Access admin options of courses where you are an instructor.
+
+**Example usages**
+
+* If your app only wants to use the API for quick user authentication, you only need the 'user_info' scope.
+* If you want to develop a mobile client for Autolab that allows students to view their upcoming assessments, you may ask for 'user_info' and 'user_courses'.
+* If you want to write a full desktop client that users can use to submit to assessments and view their grades, you may ask for all 5 scopes.
+
+Of course, these are only examples. We can't wait to see what new usages of the API you may come up with! We just recommend that you only ask for the scopes you need as the users will be shown the required scopes during authorization, and it gives them peace of mind to know that an app doesn't ask for excessive permissions.
