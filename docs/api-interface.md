@@ -71,7 +71,7 @@ A list of courses. Each course contains:
 | semester | string | The semester this course is being offered. |
 | late_slack | integer | The number of seconds after a deadline that the server will still accept a submission and not count it as late. |
 | grace_days | integer | AKA late days. The total number of days (over the entire semester) a student is allowed to submit an assessment late. |
-| auth_level | string | The user's level of access for this course. One of 'student', 'course_assistant', 'instructor', of 'administrator'. |
+| auth_level | string | The user's level of access for this course. One of 'student', 'course_assistant', 'instructor', or 'administrator'. |
 
 ---
 ### assessments
@@ -80,13 +80,36 @@ Get all the assessments of a course.
 
 **Scope:** 'user_courses'
 
-**Endpoint:** `/courses/{course_name}`
+**Endpoint:** `/courses/{course_name}/assessments`
 
 **Parameters:** [none]
 
 **Responses:**
 
 A list of assessments. If the user is only a student of the course, only released assessments are available. Otherwise, all assessments are available. Each assessment contains:
+
+| key | type | description |
+| --- | ---- | ----------- |
+| name | string | The unique url-safe name. |
+| display_name | string | The full name of the assessments. |
+| start_at | datetime | The time this assessment is released to students. |
+| due_at | datetime | Students can submit before this time without being penalized or using grace days. |
+| end_at | datetime | Last possible time that students can submit (except those granted extensions.) |
+| category_name | string | Name of the category this assessment belongs to. |
+| grading_deadline | string | *Not available if the user is a student.*<br>Time after which final scores are included in the gradebook. |
+
+---
+### assessment details
+
+Show detailed information of an assessment.
+
+**Scope:** 'user_courses'
+
+**Endpoint:** `/courses/{course_name}/assessments/{assessment_name}`
+
+**Parameters:** [none]
+
+**Response:**
 
 | key | type | description |
 | --- | ---- | ----------- |
@@ -102,6 +125,8 @@ A list of assessments. If the user is only a student of the course, only release
 | disable_handins | boolean | Are handins disallowed by students? |
 | category_name | string | Name of the category this assessment belongs to. |
 | group_size | integer | The maximum size of groups for this assessment. |
+| writeup_format | string | The format of this assessment's writeup.<br>One of 'none', 'url', or 'file'. |
+| handout_format | string | The format of this assessment's handout.<br>One of 'none', 'url', or 'file'. |
 | has_scoreboard | boolean | Does this assessment have a scoreboard? |
 | has_autograder | boolean | Does this assessment use an autograder? |
 | grading_deadline | string | *Not available if the user is a student.*<br>Time after which final scores are included in the gradebook. |
@@ -141,8 +166,11 @@ Get the writeup of an assessment.
 
 **Responses:**
 
-* If no writeup exists:<br>
-404 Not Found: no writeup.
+* If no writeup exists:
+
+| key | type | value |
+| --- | ---- | ----- |
+| writeup | string | "none" |
 
 * If writeup is a url:
 
