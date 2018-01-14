@@ -205,8 +205,9 @@ Make a submission to an assessment.
 
 **Parameters:**
 
-* submission["file"]<br>
-  The file to submit
+* submission[file]<br>
+  The file to submit<br>
+  *Note: the name should be the string 'submission[file]'*
 
 **Success Response:**
 
