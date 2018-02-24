@@ -71,7 +71,7 @@ A list of courses. Each course contains:
 | semester | string | The semester this course is being offered. |
 | late_slack | integer | The number of seconds after a deadline that the server will still accept a submission and not count it as late. |
 | grace_days | integer | AKA late days. The total number of days (over the entire semester) a student is allowed to submit an assessment late. |
-| auth_level | string | The user's level of access for this course. One of 'student', 'course_assistant', 'instructor', or 'administrator'. |
+| auth_level | string | The user's level of access for this course. One of 'student', 'course_assistant', or 'instructor'. |
 
 ---
 ### assessments
