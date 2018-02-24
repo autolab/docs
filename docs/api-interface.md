@@ -265,3 +265,116 @@ For autograded assessments, the feedback will by default be the autograder feedb
 | key | type | description |
 | --- | ---- | ----------- |
 | feedback | string | The full feedback text for this problem. |
+
+---
+### course_user_data (enrollments)
+
+Autolab uses the term course_user_data to represent the users affiliated with a course. It includes all students, course assistants, and instructors of the course.
+
+A course_user_data object in the response will be formatted in this form:
+
+| key | type | description |
+| --- | ---- | ----------- |
+| first_name | string | The user's first name. |
+| last_name | string | The user's last name. |
+| email | string | The user's registered email. |
+| school | string | The school the user belongs to. |
+| major | string | The user's major of study. |
+| year | string | The user's year. |
+| lecture | string | The user's assigned lecture. |
+| section | string | The user's assigned section. |
+| grade_policy | string | The user's grade policy for this course. |
+| nickname | string | The user's nickname for this course. |
+| dropped | boolean | Is the user marked as dropped from this course? |
+| auth_level | string | The user's level of access for this course. One of 'student', 'course_assistant', or 'instructor'. |
+
+There are five endpoints related to course_user_data:
+
+#### Index
+
+List all course_user_data of a course.
+
+**Scope:** 'instructor_all'
+
+**Endpoint:** `GET /courses/{course_name}/course_user_data`
+
+**Parameters:** [none]
+
+**Response:**
+
+A list of course_user_data objects.
+
+#### Show
+
+Show the course_user_data of a particular student in a course.
+
+**Scope:** 'instructor_all'
+
+**Endpoint:** `GET /courses/{course_name}/course_user_data/{user_email}`
+
+**Parameters:** [none]
+
+**Response:**
+
+The requested user's course_user_data object.
+
+#### Create
+
+Create a new course_user_data for a course.
+
+The user's email is used to uniquely identify the user on Autolab. If the user is not yet a user of Autolab, they need to be registered on Autolab before they can be enrolled in any courses.
+
+**Scope:** 'instructor_all'
+
+**Endpoint:** `POST /courses/{course_name}/course_user_data`
+
+**Parameters:**
+
+| key | | type | description |
+| --- | --------- | ---- | ----------- |
+| email | required | string | The email of the user (to uniquely identify the user). |
+| lecture | required | string | The lecture to assign the user to. |
+| section | required | string | The section to assign the user to. |
+| grade_policy | | string | The user's grade policy (opaque to Autolab). |
+| dropped | | boolean | Should the user be marked as dropped? |
+| nickname | | string | The nickname to give the user. |
+
+**Response:**
+
+The newly created course_user_data object.
+
+#### Update
+
+Update an existing course_user_data.
+
+**Scope:** 'instructor_all'
+
+**Endpoint:** `PUT /courses/{course_name}/course_user_data/{user_email}`
+
+**Parameters:**
+
+| key | | type | description |
+| --- | --------- | ---- | ----------- |
+| lecture | | string | The lecture to assign the user to. |
+| section | | string | The section to assign the user to. |
+| grade_policy | | string | The user's grade policy (opaque to Autolab). |
+| dropped | | boolean | Should the user be marked as dropped? |
+| nickname | | string | The nickname to give the user. |
+
+**Response:**
+
+The newly updated course_user_data object.
+
+#### Destroy
+
+Drop a user from a course. Since CUDs are never deleted from the course, this is just a shortcut for updating a user with the dropped attribute set to true.
+
+**Scope:** 'instructor_all'
+
+**Endpoint:** `DELETE /courses/{course_name}/course_user_data/{user_email}`
+
+**Parameters:** [none]
+
+**Response:**
+
+The newly updated course_user_data object.
