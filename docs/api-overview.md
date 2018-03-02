@@ -6,6 +6,7 @@ V1 of the API allows clients to:
 * View courses and assessments
 * Submit to assessments
 * View scores and feedback
+* Manage course enrollments
 
 ## Authorization
 
@@ -70,7 +71,7 @@ Failure Responses:
 
 * 400 Bad Request: {error: authorization_pending}<br>
   The user has not yet granted or denied the authorization request. Please try again in a while.
-* 429 Too Many Requests: Retry later<br>
+* 429 Too Many Requests: {error: Retry later}<br>
   The client is polling too frequently. Please wait for a while before polling again.<br>
   The default rate limit is once every 5 seconds.
 
