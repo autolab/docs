@@ -5,7 +5,7 @@ pages:
         - Guide for Instructors: instructors.md
         - Guide for Lab Authors: lab.md
         - Features: features.md
-        - API:
+        - API (Beta Feature):
             - Overview: api-overview.md
             - Reference: api-interface.md
     - Tango:
