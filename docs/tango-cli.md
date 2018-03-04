@@ -65,13 +65,13 @@ The args are -P <port\>, -k <key\>, -l <unique_job_name\> --runJob <job_files_pa
 The CLI also implements a list of commands to invoke the [Tango REST API](/tango-rest), including `--info`, `--prealloc`, and `--jobs`. For a full list of commands, run:
 
 ```bash
-python clients/tango-rest.py --help
+python clients/tango-cli.py --help
 ```
 
 The general form for each command is as follows:
 
 ```bash
-python clients/tango-rest.py -P <port> -k <key> <command>
+python clients/tango-cli.py -P <port> -k <key> <command>
 ```
 
 
