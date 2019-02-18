@@ -1,5 +1,5 @@
 site_name: Autolab Documentation
-pages:
+nav:
     - Autolab:
         - Getting Started: index.md
         - Guide for Instructors: instructors.md
@@ -17,15 +17,15 @@ pages:
         - VMMS Docs: tango-vmms.md
         - Deploying Tango: tango-deploy.md
     - OneClick Install: one-click.md
-theme: null
-theme_dir: 'mkdocs-material/material'
-repo_name: 'Autolab'
-repo_url: 'https://github.com/Autolab/autolab'
-extra:
-  logo: 'images/logo.svg'
+theme:
+  name: material
   palette:
      primary: 'red'
      accent: 'blue'
+  logo: 'images/logo.svg'
+repo_name: 'Autolab'
+repo_url: 'https://github.com/Autolab/autolab'
+extra:
   social:
     - type: 'github'
       link: 'https://github.com/Autolab'
@@ -36,5 +36,5 @@ google_analytics:
   - 'auto'
 markdown_extensions:
   - admonition
-  - codehilite(linenums=true)
+  - codehilite
 strict: true
