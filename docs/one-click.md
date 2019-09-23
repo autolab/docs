@@ -19,7 +19,7 @@ To set up, [Install Ubuntu on Virtualbox](http://www.wikihow.com/Install-Ubuntu-
 
 **Optional:**
 
-For better experience, we also recommend you to "insert guest additional CD image" for your virtual machine to enable full screen. 
+For better experience, we also recommend you to "insert guest additional CD image" for your virtual machine to enable full screen.
 (If you installed Ubuntu 16+, you can skip this)
 
 ```
@@ -35,7 +35,7 @@ Settings > Advanced > Shared Clipboard > Bidrectional
 You need to restart your virtual machine to validate these optional changes.
 
 
-### 2. Download 
+### 2. Download
 
 Root is required to install Autolab:
 
@@ -96,18 +96,18 @@ You can run Autolab with or without HTTPS encryption. We strongly recommend you 
 Here are a few options to get the SSL certificate and key:
 
 1. Go through your school/organization
-    
+
     Many universities have a program whereby they'll grant SSL certificates to students and faculty for free. Some of these programs require you to be using a school-related domain name, but some don't. You should be able to find out more information from your school's IT department.
 
 2. Use paid service: SSLmate
 
     You can follow this [simple guide](https://sslmate.com/help/getting_started) to get your paid SSL with [SSLMate](https://sslmate.com/) in the simplest way.
-    
-    
+
+
 
 #### Email Service
 
-Autolab uses email for various features, include sending out user confirmation emails and instructor-to-student bulk emails. You can use MailChimp + Mandrill to configure transactional email. 
+Autolab uses email for various features, include sending out user confirmation emails and instructor-to-student bulk emails. You can use MailChimp + Mandrill to configure transactional email.
 
 1. Create a MailChimp account [here](https://login.mailchimp.com/signup)
 
@@ -115,7 +115,7 @@ Autolab uses email for various features, include sending out user confirmation e
 
 3. Go to the settings page and create a new API key
 
-4. From the Mailchimp/Mandrill Domains settings page, add your domain 
+4. From the Mailchimp/Mandrill Domains settings page, add your domain
 
 5. Configure the DKIM and SFF settings by creating TXT records with your DNS provider (they link to some instructions for how to do this, but the process will differ depending on which DNS provider you are using. Try Google!).
 
@@ -143,22 +143,40 @@ Autolab uses email for various features, include sending out user confirmation e
         config.secret_key = <GENERATED_SECRET_KEY>
         config.mailer_sender = <EMAIL_ADDRESS_WITH_YOUR_HOSTNAME>
 
+4. **With SSL:**
 
-4. Copy your SSL certificate and key file into the ``server/ssl`` directory.
+    Copy your SSL certificate and key file into the ``server/ssl`` directory.
 
-5. Configure Nginx in ``server/configs/nginx.conf``
+    **Without SSL**:
+
+    Comment out the following lines in `server/configs/nginx.conf`
+
+         :::ruby
+         # EFF recommended SSL settings
+         # ssl_prefer_server_ciphers on;
+         # ssl_ciphers ECDH+AESGCM:ECDH+AES256:ECDH+AES128:ECDH+3DES:RSA+AES:RSA+3DES:!ADH:!AECDH:!MD5:!DSS;
+         # ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+         # add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+
+
+    Comment out the following line in `server/configs/production.rb`
+
+        :::ruby
+        # config.middleware.use Rack::SslEnforcer, :except => [ /log_submit/, /local_submit/ ]
+
+6. Configure Nginx in ``server/configs/nginx.conf``
 
         :::ruby
         server_name <YOUR_SERVER_DOMAIN>
         ssl_certificate /path/to/ssl_certificate/file
         ssl_certificate_key /path/to/ssl_certificate_key/file
 
-6. Configure Email in ``server/configs/production.rb``. Update the address, port, user_name, password and domain with your email service informations. For Mandrill, go to "SMTP & API Info" to see the informations.
+7. Configure Email in ``server/configs/production.rb``. Update the address, port, user_name, password and domain with your email service informations. For Mandrill, go to "SMTP & API Info" to see the informations.
 
 
 ### 3. Installation
 1. Start Installation
-        
+
         ::bash
         cd autolab-oneclick
         ./install.sh -s
@@ -172,7 +190,7 @@ Autolab uses email for various features, include sending out user confirmation e
         # c8679844bbfa        local_web           "/sbin/my_init"          3 months ago        Exited (0) 3 months ago                             local_web_1         721 kB (virtual 821 MB)
         # 45a9e30241ea        mysql               "docker-entrypoint..."   3 months ago        Exited (0) 3 months ago   0.0.0.0:32768->3306/tcp   local_db_1          0 B (virtual 383 MB)
         # 1ef089e2dca4        local_tango         "sh start.sh"            3 months ago        Exited (0) 3 months ago   0.0.0.0:8600->8600/tcp    local_tango_1       91.1 kB (virtual 743 MB)
-        
+
 
 Now Autolab is successfully installed and running on your virtual machine.
 Open your browser and visit ``https://yourdomainname``, to see the landing page of Autolab.
