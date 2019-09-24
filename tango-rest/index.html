@@ -1,17 +1,38 @@
 
-<!DOCTYPE html>
+
+
+
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -19,88 +40,126 @@
       
     
     
-      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/application-4d0d3f2fbf.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
-    
-    
       
         
         
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-79424729-3", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="red" data-md-color-accent="blue">
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#authentication" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href=".." title="Autolab Documentation" class="md-logo md-header-nav__button">
+        <a href=".." title="Autolab Documentation" class="md-header-nav__button md-logo">
+          
             <img src="../images/logo.svg" width="24" height="24">
-          </a>
-        
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
+            <span class="md-header-nav__topic">
+              Autolab Documentation
+            </span>
+            <span class="md-header-nav__topic">
               
-                <span class="md-header-nav__parent">
-                  Tango
-                </span>
+                REST API
               
-            
-            REST API
+            </span>
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-<div class="md-search" data-md-component="search">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -111,39 +170,39 @@
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
 
   
 
-
-  <a href="https://github.com/Autolab/autolab" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      Autolab
+<a href="https://github.com/Autolab/autolab/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
-          
+  
+  <div class="md-source__repository">
+    Autolab
+  </div>
+</a>
+          </div>
         </div>
-      </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
       
+        
       
-      <main class="md-main">
+      
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -151,12 +210,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-logo md-nav__button">
-        <img src="../images/logo.svg">
-      </i>
-    
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Autolab Documentation" class="md-nav__button md-logo">
+      
+        <img src="../images/logo.svg" width="48" height="48">
+      
+    </a>
     Autolab Documentation
   </label>
   
@@ -166,20 +225,18 @@
 
   
 
-
-  <a href="https://github.com/Autolab/autolab" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      Autolab
+<a href="https://github.com/Autolab/autolab/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    Autolab
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -382,10 +439,10 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         REST API
       </label>
     
@@ -398,18 +455,18 @@
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication" title="Authentication" class="md-nav__link">
+  <a href="#authentication" class="md-nav__link">
     Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#job-requests" title="Job Requests" class="md-nav__link">
+  <a href="#job-requests" class="md-nav__link">
     Job Requests
   </a>
   
@@ -417,28 +474,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#open" title="open" class="md-nav__link">
+  <a href="#open" class="md-nav__link">
     open
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#upload" title="upload" class="md-nav__link">
+  <a href="#upload" class="md-nav__link">
     upload
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#addjob" title="addJob" class="md-nav__link">
+  <a href="#addjob" class="md-nav__link">
     addJob
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#poll" title="poll" class="md-nav__link">
+  <a href="#poll" class="md-nav__link">
     poll
   </a>
   
@@ -450,7 +507,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#administrative-requests" title="Administrative Requests" class="md-nav__link">
+  <a href="#administrative-requests" class="md-nav__link">
     Administrative Requests
   </a>
   
@@ -458,28 +515,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#info" title="/info" class="md-nav__link">
+  <a href="#info" class="md-nav__link">
     /info
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#jobs" title="/jobs" class="md-nav__link">
+  <a href="#jobs" class="md-nav__link">
     /jobs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pool" title="pool" class="md-nav__link">
+  <a href="#pool" class="md-nav__link">
     pool
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#prealloc" title="prealloc" class="md-nav__link">
+  <a href="#prealloc" class="md-nav__link">
     prealloc
   </a>
   
@@ -491,11 +548,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-notes" title="Implementation Notes" class="md-nav__link">
+  <a href="#implementation-notes" class="md-nav__link">
     Implementation Notes
   </a>
   
 </li>
+      
+      
       
       
       
@@ -562,18 +621,18 @@
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authentication" title="Authentication" class="md-nav__link">
+  <a href="#authentication" class="md-nav__link">
     Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#job-requests" title="Job Requests" class="md-nav__link">
+  <a href="#job-requests" class="md-nav__link">
     Job Requests
   </a>
   
@@ -581,28 +640,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#open" title="open" class="md-nav__link">
+  <a href="#open" class="md-nav__link">
     open
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#upload" title="upload" class="md-nav__link">
+  <a href="#upload" class="md-nav__link">
     upload
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#addjob" title="addJob" class="md-nav__link">
+  <a href="#addjob" class="md-nav__link">
     addJob
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#poll" title="poll" class="md-nav__link">
+  <a href="#poll" class="md-nav__link">
     poll
   </a>
   
@@ -614,7 +673,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#administrative-requests" title="Administrative Requests" class="md-nav__link">
+  <a href="#administrative-requests" class="md-nav__link">
     Administrative Requests
   </a>
   
@@ -622,28 +681,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#info" title="/info" class="md-nav__link">
+  <a href="#info" class="md-nav__link">
     /info
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#jobs" title="/jobs" class="md-nav__link">
+  <a href="#jobs" class="md-nav__link">
     /jobs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pool" title="pool" class="md-nav__link">
+  <a href="#pool" class="md-nav__link">
     pool
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#prealloc" title="prealloc" class="md-nav__link">
+  <a href="#prealloc" class="md-nav__link">
     prealloc
   </a>
   
@@ -655,11 +714,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-notes" title="Implementation Notes" class="md-nav__link">
+  <a href="#implementation-notes" class="md-nav__link">
     Implementation Notes
   </a>
   
 </li>
+      
+      
       
       
       
@@ -675,6 +736,8 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/Autolab/autolab/edit/master/docs/tango-rest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
                 
                   <h1>REST API</h1>
                 
@@ -688,11 +751,12 @@
 <p>Request header: <code>GET /open/key/courselab/</code><br />
 Request body: empty<br />
 Response body:</p>
-<pre class="codehilite"><code class="language-json linenums">{ 
-  &quot;statusMsg&quot;: &lt;string&gt;, 
-  &quot;statusId&quot;: &lt;int&gt;,
-  &quot;files&quot;: { &lt;fileName1&gt; : &lt;md5hash1&gt;, &lt;fileName2&gt; : &lt;md5hash2&gt; ... },
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span> 
+  <span class="nt">&quot;statusMsg&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span> 
+  <span class="nt">&quot;statusId&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span>
+  <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="err">&lt;fileName1&gt;</span> <span class="err">:</span> <span class="err">&lt;md5hash1&gt;,</span> <span class="err">&lt;fileName2&gt;</span> <span class="err">:</span> <span class="err">&lt;md5hash2&gt;</span> <span class="err">...</span> <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <h4 id="upload">upload</h4>
@@ -700,51 +764,56 @@ Response body:</p>
 <p>Request header: <code>POST /upload/key/courselab/</code><br />
 Request body: <code>&lt;file&gt;</code><br />
 Response body: </p>
-<pre class="codehilite"><code class="language-json linenums">{ 
-  &quot;statusMsg&quot;: &lt;string&gt;, 
-  &quot;statusId&quot;: &lt;int&gt; 
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span> 
+  <span class="nt">&quot;statusMsg&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span> 
+  <span class="nt">&quot;statusId&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span> 
+<span class="p">}</span>
+</pre></div>
 
 
 <h4 id="addjob">addJob</h4>
 <p>After uploading the appropriate files, the client uses this command to run the job for the files specified as <code>files</code> in the <code>courselab</code> and on an instance of a particular VM <code>image</code>. Each file has <code>localFile</code> and <code>destFile</code> attributes which specify what the file is called on the Tango server and what it should be called when copied over to a VM (for autograding) respectively. Exactly one of the specified <code>files</code> should have the <code>destFile</code> attribute set to <code>Makefile</code>, and the Makefile must contain a rule called <code>autograde</code>. Clients can also specify an optional timeout value (<code>timeout</code>) and maximum output file size (<code>max_kb</code>). This command is non-blocking and returns immediately with a status message. Additionally, the command accepts an optional parameter, <code>callback_url</code>. If the <code>callback_url</code> is specified, then the Tango server sends a <code>POST</code> request to the <code>callback_url</code> with the output file once the job is terminated. If the <code>callback_url</code> is not specified, the client can then send a <code>poll</code> request for the <code>output_file</code> to check the status of that job and retrieve the output file from the Tango server if autograding is complete.</p>
 <p>Request header: <code>POST /addJob/key/courselab/</code><br />
 Request body:  </p>
-<pre class="codehilite"><code class="language-json linenums">{
-  &quot;image&quot;: &lt;string&gt;,                            # required VM image (e.g. &quot;rhel.img&quot;)
-  &quot;files&quot;: [ { &quot;localFile&quot;: &lt;string&gt;, 
-               &quot;destFile&quot;: &lt;string&gt; }, ...],    # required list of files to be used for autograding
-  &quot;jobName&quot;: &lt;string&gt;,                          # required name of job
-  &quot;output_file&quot;: &lt;string&gt;,                      # required name of output file
-  &quot;timeout&quot;: &lt;int&gt;,                             # optional timeout value (secs)
-  &quot;max_kb&quot;: &lt;int&gt;,                              # optional max output file size (KB)
-  &quot;callback_url&quot;: &lt;string&gt;                      # optional URL for POST callback from server to client
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>                            <span class="err">#</span> <span class="err">required</span> <span class="err">VM</span> <span class="err">image</span> <span class="err">(e.g.</span> <span class="nt">&quot;rhel.img&quot;</span><span class="err">)</span>
+  <span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;localFile&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span> 
+               <span class="nt">&quot;destFile&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span> <span class="p">},</span> <span class="err">...</span><span class="p">],</span>    <span class="err">#</span> <span class="err">required</span> <span class="err">list</span> <span class="err">of</span> <span class="err">files</span> <span class="err">to</span> <span class="err">be</span> <span class="err">used</span> <span class="err">for</span> <span class="err">autograding</span>
+  <span class="nt">&quot;jobName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>                          <span class="err">#</span> <span class="err">required</span> <span class="err">name</span> <span class="err">of</span> <span class="err">job</span>
+  <span class="nt">&quot;output_file&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>                      <span class="err">#</span> <span class="err">required</span> <span class="err">name</span> <span class="err">of</span> <span class="err">output</span> <span class="err">file</span>
+  <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span>                             <span class="err">#</span> <span class="err">optional</span> <span class="err">timeout</span> <span class="err">value</span> <span class="err">(secs)</span>
+  <span class="nt">&quot;max_kb&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span>                              <span class="err">#</span> <span class="err">optional</span> <span class="err">max</span> <span class="err">output</span> <span class="err">file</span> <span class="err">size</span> <span class="err">(KB)</span>
+  <span class="nt">&quot;callback_url&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>                      <span class="err">#</span> <span class="err">optional</span> <span class="err">URL</span> <span class="err">for</span> <span class="err">POST</span> <span class="err">callback</span> <span class="err">from</span> <span class="err">server</span> <span class="err">to</span> <span class="err">client</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <p>Response body: </p>
-<pre class="codehilite"><code class="language-json linenums">{ 
-  &quot;statusMsg&quot;: &lt;string&gt;, 
-  &quot;statusId&quot;: &lt;int&gt;, 
-  &quot;jobId&quot;: &lt;int&gt; 
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span> 
+  <span class="nt">&quot;statusMsg&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span> 
+  <span class="nt">&quot;statusId&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+  <span class="nt">&quot;jobId&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span> 
+<span class="p">}</span>
+</pre></div>
 
 
 <h4 id="poll">poll</h4>
 <p>Check if the job for <code>outputFile</code> has completed. If not, return <code>404: Not Found</code> and a status message, otherwise return the file in the response body, and free all resources held by the job. </p>
 <p>Request header: <code>GET /poll/key/courselab/outputFile/</code><br />
 Request body: </p>
-<pre class="codehilite"><code class="language-json linenums">{
-  &lt;empty&gt;
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="err">&lt;empty&gt;</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <p>Response body:<br />
 <code>&lt;autograder output file&gt;</code> if autograding successful otherwise: </p>
-<pre class="codehilite"><code class="language-json linenums">{
-  &quot;statusMsg&quot;: &lt;string&gt;, 
-  &quot;statusId&quot;: &lt;int&gt; 
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;statusMsg&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span> 
+  <span class="nt">&quot;statusId&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span> 
+<span class="p">}</span>
+</pre></div>
 
 
 <h3 id="administrative-requests">Administrative Requests</h3>
@@ -753,27 +822,29 @@ Request body: </p>
 <p>This is the "hello, world" request for the service. It returns a JSON object with some basic stats about the service, such as uptime, number of jobs, etc. </p>
 <p>Request header: <code>GET /info/&lt;KEY&gt;/&lt;COURSE_LAB&gt;/</code><br />
 Request body:</p>
-<pre class="codehilite"><code class="language-json linenums">{
-  &lt;empty&gt;
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="err">&lt;empty&gt;</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <p>Response body:</p>
-<pre class="codehilite"><code class="language-json linenums">{
-  &quot;info&quot;: {
-            &quot;num_threads&quot;: &lt;int&gt;, 
-            &quot;job_requests&quot;: &lt;int&gt;, 
-            &quot;waitvm_timeouts&quot;: &lt;int&gt;, 
-            &quot;runjob_timeouts&quot;: &lt;int&gt;, 
-            &quot;elapsed_secs&quot;: &lt;float&gt;, 
-            &quot;runjob_errors&quot;: &lt;int&gt;, 
-            &quot;job_retries&quot;: &lt;int&gt;, 
-            &quot;copyin_errors&quot;: &lt;int&gt;, 
-            &quot;copyout_errors&quot;: &lt;int&gt;
-          }, 
-  &quot;statusMsg&quot;: &quot;Found info successfully&quot;, 
-  &quot;statusId&quot;: 0
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;num_threads&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;job_requests&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;waitvm_timeouts&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;runjob_timeouts&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;elapsed_secs&quot;</span><span class="p">:</span> <span class="err">&lt;float&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;runjob_errors&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;job_retries&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;copyin_errors&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span> 
+            <span class="nt">&quot;copyout_errors&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span>
+          <span class="p">},</span> 
+  <span class="nt">&quot;statusMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;Found info successfully&quot;</span><span class="p">,</span> 
+  <span class="nt">&quot;statusId&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <h4 id="jobs">/jobs</h4>
@@ -789,11 +860,12 @@ Response body: JSON <code>pool</code> object  </p>
 <p>Creates a pool of <code>num</code> identical instances spawned from <code>image</code> (e.g. "rhel.img). </p>
 <p>Request header: <code>POST /prealloc/key/image/num/</code><br />
 Request body:</p>
-<pre class="codehilite"><code class="language-json linenums">{
-    &quot;vmms&quot;: &lt;string&gt;,     # vmms to use (e.g. &quot;localSSH&quot;)
-    &quot;cores&quot;: &lt;int&gt;,       # number of cores per VM
-    &quot;memory&quot;: &lt;int&gt;,      # amount of memory per VM
-}</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;vmms&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>     <span class="err">#</span> <span class="err">vmms</span> <span class="err">to</span> <span class="err">use</span> <span class="err">(e.g.</span> <span class="nt">&quot;localSSH&quot;</span><span class="err">)</span>
+    <span class="s2">&quot;cores&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span>       <span class="err">#</span> <span class="err">number</span> <span class="err">of</span> <span class="err">cores</span> <span class="err">per</span> <span class="err">VM</span>
+    <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="err">&lt;int&gt;</span><span class="p">,</span>      <span class="err">#</span> <span class="err">amount</span> <span class="err">of</span> <span class="err">memory</span> <span class="err">per</span> <span class="err">VM</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <p>Response body: <code>{ "status": &lt;string&gt; }</code> </p>
@@ -806,6 +878,8 @@ Request body:</p>
               
               
                 
+
+
               
             </article>
           </div>
@@ -855,16 +929,14 @@ Request body:</p>
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/Autolab" class="md-footer-social__link fa fa-github"></a>
     
@@ -872,20 +944,15 @@ Request body:</p>
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application-6b599127bc.js"></script>
-      <script>app.initialize({url:{base:".."}})</script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
-    
-    
-      
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-79424729-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>

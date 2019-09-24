@@ -1,102 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
-        
     <url>
-     <loc>/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/instructors/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/lab/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/features/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>/api-overview/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api-interface/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/command-line-interface/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api-managing-authorized-apps/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>/tango/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/tango-cli/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/tango-rest/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/tango-vmms/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/tango-deploy/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
     <url>
-     <loc>/one-click/</loc>
-     <lastmod>2018-09-20</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-09-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
 </urlset>
