@@ -1,4 +1,5 @@
 site_name: Autolab Documentation
+site_url: https://autolab.github.io/docs/
 nav:
     - Autolab:
         - Getting Started: index.md
