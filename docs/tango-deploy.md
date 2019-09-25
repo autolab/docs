@@ -47,8 +47,8 @@ This is a guide to setup a fully self-sufficient Tango deployment environment ou
 
 7.  Set up a VMMS for Tango within the Docker container.
 
-    - [Docker](/tango-vmms/#docker-vmms-setup) (**recommended**)
-    - [Amazon EC2](/tango-vmms/#amazon-ec2-vmms-setup)
+    - [Docker](/docs/tango-vmms/#docker-vmms-setup) (**recommended**)
+    - [Amazon EC2](/docs/tango-vmms/#amazon-ec2-vmms-setup)
 
 8.  Run the following command to start supervisor, which will then start Tango and all its dependencies.
 
@@ -102,7 +102,7 @@ This is a guide to setup a fully self-sufficient Tango deployment environment ou
         # (Test tango environment)
         $ docker stop erwin
 
-16. Test the setup by running sample jobs using [the testing guide](/tango-cli/).
+16. Test the setup by running sample jobs using [the testing guide](/docs/tango-cli/).
 
     **The following steps are optional and should only be used if you would like the Tango container to start on system boot.**
 

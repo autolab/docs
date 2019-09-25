@@ -19,12 +19,12 @@ As a user of Autolab, when you want to use a client for the first time, you need
 
 _Note_: Third-party clients never ask for your Autolab username or password. Never enter them anywhere else except on the Autolab website (always check the page url before entering your credentials).
 
-![API Manual Activation Page](/images/api/api-activate.png)
+![API Manual Activation Page](/docs/images/api/api-activate.png)
 _Manual activation page_
 
 When you enter the code on the website and click "Activate", you will be taken to the Grant Permissions page.
 
-![API Grant Permissions Page](/images/api/api-permissions.png)
+![API Grant Permissions Page](/docs/images/api/api-permissions.png)
 _API Grant Permissions Page_
 
 This page shows you all the permissions the client requests. Click 'approve' to grant these permissions to this client.
@@ -33,7 +33,7 @@ This page shows you all the permissions the client requests. Click 'approve' to 
 
 As a user, you can review all the clients that you've granted access to on the Manage Authorized Clients page. Click on the menu at the upper right corner, then click on 'Account'. At the bottom of the page you'll find the 'Manage Authorized Clients' link.
 
-![API Manage Authorized Clients Page](/images/api/api-manage-clients.png)
+![API Manage Authorized Clients Page](/docs/images/api/api-manage-clients.png)
 _Manage all the clients that currently have access to your account_
 
 You can view the permissions that each client has (hover over the icon to see a description of each permission). You can also click 'Revoke' at any time to revoke the access of a client immediately.

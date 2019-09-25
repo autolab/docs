@@ -155,4 +155,4 @@ This is a guide to set up Tango to run jobs on an Amazon EC2 VM.
         TANGO_RESERVATION_ID = '1'           # Leave as 1
         INSTANCE_RUNNING = 16                # Status code of a running instance, leave as 16
 
-10. You should now be ready to run Tango jobs on EC2! Use the [Tango CLI](/tango-cli/) to test your setup.
+10. You should now be ready to run Tango jobs on EC2! Use the [Tango CLI](/docs/tango-cli/) to test your setup.

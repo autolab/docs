@@ -9,9 +9,9 @@ Features Documented (Work in Progress):
 
 ## Scoreboards
 
-Scoreboards are a central concept of Autolab and are created by the output of [Autograders](/lab/#writing-autograders). They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (`/courses/<course>/assessments/<assessment>/edit`).
+Scoreboards are a central concept of Autolab and are created by the output of [Autograders](/docs/lab/#writing-autograders). They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (`/courses/<course>/assessments/<assessment>/edit`).
 
-![Scoreboard Edit](/images/scoreboard_edit.png)
+![Scoreboard Edit](/docs/images/scoreboard_edit.png)
 
 In general, scoreboards are configured using a JSON string.
 
@@ -58,16 +58,16 @@ The values for each row in a custom scoreboard come directly from a `scoreboard`
 }
 ```
 
-For more information on how to use Autograders and Scoreboards together, visit the [Guide for Lab Authors](/lab/).
+For more information on how to use Autograders and Scoreboards together, visit the [Guide for Lab Authors](/docs/lab/).
 
 ## Embedded Forms
 
 This feature allows an instructor to create an assessment which does not require a file submission on the part of the student. Instead, when an assessment is created, the hand-in page for that assessment will display an HTML form of the instructor’s design. When the student submits the form, the information is sent directly in JSON format to the Tango grading server for evaluation.
 
 !!! attention "Tango Required"
-	Tango is needed to use this feature. Please install [Tango](/tango/) and connect it to Autolab before proceeding.
+	Tango is needed to use this feature. Please install [Tango](/docs/tango/) and connect it to Autolab before proceeding.
 
-![Embedded Form](/images/embedded_quiz.png)
+![Embedded Form](/docs/images/embedded_quiz.png)
 
 ### Creating an Embedded Form
 
@@ -141,11 +141,11 @@ HTML Form Reference:
 
 Navigate to the Basic section of editing an assessment (`/courses/<course>/assessments/<assessment>/edit`), check the check box, and upload the HTML file. Ensure you submit the form by clicking `Save` at the bottom of the page.
 
-![Embedded Form Edit](/images/embedded_quiz_edit.png)
+![Embedded Form Edit](/docs/images/embedded_quiz_edit.png)
 
 ### Grading an Embedded Form
 
-When a student submits a form, the form data is sent to [Tango](/tango/) in the form of a JSON string in the file `out.txt.` In your grading script, parse the contents of `out.txt` as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (`value`) by its unique key (the `name` attribute).
+When a student submits a form, the form data is sent to [Tango](/docs/tango/) in the form of a JSON string in the file `out.txt.` In your grading script, parse the contents of `out.txt` as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (`value`) by its unique key (the `name` attribute).
 
 For the example form shown above, the JSON object will be as follows:
 

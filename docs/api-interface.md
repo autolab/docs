@@ -1,6 +1,6 @@
 This page details all the endpoints of the Autolab REST API.
 
-The client's access token should be included as a parameter to all endpoints. For details on obtaining access tokens, please see the [API Overview](/api-overview/)
+The client's access token should be included as a parameter to all endpoints. For details on obtaining access tokens, please see the [API Overview](/docs/api-overview/)
 
 ## Routing
 
@@ -203,7 +203,7 @@ Get the handout of an assessment.
 
 **Parameters:** [none]
 
-**Responses:** [same as [writeup](/api-interface/#writeup)]
+**Responses:** [same as [writeup](/docs/api-interface/#writeup)]
 
 ---
 

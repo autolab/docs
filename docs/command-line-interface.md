@@ -11,10 +11,10 @@ Make sure you have the cli installed by running `autolab` in your terminal. If y
 
 To setup autolab-cli with your Autolab account, run `autolab setup`. This will initiate a manual activation.
 
-![autolab-cli setup](/images/api/api-cli-setup.png)
+![autolab-cli setup](/docs/images/api/api-cli-setup.png)
 _What you'll see when you run `autolab setup`_
 
-Once you approve the client on the Autolab website, the client will respond telling you that authorization was successful. You should be able to use the client from now on. If at any point you want to reset the client, run `autolab setup -f` and you'll be asked to re-authorize the client from a clean state. To deauthorize any client that you've given permission to, look at how to [Manage Authorized Apps](/api-managing-authorized-apps/).
+Once you approve the client on the Autolab website, the client will respond telling you that authorization was successful. You should be able to use the client from now on. If at any point you want to reset the client, run `autolab setup -f` and you'll be asked to re-authorize the client from a clean state. To deauthorize any client that you've given permission to, look at how to [Manage Authorized Apps](/docs/api-managing-authorized-apps/).
 
 ## Viewing your courses and assessments
 
@@ -24,7 +24,7 @@ To view your current courses, run
 $ autolab courses
 ```
 
-![autolab-cli courses](/images/api/api-cli-courses.png)
+![autolab-cli courses](/docs/images/api/api-cli-courses.png)
 
 This will show you a list of ongoing courses in the form `unique_name (Display name)`. You should use the 'unique_name' of each course when interacting with autolab-cli.
 
@@ -44,7 +44,7 @@ To start working on an assessment, go to a directory where you usually put your 
 $ autolab download <course_unique_name>:<asmt_unique_name>
 ```
 
-![autolab-cli download](/images/api/api-cli-download.png)
+![autolab-cli download](/docs/images/api/api-cli-download.png)
 
 This will create a directory with the assessment name in your current directory, and download the handout and writeup in it. This new directory is called an 'assessment directory'. Whenever you're inside an assessment directory, autolab-cli will respond according to the context.
 
@@ -64,7 +64,7 @@ To submit to an assessment inside an assessment directory, run
 $ autolab submit <filename>
 ```
 
-![autolab-cli submit](/images/api/api-cli-submit.png)
+![autolab-cli submit](/docs/images/api/api-cli-submit.png)
 
 Yep, it's that easy.
 
@@ -76,7 +76,7 @@ To view the scores you got, run
 $ autolab scores
 ```
 
-![autolab-cli scores](/images/api/api-cli-scores.png)
+![autolab-cli scores](/docs/images/api/api-cli-scores.png)
 
 The scores command will only return scores for those submissions that are made via this client. This is a privacy constraint of the Autolab API.
 

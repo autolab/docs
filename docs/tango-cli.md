@@ -4,11 +4,11 @@ This is a guide to use the command-line client (`clients/tango-cli.py`) to test 
 
 ## Running a Sample Job
 
-The CLI supports two ways to run a sample job, [individual steps](/tango-cli/#indivdual-steps) or in a [single all-in-one command](/tango-cli/#single-command). The first option is better for debugging each individual API call, whereas the second option is best for quickly running a job. Other Tango CLI commands are also discussed [below](/tango-cli/#miscallaneous-commands).
+The CLI supports two ways to run a sample job, [individual steps](/docs/tango-cli/#indivdual-steps) or in a [single all-in-one command](/docs/tango-cli/#single-command). The first option is better for debugging each individual API call, whereas the second option is best for quickly running a job. Other Tango CLI commands are also discussed [below](/docs/tango-cli/#miscallaneous-commands).
 
 The Tango directory contains various different jobs in the `clients/` directory; `clients/README.md` discusses the function of each job.
 
-Find out more information about the Tango REST API [here](/tango-rest/).
+Find out more information about the Tango REST API [here](/docs/tango-rest/).
 
 ### Single Command
 
@@ -60,7 +60,7 @@ The args are -P <port\>, -k <key\>, -l <unique_job_name\> --runJob <job_files_pa
 
 ## Miscellaneous Commands
 
-The CLI also implements a list of commands to invoke the [Tango REST API](/tango-rest/), including `--info`, `--prealloc`, and `--jobs`. For a full list of commands, run:
+The CLI also implements a list of commands to invoke the [Tango REST API](/docs/tango-rest/), including `--info`, `--prealloc`, and `--jobs`. For a full list of commands, run:
 
 ```bash
 python clients/tango-cli.py --help

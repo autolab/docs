@@ -35,7 +35,7 @@ Once a student is added to the roster for a course, then that course becomes vis
 
 ## Labs (Assessments)
 
-A _lab_ (or _assessment_) is broadly defined as a submission set; it is anything that your students make submissions (handins) for. This could be a programming assignment, a typed homework, or even an in-class exam. You can create labs from scratch, or reuse them from previous semesters. See the companion [Guide For Lab Authors](/lab/) for info on writing and installing labs.
+A _lab_ (or _assessment_) is broadly defined as a submission set; it is anything that your students make submissions (handins) for. This could be a programming assignment, a typed homework, or even an in-class exam. You can create labs from scratch, or reuse them from previous semesters. See the companion [Guide For Lab Authors](/docs/lab/) for info on writing and installing labs.
 
 ## Assessment Categories
 
@@ -43,7 +43,7 @@ You can tag each assessment with an arbitrary user-defined _category_, e.g., "La
 
 ## Autograders and Scoreboards
 
-Labs can be _autograded_ or not, at your disrcretion. When a student submits to an autograded lab, Autolab runs an instructor-supplied _autograder_ program that assigns scores to one or more problems associated with the lab. Autograded labs can have an optional _scoreboard_ that shows (anonymized) results in real-time. See the companion [Guide For Lab Authors](/lab/) for details on writing autograded labs with scoreboards.
+Labs can be _autograded_ or not, at your disrcretion. When a student submits to an autograded lab, Autolab runs an instructor-supplied _autograder_ program that assigns scores to one or more problems associated with the lab. Autograded labs can have an optional _scoreboard_ that shows (anonymized) results in real-time. See the companion [Guide For Lab Authors](/docs/lab/) for details on writing autograded labs with scoreboards.
 
 ## Important Dates
 

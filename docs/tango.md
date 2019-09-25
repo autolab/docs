@@ -1,6 +1,6 @@
 # Tango
 
-Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for [Autolab](/) and has been extensively used for autograding programming assignments. It is also open source and hosted on [Github](https://www.github.com/autolab/Tango).
+Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for [Autolab](/docs/) and has been extensively used for autograding programming assignments. It is also open source and hosted on [Github](https://www.github.com/autolab/Tango).
 
 ## Getting Started
 
@@ -18,14 +18,14 @@ Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS
 
 For more information about the different Tango components, go to the following pages:
 
--   [REST API docs](/tango-rest/)
--   [VMMS API docs](/tango-vmms/)
+-   [REST API docs](/docs/tango-rest/)
+-   [VMMS API docs](/docs/tango-vmms/)
 -   [Tango Architecture Overview](http://autolab.github.io/2015/04/making-backend-scalable/)
--   [Deploying Tango](/tango-deploy/)
+-   [Deploying Tango](/docs/tango-deploy/)
 
 ### Installation
 
-This guide shows how to setup Tango in a **development environment**. Use the [deploying Tango](/tango-deploy/) guide for installing in a **production environment**.
+This guide shows how to setup Tango in a **development environment**. Use the [deploying Tango](/docs/tango-deploy/) guide for installing in a **production environment**.
 
 1.  Obtain the source code.
 
@@ -49,8 +49,8 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
 
 5.  Set up a VMMS for Tango to use.
 
-    -   [Docker](/tango-vmms/#docker-vmms-setup) (**recommended**)
-    -   [Amazon EC2](/tango-vmms/#amazon-ec2-vmms-setup)
+    -   [Docker](/docs/tango-vmms/#docker-vmms-setup) (**recommended**)
+    -   [Amazon EC2](/docs/tango-vmms/#amazon-ec2-vmms-setup)
     -   TashiVMMS (deprecated)
 
 6.  Run the following commands to setup the Tango dev environment inside the Tango directory. [Install pip](https://pip.pypa.io/en/stable/installing/) if needed.
@@ -84,7 +84,7 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
         $ curl localhost:<port>
         # Hello, world! RESTful Tango here!
 
-10. You can test the Tango setup using the [command line client](/tango-cli/).
+10. You can test the Tango setup using the [command line client](/docs/tango-cli/).
 
 11. If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:
 
@@ -103,4 +103,4 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
         # Key for Tango RESTful API
         RESTFUL_KEY = "test"
 
-12. To deploy Tango in a standalone production environment, use this [guide](/tango-deploy/)
+12. To deploy Tango in a standalone production environment, use this [guide](/docs/tango-deploy/)
