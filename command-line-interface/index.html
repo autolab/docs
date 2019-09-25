@@ -648,16 +648,16 @@
 <h2 id="obtaining-authorization">Obtaining authorization</h2>
 <p>Make sure you have the cli installed by running <code>autolab</code> in your terminal. If you see the usage instructions you're good to go. Otherwise, ask your school admin to install the cli from the <a href="https://github.com/autolab/autolab-cli">Autolab CLI Repository</a>.</p>
 <p>To setup autolab-cli with your Autolab account, run <code>autolab setup</code>. This will initiate a manual activation.</p>
-<p><img alt="autolab-cli setup" src="/images/api/api-cli-setup.png" />
+<p><img alt="autolab-cli setup" src="/docs/images/api/api-cli-setup.png" />
 <em>What you'll see when you run <code>autolab setup</code></em></p>
-<p>Once you approve the client on the Autolab website, the client will respond telling you that authorization was successful. You should be able to use the client from now on. If at any point you want to reset the client, run <code>autolab setup -f</code> and you'll be asked to re-authorize the client from a clean state. To deauthorize any client that you've given permission to, look at how to <a href="/api-managing-authorized-apps/">Manage Authorized Apps</a>.</p>
+<p>Once you approve the client on the Autolab website, the client will respond telling you that authorization was successful. You should be able to use the client from now on. If at any point you want to reset the client, run <code>autolab setup -f</code> and you'll be asked to re-authorize the client from a clean state. To deauthorize any client that you've given permission to, look at how to <a href="/docs/api-managing-authorized-apps/">Manage Authorized Apps</a>.</p>
 <h2 id="viewing-your-courses-and-assessments">Viewing your courses and assessments</h2>
 <p>To view your current courses, run</p>
 <div class="codehilite"><pre><span></span>$ autolab courses
 </pre></div>
 
 
-<p><img alt="autolab-cli courses" src="/images/api/api-cli-courses.png" /></p>
+<p><img alt="autolab-cli courses" src="/docs/images/api/api-cli-courses.png" /></p>
 <p>This will show you a list of ongoing courses in the form <code>unique_name (Display name)</code>. You should use the 'unique_name' of each course when interacting with autolab-cli.</p>
 <p>To view the assessments of a course, run</p>
 <div class="codehilite"><pre><span></span>$ autolab asmts &lt;course_unique_name&gt;
@@ -671,7 +671,7 @@
 </pre></div>
 
 
-<p><img alt="autolab-cli download" src="/images/api/api-cli-download.png" /></p>
+<p><img alt="autolab-cli download" src="/docs/images/api/api-cli-download.png" /></p>
 <p>This will create a directory with the assessment name in your current directory, and download the handout and writeup in it. This new directory is called an 'assessment directory'. Whenever you're inside an assessment directory, autolab-cli will respond according to the context.</p>
 <p>For example, when you're inside an assessment directory, you can run</p>
 <div class="codehilite"><pre><span></span>$ autolab problems
@@ -685,7 +685,7 @@
 </pre></div>
 
 
-<p><img alt="autolab-cli submit" src="/images/api/api-cli-submit.png" /></p>
+<p><img alt="autolab-cli submit" src="/docs/images/api/api-cli-submit.png" /></p>
 <p>Yep, it's that easy.</p>
 <h2 id="viewing-scores">Viewing scores</h2>
 <p>To view the scores you got, run</p>
@@ -693,7 +693,7 @@
 </pre></div>
 
 
-<p><img alt="autolab-cli scores" src="/images/api/api-cli-scores.png" /></p>
+<p><img alt="autolab-cli scores" src="/docs/images/api/api-cli-scores.png" /></p>
 <p>The scores command will only return scores for those submissions that are made via this client. This is a privacy constraint of the Autolab API.</p>
 <p>To view the feedback you got, run</p>
 <div class="codehilite"><pre><span></span>$ autolab feedback

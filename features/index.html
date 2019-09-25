@@ -685,8 +685,8 @@
 <li><a href="#embedded-forms">Embedded Forms</a></li>
 </ul>
 <h2 id="scoreboards">Scoreboards</h2>
-<p>Scoreboards are a central concept of Autolab and are created by the output of <a href="/lab/#writing-autograders">Autograders</a>. They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>).</p>
-<p><img alt="Scoreboard Edit" src="/images/scoreboard_edit.png" /></p>
+<p>Scoreboards are a central concept of Autolab and are created by the output of <a href="/docs/lab/#writing-autograders">Autograders</a>. They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>).</p>
+<p><img alt="Scoreboard Edit" src="/docs/images/scoreboard_edit.png" /></p>
 <p>In general, scoreboards are configured using a JSON string.</p>
 <h3 id="default-scoreboard">Default Scoreboard</h3>
 <p>The default scoreboard displays the total problem scores, followed by each individual problem score, sorted in descending order by the total score.</p>
@@ -720,14 +720,14 @@
 </pre></div>
 
 
-<p>For more information on how to use Autograders and Scoreboards together, visit the <a href="/lab/">Guide for Lab Authors</a>.</p>
+<p>For more information on how to use Autograders and Scoreboards together, visit the <a href="/docs/lab/">Guide for Lab Authors</a>.</p>
 <h2 id="embedded-forms">Embedded Forms</h2>
 <p>This feature allows an instructor to create an assessment which does not require a file submission on the part of the student. Instead, when an assessment is created, the hand-in page for that assessment will display an HTML form of the instructor’s design. When the student submits the form, the information is sent directly in JSON format to the Tango grading server for evaluation.</p>
 <div class="admonition attention">
 <p class="admonition-title">Tango Required</p>
-<p>Tango is needed to use this feature. Please install <a href="/tango/">Tango</a> and connect it to Autolab before proceeding.</p>
+<p>Tango is needed to use this feature. Please install <a href="/docs/tango/">Tango</a> and connect it to Autolab before proceeding.</p>
 </div>
-<p><img alt="Embedded Form" src="/images/embedded_quiz.png" /></p>
+<p><img alt="Embedded Form" src="/docs/images/embedded_quiz.png" /></p>
 <h3 id="creating-an-embedded-form">Creating an Embedded Form</h3>
 <p>Create an HTML file with a combination of the following elements. The HTML file need only include form elements, because it will automatically be wrapped in a <code>&lt;form&gt;&lt;/form&gt;</code> block when it is rendered on the page.</p>
 <p>In order for the JSON string (the information passed to the grader) to be constructed properly, your form elements must follow the following conventions:</p>
@@ -791,9 +791,9 @@
 
 
 <p>Navigate to the Basic section of editing an assessment (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>), check the check box, and upload the HTML file. Ensure you submit the form by clicking <code>Save</code> at the bottom of the page.</p>
-<p><img alt="Embedded Form Edit" src="/images/embedded_quiz_edit.png" /></p>
+<p><img alt="Embedded Form Edit" src="/docs/images/embedded_quiz_edit.png" /></p>
 <h3 id="grading-an-embedded-form">Grading an Embedded Form</h3>
-<p>When a student submits a form, the form data is sent to <a href="/tango/">Tango</a> in the form of a JSON string in the file <code>out.txt.</code> In your grading script, parse the contents of <code>out.txt</code> as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (<code>value</code>) by its unique key (the <code>name</code> attribute).</p>
+<p>When a student submits a form, the form data is sent to <a href="/docs/tango/">Tango</a> in the form of a JSON string in the file <code>out.txt.</code> In your grading script, parse the contents of <code>out.txt</code> as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (<code>value</code>) by its unique key (the <code>name</code> attribute).</p>
 <p>For the example form shown above, the JSON object will be as follows:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;utf8&quot;</span><span class="p">:</span> <span class="s2">&quot;✓&quot;</span><span class="p">,</span>

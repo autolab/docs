@@ -721,9 +721,9 @@
                 
                 <h1 id="welcome-to-the-autolab-docs">Welcome to the Autolab Docs</h1>
 <p>Autolab is a course management platform that enables instructors to offer autograded programming assignments to their students. The two key ideas in Autolab are <em>autograding</em> that is, programs evaluating other programs, and <em>scoreboards</em> that display the latest autograded scores for each student. Autolab also provides gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.</p>
-<p>For information on how to use Autolab for your course see the <a href="/instructors">Guide for Instructors</a>. To learn how to write an autograded lab see the <a href="/lab">Guide for Lab Authors</a>.</p>
+<p>For information on how to use Autolab for your course see the <a href="/docs/instructors">Guide for Instructors</a>. To learn how to write an autograded lab see the <a href="/docs/lab">Guide for Lab Authors</a>.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) <a href="/tango">Tango</a>, the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.</p>
+<p>Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) <a href="/docs/tango">Tango</a>, the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.</p>
 <p>Currently, we have support for installing Autolab on <a href="#aws">AWS</a>, <a href="#ubuntu-1404">Ubuntu 14.04+</a>, and <a href="#mac-osx-1011">Mac OSX</a>.</p>
 <h3 id="aws">AWS</h3>
 <p>If you want to try Autolab or Tango without any installation, we have a pre-built AMI you can deploy on AWS' free tier. To deploy it, follow the official <a href="https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/">EC2 Launch Instructions</a>. Make sure that you</p>
@@ -742,14 +742,14 @@
 <h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
 <p>There are two ways to install Autolab on Ubuntu.</p>
 <p><strong>Option 1</strong></p>
-<p>The recommended way is to use the <a href="/one-click">OneClick option</a>. This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.</p>
+<p>The recommended way is to use the <a href="/docs/one-click">OneClick option</a>. This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.</p>
 <p><strong>Option 2</strong></p>
 <p>Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, run the following script:</p>
 <div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
 </pre></div>
 
 
-<p>When the script runs, you will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a>. Once finished, <a href="/tango">install Tango</a>.</p>
+<p>When the script runs, you will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a>. Once finished, <a href="/docs/tango">install Tango</a>.</p>
 <h3 id="mac-osx-1011">Mac OSX 10.11+</h3>
 <p>Follow the step-by-step instructions below:</p>
 <ol>
@@ -868,10 +868,10 @@ bundle <span class="nb">exec</span> rake db:migrate
 
 </li>
 <li>
-<p>Install <a href="/tango">Tango</a>, the backend autograding service.</p>
+<p>Install <a href="/docs/tango">Tango</a>, the backend autograding service.</p>
 </li>
 <li>
-<p>Now you are all set to start using Autolab! Visit the <a href="/instructors">Guide for Instructors</a> and <a href="/lab">Guide for Lab Authors</a> pages for more info.</p>
+<p>Now you are all set to start using Autolab! Visit the <a href="/docs/instructors">Guide for Instructors</a> and <a href="/docs/lab">Guide for Lab Authors</a> pages for more info.</p>
 </li>
 </ol>
 <h2 id="faq">FAQ</h2>
