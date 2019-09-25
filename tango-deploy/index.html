@@ -584,7 +584,7 @@
                 
                 
                 <h1 id="deploying-standalone-tango">Deploying Standalone Tango</h1>
-<p>This is a guide to setup a fully self-sufficient Tango deployment environment out-of-the-box using Docker. The suggested deployment pattern for Tango uses Nginx as a proxy and Supervisor as a process manager for Tango and all its dependencies. All requests to Nginx are rerouted to a Tango process. </p>
+<p>This is a guide to setup a fully self-sufficient Tango deployment environment out-of-the-box using Docker. The suggested deployment pattern for Tango uses Nginx as a proxy and Supervisor as a process manager for Tango and all its dependencies. All requests to Nginx are rerouted to a Tango process.</p>
 <h2 id="details">Details</h2>
 <ul>
 <li>Nginx default port - 8600</li>
@@ -617,7 +617,7 @@
 
 </li>
 <li>
-<p>Run the following command to build the Tango deployment image. </p>
+<p>Run the following command to build the Tango deployment image.</p>
 <div class="codehilite"><pre><span></span>$ docker build --tag<span class="o">=</span><span class="s2">&quot;tango_deployment&quot;</span> .
 </pre></div>
 
@@ -656,8 +656,7 @@
 </li>
 <li>
 <p>Check to see if Tango is responding to requests</p>
-<div class="codehilite"><pre><span></span>$ curl localhost:8610
-<span class="c1"># Hello, world! RESTful Tango here!</span>
+<div class="codehilite"><pre><span></span>$ curl localhost:8610 <span class="c1"># Hello, world! RESTful Tango here!</span>
 </pre></div>
 
 
@@ -698,7 +697,7 @@ $ sudo vim /var/lib/docker/containers/c704d45c37372a034cb97761d99f6f3f362707cc23
 
 </li>
 <li>
-<p>Edit the "Path" field in the config.v2.json file from "/bin/bash" to "/usr/bin/supervisord" and save the file. Run the following commands to verify the changes were successful. The COMMAND field should now be "/usr/bin/supervisord" </p>
+<p>Edit the "Path" field in the config.v2.json file from "/bin/bash" to "/usr/bin/supervisord" and save the file. Run the following commands to verify the changes were successful. The COMMAND field should now be "/usr/bin/supervisord"</p>
 <div class="codehilite"><pre><span></span>$ service docker restart
 $ docker ps -as
 <span class="c1"># CONTAINER ID        IMAGE               COMMAND               NAMES               SIZE</span>
@@ -717,11 +716,9 @@ $ docker stop erwin
 
 </li>
 <li>
-<p>Test the setup by running sample jobs using <a href="/tango-cli">the testing guide</a>.</p>
-</li>
-</ol>
+<p>Test the setup by running sample jobs using <a href="/tango-cli/">the testing guide</a>.</p>
 <p><strong>The following steps are optional and should only be used if you would like the Tango container to start on system boot.</strong></p>
-<ol>
+</li>
 <li>
 <p>To ensure Tango starts with the system in the production environment, the container needs to be configured as a service. Below is a sample service config file that needs to be changed to suit your environment and placed in <code>/etc/systemd/system/</code>. The file should be named <code>&lt;name&gt;.service</code>. For this example, it is <code>erwin.service</code>.</p>
 <div class="codehilite"><pre><span></span><span class="o">[</span>Unit<span class="o">]</span>

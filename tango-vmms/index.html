@@ -717,9 +717,9 @@
                 
                   <h1>VMMS Docs</h1>
                 
-                <p>This page documents the interface for Tango's Virtual Machine Management Systems' (VMMSs) API and instructions for setting up VMMSs. See <a href="https://github.com/autolab/Tango/tree/master/vmms">the vmms directory</a> in Tango for example implementations. </p>
+                <p>This page documents the interface for Tango's Virtual Machine Management Systems' (VMMSs) API and instructions for setting up VMMSs. See <a href="https://github.com/autolab/Tango/tree/master/vmms">the vmms directory</a> in Tango for example implementations.</p>
 <h2 id="api">API</h2>
-<p>The functions necessary to implement the API are documented here. Note that for certain implementations, some of these methods will be no-ops since the VMMS doesn't require any particular instructions to perform the specified actions. Furthermore, throughout this document, we use the term "VM" liberally to represent any container-like object on which Tango jobs may be run. </p>
+<p>The functions necessary to implement the API are documented here. Note that for certain implementations, some of these methods will be no-ops since the VMMS doesn't require any particular instructions to perform the specified actions. Furthermore, throughout this document, we use the term "VM" liberally to represent any container-like object on which Tango jobs may be run.</p>
 <h3 id="initializevm">initializeVM</h3>
 <div class="codehilite"><pre><span></span><span class="n">initializeVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
 </pre></div>
@@ -737,44 +737,43 @@
 </pre></div>
 
 
-<p>Copies the input files for a job into the VM. <code>inputFiles</code> is a list of <code>InputFile</code> objects defined in <code>tangoObjects.py</code>. For each <code>InputFile</code> object, <code>file.localFile</code> is the name of the file on the Tango host machine and <code>file.destFile</code> is what the name of the file should be on the VM. </p>
+<p>Copies the input files for a job into the VM. <code>inputFiles</code> is a list of <code>InputFile</code> objects defined in <code>tangoObjects.py</code>. For each <code>InputFile</code> object, <code>file.localFile</code> is the name of the file on the Tango host machine and <code>file.destFile</code> is what the name of the file should be on the VM.</p>
 <h3 id="runjob">runJob</h3>
 <div class="codehilite"><pre><span></span><span class="n">runJob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">runTimeout</span><span class="p">,</span> <span class="n">maxOutputFileSize</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Runs the autodriver binary on the VM. The autodriver runs <code>make</code> on the VM (which in turn runs the job via the <code>Makefile</code> that was provided as a part of the input files for the job). The output from the autodriver most likely should be redirected to some feedback file to be used in the next method of the API. </p>
+<p>Runs the autodriver binary on the VM. The autodriver runs <code>make</code> on the VM (which in turn runs the job via the <code>Makefile</code> that was provided as a part of the input files for the job). The output from the autodriver most likely should be redirected to some feedback file to be used in the next method of the API.</p>
 <h3 id="copyout">copyOut</h3>
 <div class="codehilite"><pre><span></span><span class="n">copyOut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">destFile</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Copies the output file for the job out of the VM into <code>destFile</code> on the Tango host machine. </p>
+<p>Copies the output file for the job out of the VM into <code>destFile</code> on the Tango host machine.</p>
 <h3 id="destroyvm">destroyVM</h3>
 <div class="codehilite"><pre><span></span><span class="n">destroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Removes a VM from the Tango system. </p>
+<p>Removes a VM from the Tango system.</p>
 <h3 id="safedestroyvm">safeDestroyVM</h3>
 <div class="codehilite"><pre><span></span><span class="n">safeDestroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Removes a VM from the Tango system and makes sure that it has been removed. </p>
+<p>Removes a VM from the Tango system and makes sure that it has been removed.</p>
 <h3 id="getvms">getVMs</h3>
 <div class="codehilite"><pre><span></span><span class="n">getVMs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Returns a complete list of VMs associated with this Tango system. </p>
+<p>Returns a complete list of VMs associated with this Tango system.</p>
 <h2 id="docker-vmms-setup">Docker VMMS Setup</h2>
-<p>This is a guide to set up Tango to run jobs inside Docker containers. </p>
+<p>This is a guide to set up Tango to run jobs inside Docker containers.</p>
 <ol>
 <li>
 <p>Install docker on host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
-<div class="codehilite"><pre><span></span>$ docker ps
-<span class="c1"># CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span>
+<div class="codehilite"><pre><span></span>$ docker ps <span class="c1"># CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span>
 </pre></div>
 
 
@@ -798,7 +797,7 @@ docker images autograding_image    <span class="c1"># Check if image built</span
 </li>
 </ol>
 <h2 id="amazon-ec2-vmms-setup">Amazon EC2 VMMS Setup</h2>
-<p>This is a guide to set up Tango to run jobs on an Amazon EC2 VM. </p>
+<p>This is a guide to set up Tango to run jobs on an Amazon EC2 VM.</p>
 <ol>
 <li>
 <p>Create an <a href="https://aws.amazon.com/">AWS Account</a> or use an existing one.</p>
@@ -809,15 +808,15 @@ docker images autograding_image    <span class="c1"># Check if image built</span
 <li>
 <p>Add AWS Credentials to a file called <code>~/.boto</code> using the following format:</p>
 <div class="codehilite"><pre><span></span><span class="o">[</span>Credentials<span class="o">]</span>
-<span class="nv">aws_access_key_id</span> <span class="o">=</span> MYAMAZONTESTKEY12345
-<span class="nv">aws_secret_access_key</span> <span class="o">=</span> myawssecretaccesskey12345
+    <span class="nv">aws_access_key_id</span> <span class="o">=</span> MYAMAZONTESTKEY12345
+    <span class="nv">aws_secret_access_key</span> <span class="o">=</span> myawssecretaccesskey12345
 </pre></div>
 
 
 <p>Tango uses the <a href="http://boto.cloudhackers.com/en/latest/">Boto</a> Python package to interface with Amazon Web Services</p>
 </li>
 <li>
-<p>In the AWS EC2 console, create an Ubuntu 14.04+ EC2 instance and save the <code>.pem</code> file in a safe location. </p>
+<p>In the AWS EC2 console, create an Ubuntu 14.04+ EC2 instance and save the <code>.pem</code> file in a safe location.</p>
 </li>
 <li>
 <p>Copy the directory and contents of <code>autodriver/</code> in the Tango repo into the EC2 VM. For more help connecting to the EC2 instance follow <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html#AccessingInstancesLinuxSCP">this guide</a></p>
@@ -861,7 +860,7 @@ $ chown :autograde autograde
 <span class="c1">#</span>
 <span class="nv">EC2_REGION</span> <span class="o">=</span> <span class="s1">&#39;us-east-1&#39;</span>             <span class="c1"># EC2 Region</span>
 <span class="nv">EC2_USER_NAME</span> <span class="o">=</span> <span class="s1">&#39;ubuntu&#39;</span>             <span class="c1"># EC2 username</span>
-<span class="nv">DEFAULT_AMI</span> <span class="o">=</span> <span class="s1">&#39;ami-4c99c35b&#39;</span>         <span class="c1"># Custom AMI Id </span>
+<span class="nv">DEFAULT_AMI</span> <span class="o">=</span> <span class="s1">&#39;ami-4c99c35b&#39;</span>         <span class="c1"># Custom AMI Id</span>
 <span class="nv">DEFAULT_INST_TYPE</span> <span class="o">=</span> <span class="s1">&#39;t2.micro&#39;</span>       <span class="c1"># Instance Type</span>
 <span class="nv">DEFAULT_SECURITY_GROUP</span> <span class="o">=</span> <span class="s1">&#39;autolab-autograde-ec2&#39;</span>  <span class="c1"># Security Group with full access to EC2</span>
 <span class="nv">SECURITY_KEY_PATH</span> <span class="o">=</span> <span class="s1">&#39;/path/to/my-key-pair.pem&#39;</span>    <span class="c1"># Absolute path to my-key-pair.pem</span>
@@ -874,7 +873,7 @@ $ chown :autograde autograde
 
 </li>
 <li>
-<p>You should now be ready to run Tango jobs on EC2! Use the <a href="/tango-cli">Tango CLI</a> to test your setup.</p>
+<p>You should now be ready to run Tango jobs on EC2! Use the <a href="/tango-cli/">Tango CLI</a> to test your setup.</p>
 </li>
 </ol>
                 

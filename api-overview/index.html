@@ -691,7 +691,7 @@
                 
                 <h1 id="overview">Overview</h1>
 <p>The web interface that has served us well for many years is no longer the only way to use Autolab. With the API, developers will be able to help make Autolab more versatile and convenient: Whether it be with a mobile app, a command line tool, a browser extension, or something we've never even thought of.</p>
-<p>For students and instructors who only plan to use Autolab, try out the <a href="/command-line-interface">Autolab CLI</a>.</p>
+<p>For students and instructors who only plan to use Autolab, try out the <a href="/command-line-interface/">Autolab CLI</a>.</p>
 <p>The Autolab REST API allows developers to create clients that can access features of Autolab on behalf of Autolab users.</p>
 <p>V1 of the API allows clients to:</p>
 <ul>
@@ -704,7 +704,7 @@
 <h2 id="authorization">Authorization</h2>
 <p>All endpoints of the Autolab API requires client authentication in the form of an access token. To obtain this access token, clients must obtain authorization from the user.</p>
 <p>Autolab API uses the standard <a href="https://tools.ietf.org/html/rfc6749">OAuth2</a> <a href="https://tools.ietf.org/html/rfc6749#section-4.1">Authorization Code Grant</a> for user authorization. For clients with no easy access to web browsers (e.g. console apps), an alternative <a href="https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07">device flow</a>-based authorization method is provided as well.</p>
-<p>To understand how to authorize and unauthorize clients as a user, go to <a href="/api-managing-authorized-apps">Managing Authorized Apps</a></p>
+<p>To understand how to authorize and unauthorize clients as a user, go to <a href="/api-managing-authorized-apps/">Managing Authorized Apps</a></p>
 <h3 id="authorization-code-grant-flow">Authorization Code Grant Flow</h3>
 <p>The authorization code grant consists of 5 basic steps:</p>
 <ol>
@@ -746,11 +746,15 @@
 </ul>
 <p>Failure Responses:</p>
 <ul>
-<li>400 Bad Request: {error: authorization_pending}<br>
-  The user has not yet granted or denied the authorization request. Please try again in a while.</li>
-<li>429 Too Many Requests: {error: Retry later}<br>
-  The client is polling too frequently. Please wait for a while before polling again.<br>
-  The default rate limit is once every 5 seconds.</li>
+<li>
+<p>400 Bad Request: {error: authorization_pending}</p>
+<p>The user has not yet granted or denied the authorization request. Please try again in a while.</p>
+</li>
+<li>
+<p>429 Too Many Requests: {error: Retry later}</p>
+<p>The client is polling too frequently. Please wait for a while before polling again.</p>
+<p>The default rate limit is once every 5 seconds.</p>
+</li>
 </ul>
 <p>Success Response:</p>
 <ul>

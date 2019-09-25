@@ -681,8 +681,8 @@
 <p>This guide details the usage of features in Autolab.</p>
 <p>Features Documented (Work in Progress):</p>
 <ul>
-<li><a href="/features/#scoreboards">Scoreboards</a> </li>
-<li><a href="/features/#embedded-forms">Embedded Forms</a> </li>
+<li><a href="#scoreboards">Scoreboards</a></li>
+<li><a href="#embedded-forms">Embedded Forms</a></li>
 </ul>
 <h2 id="scoreboards">Scoreboards</h2>
 <p>Scoreboards are a central concept of Autolab and are created by the output of <a href="/lab/#writing-autograders">Autograders</a>. They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>).</p>
@@ -695,9 +695,7 @@
 <p>The column spec consists of a "scoreboard" object, which is an array of JSON objects, where each object describes a column.</p>
 <p><strong>Example:</strong> a scoreboard with one column, called <code>Score</code>.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span> 
-        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Score&quot;</span><span class="p">}</span> 
-    <span class="p">]</span> 
+    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;hdr&quot;</span><span class="p">:</span> <span class="s2">&quot;Score&quot;</span> <span class="p">}]</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -705,10 +703,7 @@
 <p>A custom scoreboard sorts the first three columns, from left to right, in descending order. You can change the default sort order for a particular column by adding an optional "asc:1" element to its hash.</p>
 <p><strong>Example:</strong> Scoreboard with two columns, "Score" and "Ops", with "Score" sorted descending, and then "Ops" ascending:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span> 
-        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Score&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Ops&quot;</span><span class="p">,</span> <span class="nt">&quot;asc&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span> 
-    <span class="p">]</span> 
+    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;hdr&quot;</span><span class="p">:</span> <span class="s2">&quot;Score&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;hdr&quot;</span><span class="p">:</span> <span class="s2">&quot;Ops&quot;</span><span class="p">,</span> <span class="nt">&quot;asc&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}]</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -718,19 +713,19 @@
 <p><strong>Example:</strong> Autoresult returning the score (97) for a single autograded problem called <code>autograded</code>, and a scoreboard entry with two columns: the autograded score (<code>Score</code>) and the number of operations (<code>Ops</code>):</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;autograded&quot;</span><span class="p">:</span><span class="mi">97</span>
-    <span class="p">},</span> 
-    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span> 
+        <span class="nt">&quot;autograded&quot;</span><span class="p">:</span> <span class="mi">97</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<p>For more information on how to use Autograders and Scoreboards together, visit the <a href="/lab">Guide for Lab Authors</a>.</p>
+<p>For more information on how to use Autograders and Scoreboards together, visit the <a href="/lab/">Guide for Lab Authors</a>.</p>
 <h2 id="embedded-forms">Embedded Forms</h2>
 <p>This feature allows an instructor to create an assessment which does not require a file submission on the part of the student. Instead, when an assessment is created, the hand-in page for that assessment will display an HTML form of the instructor’s design. When the student submits the form, the information is sent directly in JSON format to the Tango grading server for evaluation.</p>
 <div class="admonition attention">
 <p class="admonition-title">Tango Required</p>
-<p>Tango is needed to use this feature. Please install <a href="/tango">Tango</a> and connect it to Autolab before proceeding.</p>
+<p>Tango is needed to use this feature. Please install <a href="/tango/">Tango</a> and connect it to Autolab before proceeding.</p>
 </div>
 <p><img alt="Embedded Form" src="/images/embedded_quiz.png" /></p>
 <h3 id="creating-an-embedded-form">Creating an Embedded Form</h3>
@@ -742,26 +737,26 @@
 </ul>
 <p>HTML Form Reference:</p>
 <p><strong>Text Field (For short responses)</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">“text”</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-1”/</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;“text”&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;“question-1”&quot;</span> <span class="p">/&gt;</span>
 </pre></div>
 
 
 <p><strong>Text Area (For coding questions)</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-2”</span> <span class="na">style</span><span class="o">=</span><span class="s">“width:100%”/</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;“question-2”&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;“width:100%”&quot;</span> <span class="p">/&gt;</span>
 </pre></div>
 
 
 <p><strong>Radio Button (For multiple choice)</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">“row</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-3”</span> <span class="na">type</span><span class="o">=</span><span class="s">“radio”</span> <span class="na">value</span><span class="o">=</span><span class="s">“object”</span> <span class="na">id</span><span class="o">=</span><span class="s">“q3-1”/</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;“row&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;“question-3”&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;“radio”&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;“object”&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;“q3-1”&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">&gt;</span>Object<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-3”</span> <span class="na">type</span><span class="o">=</span><span class="s">“radio”</span> <span class="na">value</span><span class="o">=</span><span class="s">“boolean”</span> <span class="na">id</span><span class="o">=</span><span class="s">“q3-2”/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">“q3-2”</span><span class="p">&gt;</span>Boolean<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;“question-3”&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;“radio”&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;“boolean”&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;“q3-2”&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;“q3-2”&quot;</span><span class="p">&gt;</span>Boolean<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 
-<p><strong>Dropdown (For multiple choice or select all that apply)</strong> </p>
+<p><strong>Dropdown (For multiple choice or select all that apply)</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">select</span> <span class="na">multiple</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-4&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
@@ -773,17 +768,17 @@
 <p><strong>Example Form (shown in screenshot above)</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;What&#39;s your name?&quot;</span> <span class="p">/&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;freshman&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;freshman&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">&gt;</span>Freshman<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;sophomore&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;sophomore&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span><span class="p">&gt;</span>Sophomore<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;junior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;junior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span><span class="p">&gt;</span>Junior<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;senior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;senior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span><span class="p">&gt;</span>Senior<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q4&quot;</span><span class="p">&gt;</span>What&#39;s your favorite language?<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
@@ -798,16 +793,16 @@
 <p>Navigate to the Basic section of editing an assessment (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>), check the check box, and upload the HTML file. Ensure you submit the form by clicking <code>Save</code> at the bottom of the page.</p>
 <p><img alt="Embedded Form Edit" src="/images/embedded_quiz_edit.png" /></p>
 <h3 id="grading-an-embedded-form">Grading an Embedded Form</h3>
-<p>When a student submits a form, the form data is sent to <a href="/tango">Tango</a> in the form of a JSON string in the file <code>out.txt.</code> In your grading script, parse the contents of <code>out.txt</code> as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (<code>value</code>) by its unique key (the <code>name</code> attribute).</p>
+<p>When a student submits a form, the form data is sent to <a href="/tango/">Tango</a> in the form of a JSON string in the file <code>out.txt.</code> In your grading script, parse the contents of <code>out.txt</code> as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (<code>value</code>) by its unique key (the <code>name</code> attribute).</p>
 <p>For the example form shown above, the JSON object will be as follows:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;utf8&quot;</span><span class="p">:</span><span class="s2">&quot;✓&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;authenticity_token&quot;</span><span class="p">:</span><span class="s2">&quot;LONGAUTHTOKEN&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;submission[embedded_quiz_form_answer]&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;question-1&quot;</span><span class="p">:</span><span class="s2">&quot;John Smith&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;question-2&quot;</span><span class="p">:</span><span class="s2">&quot;junior&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;question-3&quot;</span><span class="p">:</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;integrity_checkbox&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span>
+    <span class="nt">&quot;utf8&quot;</span><span class="p">:</span> <span class="s2">&quot;✓&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;authenticity_token&quot;</span><span class="p">:</span> <span class="s2">&quot;LONGAUTHTOKEN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;submission[embedded_quiz_form_answer]&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;question-1&quot;</span><span class="p">:</span> <span class="s2">&quot;John Smith&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;question-2&quot;</span><span class="p">:</span> <span class="s2">&quot;junior&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;question-3&quot;</span><span class="p">:</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;integrity_checkbox&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
 <span class="p">}</span>
 </pre></div>
 

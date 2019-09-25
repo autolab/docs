@@ -782,7 +782,7 @@
 
 <p>Now Autolab is successfully installed and running on your virtual machine.
 Open your browser and visit <code>localhost:3000</code>, you will see the landing page of Autolab.</p>
-<p>Follow the instructions <a href="/one-click/#testing">here</a> to test out your set up.</p>
+<p>Follow the instructions <a href="#testing">here</a> to test out your set up.</p>
 <h2 id="serverproduction-oneclick-setup">Server/Production OneClick Setup</h2>
 <h3 id="1-provision-a-server">1. Provision a Server</h3>
 <p><strong>Server</strong></p>
@@ -865,12 +865,11 @@ Open your browser and visit <code>localhost:3000</code>, you will see the landin
 <p>Copy your SSL certificate and key file into the <code>server/ssl</code> directory.</p>
 <p><strong>Without SSL</strong>:</p>
 <p>Comment out the following lines in <code>server/configs/nginx.conf</code></p>
-<div class="codehilite"><pre><span></span> <span class="o">:</span><span class="p">::</span><span class="nd">ruby</span>
- <span class="err">#</span> <span class="nt">EFF</span> <span class="nt">recommended</span> <span class="nt">SSL</span> <span class="nt">settings</span>
- <span class="err">#</span> <span class="nt">ssl_prefer_server_ciphers</span> <span class="nt">on</span><span class="o">;</span>
- <span class="err">#</span> <span class="nt">ssl_ciphers</span> <span class="nt">ECDH</span><span class="o">+</span><span class="nt">AESGCM</span><span class="p">:</span><span class="nd">ECDH</span><span class="o">+</span><span class="nt">AES256</span><span class="p">:</span><span class="nd">ECDH</span><span class="o">+</span><span class="nt">AES128</span><span class="p">:</span><span class="nd">ECDH</span><span class="o">+</span><span class="nt">3DES</span><span class="p">:</span><span class="nd">RSA</span><span class="o">+</span><span class="nt">AES</span><span class="p">:</span><span class="nd">RSA</span><span class="o">+</span><span class="nt">3DES</span><span class="o">:!</span><span class="nt">ADH</span><span class="o">:!</span><span class="nt">AECDH</span><span class="o">:!</span><span class="nt">MD5</span><span class="o">:!</span><span class="nt">DSS</span><span class="o">;</span>
- <span class="err">#</span> <span class="nt">ssl_protocols</span> <span class="nt">TLSv1</span> <span class="nt">TLSv1</span><span class="p">.</span><span class="nc">1</span> <span class="nt">TLSv1</span><span class="p">.</span><span class="nc">2</span><span class="o">;</span>
- <span class="err">#</span> <span class="nt">add_header</span> <span class="nt">Strict-Transport-Security</span> <span class="s2">&quot;max-age=31536000; includeSubDomains&quot;</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="c1"># EFF recommended SSL settings</span>
+<span class="c1"># ssl_prefer_server_ciphers on;</span>
+<span class="c1"># ssl_ciphers ECDH+AESGCM:ECDH+AES256:ECDH+AES128:ECDH+3DES:RSA+AES:RSA+3DES:!ADH:!AECDH:!MD5:!DSS;</span>
+<span class="c1"># ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span>
+<span class="c1"># add_header Strict-Transport-Security &quot;max-age=31536000; includeSubDomains&quot;;</span>
 </pre></div>
 
 
@@ -918,7 +917,7 @@ Open your browser and visit <code>localhost:3000</code>, you will see the landin
 </ol>
 <p>Now Autolab is successfully installed and running on your virtual machine.
 Open your browser and visit <code>https://yourdomainname</code>, to see the landing page of Autolab.</p>
-<p>Follow the instructions <a href="/one-click/#testing">here</a> to test out your set up.</p>
+<p>Follow the instructions <a href="#testing">here</a> to test out your set up.</p>
 <h2 id="testing">Testing</h2>
 <p>Login with the following credentials:</p>
 <div class="codehilite"><pre><span></span>email: admin@foo.bar
@@ -928,8 +927,8 @@ password: adminfoobar
 
 <p>We have populated dummy data for you to test with.</p>
 <p>Run the following commands to cleanup the dummy data:</p>
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="k">local</span>
-<span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">run</span> <span class="c1">--rm -e RAILS_ENV=production web rake autolab:depopulate</span>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> <span class="nb">local</span>
+docker-compose run --rm -e <span class="nv">RAILS_ENV</span><span class="o">=</span>production web rake autolab:depopulate
 </pre></div>
                 
                   

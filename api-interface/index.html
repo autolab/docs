@@ -841,8 +841,8 @@
                 
                   <h1>Reference</h1>
                 
-                <p>This page details all the endpoints of the Autolab REST API. </p>
-<p>The client's access token should be included as a parameter to all endpoints. For details on obtaining access tokens, please see the <a href="/api-overview">API Overview</a></p>
+                <p>This page details all the endpoints of the Autolab REST API.</p>
+<p>The client's access token should be included as a parameter to all endpoints. For details on obtaining access tokens, please see the <a href="/api-overview/">API Overview</a></p>
 <h2 id="routing">Routing</h2>
 <p>For version 1 of the API, all endpoints are under the path <code>/api/v1/</code>. For example, to get user info, send a request to <code>https://&lt;host&gt;/api/v1/user</code>.</p>
 <h2 id="request-response-format">Request &amp; Response Format</h2>
@@ -854,8 +854,7 @@
 <li>If an error occurs, the response code will <em>not</em> be 200. The returned JSON will be an object with the key 'error'. Its value will be a string that explains the error.</li>
 </ul>
 <p><strong>Notes on return value types</strong></p>
-<p>All datetime formats are strings in the form of 'YYYY-MM-DDThh:mm:ss.sTZD'.<br>
-e.g. '2017-10-23T04:17:41.000-04:00', which means 4:17:41 AM on October 23rd, 2017 US Eastern Time.</p>
+<p>All datetime formats are strings in the form of <code>YYYY-MM-DDThh:mm:ss.sTZD</code>, e.g. <code>2017-10-23T04:17:41.000-04:00</code>, which means 4:17:41 AM on October 23rd, 2017 US Eastern Time.</p>
 <p>JSON spec only has a 'number' type, but the spec below distinguishes between integers and floats for ease of use in certain languages.</p>
 <p>If a field does not exist, the value is generally null. Please be sure to check if a value is null before using it.</p>
 <h2 id="interface">Interface</h2>
@@ -914,8 +913,10 @@ e.g. '2017-10-23T04:17:41.000-04:00', which means 4:17:41 AM on October 23rd, 20
 <p><strong>Endpoint:</strong> <code>/courses</code></p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li>state<br>
-  [OPTIONAL] filter the courses by the state of the course. Should be one of 'disabled', 'completed', 'current', or 'upcoming'. If no state is provided, all courses are returned.</li>
+<li>
+<p>state</p>
+<p>[OPTIONAL] filter the courses by the state of the course. Should be one of 'disabled', 'completed', 'current', or 'upcoming'. If no state is provided, all courses are returned.</p>
+</li>
 </ul>
 <p><strong>Responses:</strong></p>
 <p>A list of courses. Each course contains:</p>
@@ -1203,7 +1204,7 @@ e.g. '2017-10-23T04:17:41.000-04:00', which means 4:17:41 AM on October 23rd, 20
 </table>
 <ul>
 <li>If writeup is a file:<br>
-The file is returned.</li>
+    The file is returned.</li>
 </ul>
 <hr />
 <h3 id="handout">handout</h3>
@@ -1219,9 +1220,11 @@ The file is returned.</li>
 <p><strong>Endpoint:</strong> <code>POST /courses/{course_name}/assessments/{assessment_name}/submit</code></p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li>submission[file]<br>
-  The file to submit<br>
-  <em>Note: the name should be the string 'submission[file]'</em></li>
+<li>
+<p>submission[file]</p>
+<p>The file to submit</p>
+<p><em>Note: the name should be the string 'submission[file]'</em></p>
+</li>
 </ul>
 <p><strong>Success Response:</strong></p>
 <table>
@@ -1295,8 +1298,10 @@ The file is returned.</li>
 <p><strong>Endpoint:</strong> <code>/courses/{course_name}/assessments/{assessment_name}/submissions/{submission_version}/feedback</code></p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li>problem<br>
-  The name of the problem that the feedback is given to.</li>
+<li>
+<p>problem</p>
+<p>The name of the problem that the feedback is given to.</p>
+</li>
 </ul>
 <p><strong>Response:</strong></p>
 <table>

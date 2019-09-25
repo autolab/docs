@@ -611,13 +611,13 @@
 <p>Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS) API. Tango currently has support for running jobs in <a href="https://www.docker.com/">Docker</a> containers (<strong>recommended</strong>), <a href="http://opencirrus.intel-research.net/tashi/">Tashi VMs</a>, or <a href="https://aws.amazon.com/ec2">Amazon EC2</a>.</p>
 <p>For more information about the different Tango components, go to the following pages:</p>
 <ul>
-<li><a href="/tango-rest">REST API docs</a></li>
-<li><a href="/tango-vmms">VMMS API docs</a></li>
+<li><a href="/tango-rest/">REST API docs</a></li>
+<li><a href="/tango-vmms/">VMMS API docs</a></li>
 <li><a href="http://autolab.github.io/2015/04/making-backend-scalable/">Tango Architecture Overview</a></li>
-<li><a href="/tango-deploy">Deploying Tango</a></li>
+<li><a href="/tango-deploy/">Deploying Tango</a></li>
 </ul>
 <h3 id="installation">Installation</h3>
-<p>This guide shows how to setup Tango in a <strong>development environment</strong>. Use the <a href="/tango-deploy">deploying Tango</a> guide for installing in a <strong>production environment</strong>. </p>
+<p>This guide shows how to setup Tango in a <strong>development environment</strong>. Use the <a href="/tango-deploy/">deploying Tango</a> guide for installing in a <strong>production environment</strong>.</p>
 <ol>
 <li>
 <p>Obtain the source code.</p>
@@ -630,7 +630,7 @@
 <p>Install Redis following <a href="http://redis.io/topics/quickstart">this guide</a>. By default, Tango uses Redis as a stateless job queue. Learn more <a href="http://autolab.github.io/2015/04/making-backend-scalable/">here</a>.</p>
 </li>
 <li>
-<p>Create a <code>config.py</code> file from the given template. </p>
+<p>Create a <code>config.py</code> file from the given template.</p>
 <div class="codehilite"><pre><span></span>cp config.template.py config.py
 </pre></div>
 
@@ -643,10 +643,10 @@
 
 
 <p>By default the <code>COURSELABS</code> option in <code>config.py</code> points to the <code>courselabs</code> directory in the Tango directory.
-   Change this to specify another path if you wish.</p>
+Change this to specify another path if you wish.</p>
 </li>
 <li>
-<p>Set up a VMMS for Tango to use. </p>
+<p>Set up a VMMS for Tango to use.</p>
 <ul>
 <li><a href="/tango-vmms/#docker-vmms-setup">Docker</a> (<strong>recommended</strong>)</li>
 <li><a href="/tango-vmms/#amazon-ec2-vmms-setup">Amazon EC2</a></li>
@@ -674,11 +674,10 @@ $ mkdir volumes
 <li>
 <p>Run the following command to start the server (producer). If no port is given, the server will run on the port specified in <code>config.py</code> (default: 3000):</p>
 <div class="codehilite"><pre><span></span>python restful-tango/server.py &lt;port&gt;
-</pre></div>
+Open another terminal window and start the job manager <span class="o">(</span>consumer<span class="o">)</span>:
 
-
-<p>Open another terminal window and start the job manager (consumer):</p>
-<div class="codehilite"><pre><span></span>python jobManager.py
+:::bash
+python jobManager.py
 </pre></div>
 
 
@@ -693,7 +692,7 @@ $ mkdir volumes
 
 </li>
 <li>
-<p>You can test the Tango setup using the <a href="/tango-cli">command line client</a>.</p>
+<p>You can test the Tango setup using the <a href="/tango-cli/">command line client</a>.</p>
 </li>
 <li>
 <p>If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:</p>
@@ -715,7 +714,7 @@ $ mkdir volumes
 
 </li>
 <li>
-<p>To deploy Tango in a standalone production environment, use this <a href="/tango-deploy">guide</a></p>
+<p>To deploy Tango in a standalone production environment, use this <a href="/tango-deploy/">guide</a></p>
 </li>
 </ol>
                 

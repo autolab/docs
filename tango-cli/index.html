@@ -624,11 +624,11 @@
                 
                 
                 <h1 id="tango-command-line-client">Tango Command Line Client</h1>
-<p>This is a guide to use the command-line client (<code>clients/tango-cli.py</code>) to test and collect other valuable information from Tango. Please <a href="/tango/#installation">setup Tango</a> before moving forward. This guide assumes an instance of Tango is already up and running.</p>
+<p>This is a guide to use the command-line client (<code>clients/tango-cli.py</code>) to test and collect other valuable information from Tango. Please <a href="tango/#installation">setup Tango</a> before moving forward. This guide assumes an instance of Tango is already up and running.</p>
 <h2 id="running-a-sample-job">Running a Sample Job</h2>
 <p>The CLI supports two ways to run a sample job, <a href="/tango-cli/#indivdual-steps">individual steps</a> or in a <a href="/tango-cli/#single-command">single all-in-one command</a>. The first option is better for debugging each individual API call, whereas the second option is best for quickly running a job. Other Tango CLI commands are also discussed <a href="/tango-cli/#miscallaneous-commands">below</a>.</p>
-<p>The Tango directory contains various different jobs in the <code>clients/</code> directory; <code>clients/README.md</code> discusses the function of each job.  </p>
-<p>Find out more information about the Tango REST API <a href="/tango-rest">here</a>.</p>
+<p>The Tango directory contains various different jobs in the <code>clients/</code> directory; <code>clients/README.md</code> discusses the function of each job.</p>
+<p>Find out more information about the Tango REST API <a href="/tango-rest/">here</a>.</p>
 <h3 id="single-command">Single Command</h3>
 <p>The <code>--runJob</code> command simply runs a job from a directory of files by uploading all the files in the directory. You can use this to submit an autograding job by running</p>
 <div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P <span class="m">3000</span> -k <span class="nb">test</span> -l assessment1 --runJob clients/job1/ --image autograding_image
@@ -639,7 +639,7 @@
 <h3 id="individual-steps">Individual Steps</h3>
 <ol>
 <li>
-<p>Open a <code>courselab</code> on Tango. This will create a directory for tango to store the files for the job. </p>
+<p>Open a <code>courselab</code> on Tango. This will create a directory for tango to store the files for the job.</p>
 <div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; --open
 </pre></div>
 
@@ -678,15 +678,13 @@ $ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt
 <div class="codehilite"><pre><span></span>Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: Received job &lt;jobname&gt;:&lt;jobid&gt;
 Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: Success: Autodriver returned normally
 Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: Here is the output from the autograder:
----
-...
 </pre></div>
 
 
 </li>
 </ol>
 <h2 id="miscellaneous-commands">Miscellaneous Commands</h2>
-<p>The CLI also implements a list of commands to invoke the <a href="/tango-rest">Tango REST API</a>, including <code>--info</code>, <code>--prealloc</code>, and <code>--jobs</code>. For a full list of commands, run:</p>
+<p>The CLI also implements a list of commands to invoke the <a href="/tango-rest/">Tango REST API</a>, including <code>--info</code>, <code>--prealloc</code>, and <code>--jobs</code>. For a full list of commands, run:</p>
 <div class="codehilite"><pre><span></span>python clients/tango-cli.py --help
 </pre></div>
 
