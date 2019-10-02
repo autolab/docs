@@ -10,11 +10,15 @@ _Users_ are either _instructors_, _course assistants_, or _students_. Instructor
 
 The _roster_ holds the list of users. You can add and remove users one at a time, or in bulk by uploading a CSV file in the general Autolab format:
 
-    Semester,email,last_name,first_name,school,major,year,grading_policy,courseNumber,courseLecture,section
+```
+Semester,email,last_name,first_name,school,major,year,grading_policy,courseNumber,courseLecture,section
+```
 
 or in the format that is exported by the CMU S3 service:
 
-    "Semester","Course","Section","Lecture","Mini","Last Name","First Name","MI","AndrewID","Email","College","Department",...
+```
+"Semester","Course","Section","Lecture","Mini","Last Name","First Name","MI","AndrewID","Email","College","Department",...
+```
 
 !!! warning "Attention CMU Instructors:"
     S3 lists each student twice: once in a lecture roster, which lists the lecture number (e.g., 1, 2,...) in the section field, and once in a section roster, which lists the section letter (e.g., A, B,...) in the section field. Be careful not to import the lecture roster. Instead, export and upload each section individually. Or you can export everything from S3 with a single action, edit out the roster entries for the lecture(s), and then upload a single file to Autolab with all of the sections.
@@ -31,7 +35,7 @@ Once a student is added to the roster for a course, then that course becomes vis
 
 ## Labs (Assessments)
 
-A _lab_ (or _assessment_) is broadly defined as a submission set; it is anything that your students make submissions (handins) for. This could be a programming assignment, a typed homework, or even an in-class exam. You can create labs from scratch, or reuse them from previous semesters. See the companion [Guide For Lab Authors](/lab) for info on writing and installing labs.
+A _lab_ (or _assessment_) is broadly defined as a submission set; it is anything that your students make submissions (handins) for. This could be a programming assignment, a typed homework, or even an in-class exam. You can create labs from scratch, or reuse them from previous semesters. See the companion [Guide For Lab Authors](/docs/lab/) for info on writing and installing labs.
 
 ## Assessment Categories
 
@@ -39,7 +43,7 @@ You can tag each assessment with an arbitrary user-defined _category_, e.g., "La
 
 ## Autograders and Scoreboards
 
-Labs can be _autograded_ or not, at your disrcretion. When a student submits to an autograded lab, Autolab runs an instructor-supplied _autograder_ program that assigns scores to one or more problems associated with the lab. Autograded labs can have an optional _scoreboard_ that shows (anonymized) results in real-time. See the companion [Guide For Lab Authors](/lab) for details on writing autograded labs with scoreboards.
+Labs can be _autograded_ or not, at your disrcretion. When a student submits to an autograded lab, Autolab runs an instructor-supplied _autograder_ program that assigns scores to one or more problems associated with the lab. Autograded labs can have an optional _scoreboard_ that shows (anonymized) results in real-time. See the companion [Guide For Lab Authors](/docs/lab/) for details on writing autograded labs with scoreboards.
 
 ## Important Dates
 
@@ -56,10 +60,7 @@ extends the due dates and end dates for that student.
 
 ## Grace Days
 
-Autolab provides support for a late handin policy based on _grace days_. Each
-student has a semester-long budget of grace days that are automatically applied if they handin after the due date.
-Each late day consumes one of the budgeted grace days. The Autolab system keeps track of the number of grace days that have been used by each student to date. If students run out of grace days and handin late, then there
-is a fixed late penalty (possibly zero) that can be set by the instructor.
+Autolab provides support for a late handin policy based on _grace days_. Each student has a semester-long budget of grace days that are automatically applied if they handin after the due date. Each late day consumes one of the budgeted grace days. The Autolab system keeps track of the number of grace days that have been used by each student to date. If students run out of grace days and handin late, then there is a fixed late penalty (possibly zero) that can be set by the instructor.
 
 ## Problems
 
@@ -90,8 +91,8 @@ Submissions can be classified as one of three types: "Normal", "No Grade" or "Ex
 Autolab computes raw scores for a lab with a Ruby function called `raw_score`. The default is the sum of the individual problem scores. But you can change this by providing your own `raw_score` function in `<labname>.rb` file. For example, to override the raw_score calculation for a lab called `malloclab`, you might add the following `raw_score` function to `malloclab/malloclab.rb`:
 
 ```ruby
-  # In malloclab/malloclab.rb file
-  def raw_score(score)
+# In malloclab/malloclab.rb file
+def raw_score(score)
     perfindex = score["Autograded Score"].to_f()
     heap = score["Heap Checker"].to_f()
     style = score["Style"].to_f()
@@ -100,13 +101,13 @@ Autolab computes raw scores for a lab with a Ruby function called `raw_score`. T
 
     # perfindex below 50 gets autograded score of 0.
     if perfindex < 50.0 then
-      perfpoints = 0
+        perfpoints = 0
     else
-      perfpoints = perfindex
+        perfpoints = perfindex
     end
 
     return perfpoints + heap + style + deduct
-  end
+end
 ```
 
 This particular lab has four problems called "Autograded Score", "Heap Checker", "Style", and "CorrectnessDeductions". An "Autograded Score" less than 50 is set to zero when the raw score is calculated.

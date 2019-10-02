@@ -2,11 +2,11 @@
 
 Autolab is a course management platform that enables instructors to offer autograded programming assignments to their students. The two key ideas in Autolab are _autograding_ that is, programs evaluating other programs, and _scoreboards_ that display the latest autograded scores for each student. Autolab also provides gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
 
-For information on how to use Autolab for your course see the [Guide for Instructors](/instructors). To learn how to write an autograded lab see the [Guide for Lab Authors](/lab).
+For information on how to use Autolab for your course see the [Guide for Instructors](/docs/instructors). To learn how to write an autograded lab see the [Guide for Lab Authors](/docs/lab).
 
 ## Getting Started
 
-Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
+Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/docs/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
 
 Currently, we have support for installing Autolab on [AWS](#aws), [Ubuntu 14.04+](#ubuntu-1404), and [Mac OSX](#mac-osx-1011).
 
@@ -119,9 +119,9 @@ Follow the step-by-step instructions below:
         :::bash
         Email: "admin@foo.bar".
 
-15. Install [Tango](/tango), the backend autograding service.
+15. Install [Tango](/docs/tango), the backend autograding service.
 
-16. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/instructors) and [Guide for Lab Authors](/lab) pages for more info.
+16. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/docs/instructors) and [Guide for Lab Authors](/docs/lab) pages for more info.
 
 ### Ubuntu 14.04+
 
