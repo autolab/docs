@@ -312,6 +312,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mac-osx-1011" class="md-nav__link">
+    Mac OSX 10.11+
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ubuntu-1404" class="md-nav__link">
     Ubuntu 14.04+
   </a>
@@ -319,8 +326,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mac-osx-1011" class="md-nav__link">
-    Mac OSX 10.11+
+  <a href="#ubuntu-1804-rails-5-upgrade" class="md-nav__link">
+    Ubuntu 18.04+ (rails-5-upgrade)
   </a>
   
 </li>
@@ -634,6 +641,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mac-osx-1011" class="md-nav__link">
+    Mac OSX 10.11+
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ubuntu-1404" class="md-nav__link">
     Ubuntu 14.04+
   </a>
@@ -641,8 +655,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mac-osx-1011" class="md-nav__link">
-    Mac OSX 10.11+
+  <a href="#ubuntu-1804-rails-5-upgrade" class="md-nav__link">
+    Ubuntu 18.04+ (rails-5-upgrade)
   </a>
   
 </li>
@@ -739,17 +753,6 @@
 </li>
 </ol>
 <p>Once your EC2 Instance is up, you can ssh into it using <code>ssh -i &lt;aws_key&gt;.pem ubuntu@&lt;Public DNS&gt;</code> and follow the instructions in readme.txt</p>
-<h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
-<p>There are two ways to install Autolab on Ubuntu.</p>
-<p><strong>Option 1</strong></p>
-<p>The recommended way is to use the <a href="/docs/one-click">OneClick option</a>. This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.</p>
-<p><strong>Option 2</strong></p>
-<p>Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, run the following script:</p>
-<div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
-</pre></div>
-
-
-<p>When the script runs, you will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a>. Once finished, <a href="/docs/tango">install Tango</a>.</p>
 <h3 id="mac-osx-1011">Mac OSX 10.11+</h3>
 <p>Follow the step-by-step instructions below:</p>
 <ol>
@@ -872,6 +875,206 @@ bundle <span class="nb">exec</span> rake db:migrate
 </li>
 <li>
 <p>Now you are all set to start using Autolab! Visit the <a href="/docs/instructors">Guide for Instructors</a> and <a href="/docs/lab">Guide for Lab Authors</a> pages for more info.</p>
+</li>
+</ol>
+<h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
+<p>There are two ways to install Autolab on Ubuntu.</p>
+<p><strong>Option 1</strong></p>
+<p>The recommended way is to use the <a href="/one-click">OneClick option</a>. This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.</p>
+<p><strong>Option 2</strong></p>
+<p>Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, run the following script:</p>
+<div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
+</pre></div>
+
+
+<p>When the script runs, you will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a>. Once finished, <a href="/tango">install Tango</a>.</p>
+<h3 id="ubuntu-1804-rails-5-upgrade">Ubuntu 18.04+ (rails-5-upgrade)</h3>
+<p>This set of instruction is meant to install the currently in-development version of AutoLab located at <a href="https://github.com/autolab/Autolab/tree/rails-5-upgrade">rails-5-upgrade</a> on 18.04 LTS.</p>
+<ol>
+<li>
+<p>Upgrade system packages and installing prerequisites</p>
+<div class="codehilite"><pre><span></span>sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline6-dev libncurses5-dev libgdbm5 libgdbm-dev libmysqlclient-dev libjansson-dev ctags
+</pre></div>
+
+
+</li>
+<li>
+<p>Cloning Autolab repo from Github to ~/Autolab</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/
+git clone https://github.com/autolab/Autolab.git
+<span class="nb">cd</span> Autolab
+git checkout rails-5-upgrade
+git pull
+</pre></div>
+
+
+</li>
+<li>
+<p>Setting up rbenv and ruby-build plugin</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bashrc
+<span class="nb">source</span> ~/.bashrc
+
+~/.rbenv/bin/rbenv init
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</pre></div>
+
+
+</li>
+<li>
+<p>Installing Ruby (Based on ruby version)</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
+rbenv install  <span class="sb">`</span>cat .ruby-version<span class="sb">`</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Installing SQLite</p>
+<div class="codehilite"><pre><span></span>sudo apt-get install sqlite3 libsqlite3-dev
+</pre></div>
+
+
+</li>
+<li>
+<p>Installing MySQL. (If you would like to only use SQLite, which is for testing &amp; development only, you can skip this step.)
+Following instructions from <a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04">How to Install MySQL on Ubuntu</a>. </p>
+<div class="codehilite"><pre><span></span>sudo apt install mysql-server
+sudo mysql_secure_installation
+
+&gt; There will be a few questions asked during the MySQL setup.
+
+* Validate Password Plugin? N
+* Remove Annonymous Users? Y
+* Disallow Root Login Remotely? Y
+* Remove Test Database and Access to it? Y
+* Reload Privilege Tables Now? Y
+</pre></div>
+
+
+</li>
+<li>
+<p>(If you are using MySQL) Because a password rather than auth_socket is needed, we need to change the plugin that is used to access the root</p>
+<div class="codehilite"><pre><span></span>sudo mysql
+mysql&gt; ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span>
+mysql&gt; FLUSH PRIVILEGES<span class="p">;</span>
+mysql&gt; exit<span class="p">;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Installing Rails</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
+gem install bundler
+rbenv rehash
+bundle install
+</pre></div>
+
+
+</li>
+<li>
+<p>Initializing Autolab Configs</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
+cp config/database.yml.template config/database.yml
+cp config/school.yml.template config/school.yml
+cp config/initializers/devise.rb.template config/initializers/devise.rb
+sed -i <span class="s2">&quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot;</span> config/initializers/devise.rb
+cp config/autogradeConfig.rb.template config/autogradeConfig.rb
+</pre></div>
+
+
+</li>
+<li>
+<p>(Using MySQL) Editing Database YML. 
+Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is user1, and your password is 123456, then your yml would be</p>
+<div class="codehilite"><pre><span></span><span class="n">development</span><span class="o">:</span>
+<span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
+<span class="n">database</span><span class="o">:</span> <span class="n">user1_autolab_development</span>
+<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+<span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
+<span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
+<span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
+<span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+
+<span class="n">test</span><span class="o">:</span>
+<span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
+<span class="n">database</span><span class="o">:</span> <span class="n">user1_autolab_test</span>
+<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+<span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
+<span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
+<span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
+<span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>(Using SQLite) Editing Database YML.
+Comment out the configurations meant for MySQL in config/database.yml, and insert the following</p>
+<div class="codehilite"><pre><span></span><span class="n">development</span><span class="o">:</span>
+<span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
+<span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_development</span>
+<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+<span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
+
+<span class="n">test</span><span class="o">:</span>
+<span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
+<span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_test</span>
+<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+<span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Granting permissions on the databases. Setting global sql mode is important to relax the rules of mysql when it comes to group by mode</p>
+<div class="codehilite"><pre><span></span>mysql --user<span class="o">=</span>&lt;username&gt; -p
+<span class="o">(</span>enter your password<span class="o">)</span>
+mysql&gt; grant all privileges on &lt;username&gt;_autolab_development.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
+mysql&gt; grant all privileges on &lt;username&gt;_autolab_test.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
+mysql&gt; SET GLOBAL <span class="nv">sql_mode</span><span class="o">=(</span>SELECT REPLACE<span class="o">(</span>@@sql_mode,<span class="s1">&#39;ONLY_FULL_GROUP_BY&#39;</span>,<span class="s1">&#39;&#39;</span><span class="o">))</span><span class="p">;</span> 
+mysql&gt; <span class="nb">exit</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Initializing Autolab Database</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
+bundle <span class="nb">exec</span> rake db:create
+bundle <span class="nb">exec</span> rake db:reset
+bundle <span class="nb">exec</span> rake db:migrate
+</pre></div>
+
+
+</li>
+<li>
+<p>Populating sample course &amp; students</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
+bundle <span class="nb">exec</span> rake autolab:populate
+</pre></div>
+
+
+</li>
+<li>
+<p>Run Autolab!</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
+bundle <span class="nb">exec</span> rails s -p <span class="m">3000</span> --binding<span class="o">=</span><span class="m">0</span>.0.0.0
+</pre></div>
+
+
+</li>
+<li>
+<p>Visit localhost:3000 on your browser to view your local deployment of Autolab, and login with <code>Developer Login</code></p>
+<div class="codehilite"><pre><span></span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;admin@foo.bar&quot;</span><span class="w"></span>
+</pre></div>
+
+
 </li>
 </ol>
 <h2 id="faq">FAQ</h2>
