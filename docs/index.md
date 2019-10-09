@@ -146,7 +146,7 @@ When the script runs, you will be prompted for the `sudo` password and other con
 This set of instruction is meant to install the currently in-development version of AutoLab located at [rails-5-upgrade](https://github.com/autolab/Autolab/tree/rails-5-upgrade) on 18.04 LTS.
 
 1. Upgrade system packages and installing prerequisites
-        
+
         :::bash
         sudo apt-get update
         sudo apt-get upgrade
@@ -162,7 +162,7 @@ This set of instruction is meant to install the currently in-development version
         git pull
 
 3. Setting up rbenv and ruby-build plugin
-        
+
         :::bash
         cd ~/
         git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -180,15 +180,15 @@ This set of instruction is meant to install the currently in-development version
         rbenv install  `cat .ruby-version`
 
 5. Installing SQLite
-        
+
         :::bash
         sudo apt-get install sqlite3 libsqlite3-dev
 
 6. Installing MySQL. (If you would like to only use SQLite, which is for testing & development only, you can skip this step.)
-Following instructions from [How to Install MySQL on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04). 
+Following instructions from [How to Install MySQL on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
 
-        :::bash 
+        :::bash
         sudo apt install mysql-server
         sudo mysql_secure_installation
 
@@ -226,7 +226,7 @@ Following instructions from [How to Install MySQL on Ubuntu](https://www.digital
         sed -i "s/<YOUR-SECRET-KEY>/`bundle exec rake secret`/g" config/initializers/devise.rb
         cp config/autogradeConfig.rb.template config/autogradeConfig.rb
 
-10. (Using MySQL) Editing Database YML. 
+10. (Using MySQL) Editing Database YML.
 Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is user1, and your password is 123456, then your yml would be
 
         :::yml
@@ -271,7 +271,7 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
         (enter your password)
         mysql> grant all privileges on <username>_autolab_development.* to '<username>'@localhost;
         mysql> grant all privileges on <username>_autolab_test.* to '<username>'@localhost;
-        mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY','')); 
+        mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
         mysql> exit
 
 12. Initializing Autolab Database
@@ -297,6 +297,36 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
 15. Visit localhost:3000 on your browser to view your local deployment of Autolab, and login with `Developer Login`
 
         Email: "admin@foo.bar"
+
+
+### Docker (rails-5-docker-dev)
+This sets up Autolab, Tango, and Redis locally with Docker Compose.
+
+
+1. First ensure that Docker is installed
+
+        :::bash
+        docker --version
+
+2. Cloning Autolab repo from Github to ~/Autolab, checkout to
+   rails-5-docker-dev branch
+
+        :::bash
+        cd ~/
+        git clone https://github.com/autolab/Autolab.git
+        cd Autolab
+        git checkout rails-5-docker-dev
+        git pull
+
+3. Start Docker Compose
+
+        ::bash
+        docker-compose up -d # detached mode
+
+4. View your running containers
+
+        ::bash
+        docker ps
 
 
 ## FAQ
