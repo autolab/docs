@@ -6,6 +6,12 @@ Hosted [here](http://autolab.github.io/docs) on GitHub pages. The built HTML fil
 
 Uses the latest version (v1.0.4 as of writing) of the [Mkdocs](http://www.mkdocs.org/) documentation generator.
 
+To run and preview this locally, run:
+
+```bash
+mkdocs serve
+```
+
 Once your updated documentation is in `master`, run:
 
 ```bash
