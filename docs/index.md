@@ -299,8 +299,8 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
         Email: "admin@foo.bar"
 
 
-### Docker (rails-5-docker-dev)
-This sets up Autolab, Tango, and Redis locally with Docker Compose.
+### Docker (Development) (rails-5-docker-dev)
+This sets up a development setup of Autolab, Tango, and Redis locally with Docker Compose.
 
 
 1. First ensure that Docker is installed
