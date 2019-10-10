@@ -95,7 +95,7 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
 
         :::ruby
         # Hostname for Tango RESTful API
-        RESTFUL_HOST = "foo.bar.edu"
+        RESTFUL_HOST = "foo.bar.edu" #(if you are running Tango locally, then it is just "localhost")
 
         # Port for Tango RESTful API
         RESTFUL_PORT = "3000"

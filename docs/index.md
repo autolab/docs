@@ -298,6 +298,12 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
 
         Email: "admin@foo.bar"
 
+16. Install [Tango](/docs/tango), the backend autograding service.
+
+17. If you would like to deploy the server, you can try out [Phusion Passenger](https://www.phusionpassenger.com/library/walkthroughs/start/ruby.html)
+
+18. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/docs/instructors) and [Guide for Lab Authors](/docs/lab) pages for more info.
+
 
 ### Docker (Development) (rails-5-docker-dev)
 This sets up a development setup of Autolab, Tango, and Redis locally with Docker Compose.
