@@ -10,6 +10,8 @@ Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango
 
 Currently, we have support for installing Autolab on [AWS](#aws), [Ubuntu 14.04+](#ubuntu-1404), and [Mac OSX](#mac-osx-1011).
 
+If you would like to check out Autolab prior to installation, go over to our [Demo Site](http://www.autolab.ml)! Login through `Developer Login` with the email: `admin@foo.bar`. The website will refresh itself on a schedule, and it is publicly accessible, so please only use it for your exploration.
+
 ### AWS
 
 If you want to try Autolab or Tango without any installation, we have a pre-built AMI you can deploy on AWS' free tier. To deploy it, follow the official [EC2 Launch Instructions](https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/). Make sure that you
