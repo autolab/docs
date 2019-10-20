@@ -973,9 +973,9 @@ sudo mysql_secure_installation
 
 </li>
 <li>
-<p>(If you are using MySQL) Because a password rather than auth_socket is needed, we need to change the plugin that is used to access the root</p>
+<p>(If you are using MySQL) Create a new user with access to <code>autolab_test</code> and <code>autolab_development</code> databases. Because a password rather than auth_socket is needed, we need to ensure that user uses <code>mysql_native_password</code></p>
 <div class="codehilite"><pre><span></span>sudo mysql
-mysql&gt; ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span>
+mysql&gt; CREATE USER <span class="s1">&#39;user1&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span>
 mysql&gt; FLUSH PRIVILEGES<span class="p">;</span>
 mysql&gt; exit<span class="p">;</span>
 </pre></div>
@@ -1006,10 +1006,10 @@ cp config/autogradeConfig.rb.template config/autogradeConfig.rb
 </li>
 <li>
 <p>(Using MySQL) Editing Database YML.
-Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is user1, and your password is 123456, then your yml would be</p>
+Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is <code>user1</code>, and your password is <code>123456</code>, then your yml would be</p>
 <div class="codehilite"><pre><span></span><span class="n">development</span><span class="o">:</span>
 <span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
-<span class="n">database</span><span class="o">:</span> <span class="n">user1_autolab_development</span>
+<span class="n">database</span><span class="o">:</span> <span class="n">autolab_development</span>
 <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
 <span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
 <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
@@ -1018,7 +1018,7 @@ Change the <username> and <password> fields in config/database.yml to the userna
 
 <span class="n">test</span><span class="o">:</span>
 <span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
-<span class="n">database</span><span class="o">:</span> <span class="n">user1_autolab_test</span>
+<span class="n">database</span><span class="o">:</span> <span class="n">autolab_test</span>
 <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
 <span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
 <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
@@ -1048,10 +1048,9 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
 </li>
 <li>
 <p>Granting permissions on the databases. Setting global sql mode is important to relax the rules of mysql when it comes to group by mode</p>
-<div class="codehilite"><pre><span></span>mysql --user<span class="o">=</span>&lt;username&gt; -p
-<span class="o">(</span>enter your password<span class="o">)</span>
-mysql&gt; grant all privileges on &lt;username&gt;_autolab_development.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
-mysql&gt; grant all privileges on &lt;username&gt;_autolab_test.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="o">(</span>access mysql using your root first to grant permissions<span class="o">)</span>
+mysql&gt; grant all privileges on autolab_development.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
+mysql&gt; grant all privileges on autolab_test.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
 mysql&gt; SET GLOBAL <span class="nv">sql_mode</span><span class="o">=(</span>SELECT REPLACE<span class="o">(</span>@@sql_mode,<span class="s1">&#39;ONLY_FULL_GROUP_BY&#39;</span>,<span class="s1">&#39;&#39;</span><span class="o">))</span><span class="p">;</span>
 mysql&gt; <span class="nb">exit</span>
 </pre></div>
