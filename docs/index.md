@@ -202,11 +202,13 @@ Following instructions from [How to Install MySQL on Ubuntu](https://www.digital
         * Remove Test Database and Access to it? Y
         * Reload Privilege Tables Now? Y
 
-7. (If you are using MySQL) Because a password rather than auth_socket is needed, we need to change the plugin that is used to access the root
+7. (If you are using MySQL) Create a new user with access to `autolab_test` and `autolab_development` databases. Because a password rather than auth_socket is needed, we need to ensure that user uses `mysql_native_password`
 
         :::bash
         sudo mysql
-        mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
+        mysql> CREATE USER 'user1'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
+        mysql> GRANT ALL PRIVILEGES ON autolab_test.* TO 'user1'@'localhost';
+        mysql> GRANT ALL PRIVILEGES ON autolab_development.* TO 'user1'@'localhost';
         mysql> FLUSH PRIVILEGES;
         mysql> exit;
 
@@ -229,12 +231,12 @@ Following instructions from [How to Install MySQL on Ubuntu](https://www.digital
         cp config/autogradeConfig.rb.template config/autogradeConfig.rb
 
 10. (Using MySQL) Editing Database YML.
-Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is user1, and your password is 123456, then your yml would be
+Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is `user1`, and your password is `123456`, then your yml would be
 
         :::yml
         development:
         adapter: mysql2
-        database: user1_autolab_development
+        database: autolab_development
         pool: 5
         username: user1
         password: '123456'
@@ -243,7 +245,7 @@ Change the <username> and <password> fields in config/database.yml to the userna
 
         test:
         adapter: mysql2
-        database: user1_autolab_test
+        database: autolab_test
         pool: 5
         username: user1
         password: '123456'
