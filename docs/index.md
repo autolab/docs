@@ -207,8 +207,6 @@ Following instructions from [How to Install MySQL on Ubuntu](https://www.digital
         :::bash
         sudo mysql
         mysql> CREATE USER 'user1'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
-        mysql> GRANT ALL PRIVILEGES ON autolab_test.* TO 'user1'@'localhost';
-        mysql> GRANT ALL PRIVILEGES ON autolab_development.* TO 'user1'@'localhost';
         mysql> FLUSH PRIVILEGES;
         mysql> exit;
 
@@ -271,10 +269,9 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
 12. Granting permissions on the databases. Setting global sql mode is important to relax the rules of mysql when it comes to group by mode
 
         :::bash
-        mysql --user=<username> -p
-        (enter your password)
-        mysql> grant all privileges on <username>_autolab_development.* to '<username>'@localhost;
-        mysql> grant all privileges on <username>_autolab_test.* to '<username>'@localhost;
+        (access mysql using your root first to grant permissions)
+        mysql> grant all privileges on autolab_development.* to '<username>'@localhost;
+        mysql> grant all privileges on autolab_test.* to '<username>'@localhost;
         mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
         mysql> exit
 
