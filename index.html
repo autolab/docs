@@ -297,6 +297,47 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demonstration-site" class="md-nav__link">
+    Demonstration Site
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-course" class="md-nav__link">
+    Create a new course
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-autograded-lab-assessment" class="md-nav__link">
+    Create an Autograded Lab Assessment.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-pdf-homework-assessment" class="md-nav__link">
+    Create a PDF homework assessment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grading-submissions" class="md-nav__link">
+    Grading submissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
     Getting Started
   </a>
@@ -633,6 +674,47 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demonstration-site" class="md-nav__link">
+    Demonstration Site
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-course" class="md-nav__link">
+    Create a new course
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-autograded-lab-assessment" class="md-nav__link">
+    Create an Autograded Lab Assessment.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-pdf-homework-assessment" class="md-nav__link">
+    Create a PDF homework assessment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grading-submissions" class="md-nav__link">
+    Grading submissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
     Getting Started
   </a>
@@ -749,11 +831,54 @@
                 
                 <h1 id="welcome-to-the-autolab-docs">Welcome to the Autolab Docs</h1>
 <p>Autolab is a course management platform that enables instructors to offer autograded programming assignments to their students. The two key ideas in Autolab are <em>autograding</em> that is, programs evaluating other programs, and <em>scoreboards</em> that display the latest autograded scores for each student. Autolab also provides gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.</p>
-<p>For information on how to use Autolab for your course see the <a href="/docs/instructors">Guide for Instructors</a>. To learn how to write an autograded lab see the <a href="/docs/lab">Guide for Lab Authors</a>.</p>
+<p>For information on how to use Autolab for your course see the <a href="/docs/instructors">Guide for Instructors</a>. To learn how to write an autograded lab see the <a href="/docs/lab">Guide for Lab Authors</a>. To get straight to an installation, go to <a href="#getting-started">Getting Started</a></p>
+<h2 id="demonstration-site">Demonstration Site</h2>
+<p>If you would like to check out Autolab prior to installation, go over to our <a href="http://autolab.ml" target="_blank">Demo Site</a>! Login through <code>Developer Login</code> with the email: <code>admin@foo.bar</code>. </p>
+<p>This is a demonstration website. It refreshes at 0,6,12,18 Hours (UTC) daily, and it is publicly accessible, so please only use it for your exploration. Do not use this site to store important information.</p>
+<p>Try the following in order:</p>
+<h3 id="create-a-new-course">Create a new course</h3>
+<p>Click on <code>Manage Autolab</code> (top-right navigation bar) &gt; <code>Create New Course</code>. Fill in the name and semester, and then create to see your course on the homepage.</p>
+<p>(NOTE: the email doesn't need to be real here)</p>
+<h3 id="create-an-autograded-lab-assessment">Create an Autograded Lab Assessment.</h3>
+<p>Go into the course you have just created, click on <code>Install Assessment</code>. You can install a simple autograded lab, called hello lab.
+<a href="https://github.com/autolab/Autolab/raw/rails-5-upgrade/examples/hello.tar">Download hello.tar</a> and install it using the <code>Import from Tarball</code> option. </p>
+<p>In the <code>hello</code> lab, students are asked to write a file called <code>hello.c</code>. The autograder checks that the submitted hello.c program compiles and runs with an exit status of zero. If so, the submission gets 100 points. Otherwise it gets 0 points. </p>
+<p><strong>Try submitting to the autograded hello lab</strong></p>
+<ol>
+<li>
+<p>Create and submit a <code>hello.c</code> file. </p>
+<div class="codehilite"><pre><span></span>#<span class="nv">hello</span>.<span class="nv">c</span>
+#<span class="k">include</span> <span class="o">&lt;</span><span class="nv">stdio</span>.<span class="nv">h</span><span class="o">&gt;</span>
+<span class="nv">int</span> <span class="nv">main</span><span class="ss">()</span>
+{
+        <span class="nv">printf</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Hello, World!</span><span class="s2">&quot;</span><span class="ss">)</span><span class="c1">;</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="c1">;</span>
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Refresh the submitted entries page to see the autograded score appear</p>
+</li>
+<li>Click on a sub score, in this case the <code>100.0</code> under the <code>Correctness</code> heading, to see the output from the autograder.</li>
+</ol>
+<p>For more information on <code>hello</code> lab, or how to create your own lab, go to <a href="/docs/lab">Guide for Lab Authors</a>! </p>
+<h3 id="create-a-pdf-homework-assessment">Create a PDF homework assessment</h3>
+<p>Autolab can also handle pdf submissions as well!</p>
+<p>Click on <code>Install Assessment</code>, then on <code>Assessment Builder</code>. Name your assessment, and give it a category and click <code>Create Assessment</code>!. </p>
+<p>Because it defaults to accepting <code>.c</code> files, we would like to change it to <code>*.pdf</code>. Click on <code>Edit Assessment</code> &gt; <code>Handin</code> and then change the <code>Handin filename</code> to <code>handin.pdf</code> instead of <code>handin.c</code> and save the changes</p>
+<p><strong>Try submitting to the pdf homework asssessment.</strong></p>
+<ol>
+<li>Submit a <code>.pdf</code> file. 
+<a href="https://www.vision.ee.ethz.ch/publications/papers/articles/eth_biwi_00546.pdf" target="_blank">Download Blank PDF</a></li>
+<li>Look at your submission using the magnifying glass icon</li>
+</ol>
+<h3 id="grading-submissions">Grading submissions</h3>
+<p>Click on <code>Grade Submissions</code>, and then the arrow button to open up student submissions. For details on the relevant features for an Instructor, go to <a href="/docs/instructor">Guide for Instructor</a></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) <a href="/docs/tango">Tango</a>, the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.</p>
 <p>Currently, we have support for installing Autolab on <a href="#aws">AWS</a>, <a href="#ubuntu-1404">Ubuntu 14.04+</a>, and <a href="#mac-osx-1011">Mac OSX</a>.</p>
-<p>If you would like to check out Autolab prior to installation, go over to our <a href="http://www.autolab.ml">Demo Site</a>! Login through <code>Developer Login</code> with the email: <code>admin@foo.bar</code>. The website will refresh itself on a schedule, and it is publicly accessible, so please only use it for your exploration.</p>
 <h3 id="aws">AWS</h3>
 <p>If you want to try Autolab or Tango without any installation, we have a pre-built AMI you can deploy on AWS' free tier. To deploy it, follow the official <a href="https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/">EC2 Launch Instructions</a>. Make sure that you</p>
 <ol>
