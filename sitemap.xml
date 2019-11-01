@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://autolab.github.io/docs/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/instructors/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/features/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/api-overview/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/api-interface/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/command-line-interface/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/api-managing-authorized-apps/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/tango/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/tango-cli/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/tango-rest/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/tango-vmms/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/tango-deploy/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://autolab.github.io/docs/one-click/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-10-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
