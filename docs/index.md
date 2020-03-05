@@ -59,19 +59,7 @@ Click on `Grade Submissions`, and then the arrow button to open up student submi
 
 Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/docs/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
 
-Currently, we have support for installing Autolab on [AWS](#aws), [Ubuntu 14.04+](#ubuntu-1404), and [Mac OSX](#mac-osx-1011).
-
-### AWS
-
-If you want to try Autolab or Tango without any installation, we have a pre-built AMI you can deploy on AWS' free tier. To deploy it, follow the official [EC2 Launch Instructions](https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/). Make sure that you
-
-1. Select 'Autolab vx.x.x' as the ami. You can find this in the community amis tab.
-
-2. Make sure you're using atleast a 30GB volume on the Add Storage tab.
-
-3. On the Configure Security Group tab, add rules to allow ports 80 and 8600.
-
-Once your EC2 Instance is up, you can ssh into it using `ssh -i <aws_key>.pem ubuntu@<Public DNS>` and follow the instructions in readme.txt
+Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1404), and [Mac OSX](#mac-osx-1011).
 
 ### Mac OSX 10.11+
 
@@ -174,27 +162,9 @@ Follow the step-by-step instructions below:
 
 16. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/docs/instructors) and [Guide for Lab Authors](/docs/lab) pages for more info.
 
-### Ubuntu 14.04+
+### Ubuntu 18.04+ 
 
-There are two ways to install Autolab on Ubuntu.
-
-**Option 1**
-
-The recommended way is to use the [OneClick option](/one-click). This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.
-
-**Option 2**
-
-Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, run the following script:
-
-```bash
-AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
-```
-
-When the script runs, you will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh). Once finished, [install Tango](/tango).
-
-### Ubuntu 18.04+ (rails-5-upgrade)
-
-This set of instruction is meant to install the currently in-development version of AutoLab located at [rails-5-upgrade](https://github.com/autolab/Autolab/tree/rails-5-upgrade) on 18.04 LTS.
+This set of instruction is meant to install of AutoLab v2.40 located on Ubuntu 18.04 LTS.
 
 1. Upgrade system packages and installing prerequisites
 
@@ -209,8 +179,6 @@ This set of instruction is meant to install the currently in-development version
         cd ~/
         git clone https://github.com/autolab/Autolab.git
         cd Autolab
-        git checkout rails-5-upgrade
-        git pull
 
 3. Setting up rbenv and ruby-build plugin
 
@@ -235,9 +203,8 @@ This set of instruction is meant to install the currently in-development version
         :::bash
         sudo apt-get install sqlite3 libsqlite3-dev
 
-6. Installing MySQL. (If you would like to only use SQLite, which is for testing & development only, you can skip this step.)
+6. Installing MySQL. (If you would just like to test Autolab, then you can skip this step by using SQLite)
 Following instructions from [How to Install MySQL on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
-
 
         :::bash
         sudo apt install mysql-server
