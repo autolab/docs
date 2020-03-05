@@ -59,7 +59,7 @@ Click on `Grade Submissions`, and then the arrow button to open up student submi
 
 Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/docs/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
 
-Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1404), and [Mac OSX](#mac-osx-1011).
+Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1804), and [Mac OSX](#mac-osx-1011).
 
 ### Mac OSX 10.11+
 
