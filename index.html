@@ -346,13 +346,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aws" class="md-nav__link">
-    AWS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#mac-osx-1011" class="md-nav__link">
     Mac OSX 10.11+
   </a>
@@ -360,15 +353,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ubuntu-1404" class="md-nav__link">
-    Ubuntu 14.04+
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu-1804-rails-5-upgrade" class="md-nav__link">
-    Ubuntu 18.04+ (rails-5-upgrade)
+  <a href="#ubuntu-1804" class="md-nav__link">
+    Ubuntu 18.04+
   </a>
   
 </li>
@@ -723,13 +709,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aws" class="md-nav__link">
-    AWS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#mac-osx-1011" class="md-nav__link">
     Mac OSX 10.11+
   </a>
@@ -737,15 +716,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ubuntu-1404" class="md-nav__link">
-    Ubuntu 14.04+
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu-1804-rails-5-upgrade" class="md-nav__link">
-    Ubuntu 18.04+ (rails-5-upgrade)
+  <a href="#ubuntu-1804" class="md-nav__link">
+    Ubuntu 18.04+
   </a>
   
 </li>
@@ -878,21 +850,7 @@
 <p>Click on <code>Grade Submissions</code>, and then the arrow button to open up student submissions. For details on the relevant features for an Instructor, go to <a href="/docs/instructor">Guide for Instructor</a></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) <a href="/docs/tango">Tango</a>, the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.</p>
-<p>Currently, we have support for installing Autolab on <a href="#aws">AWS</a>, <a href="#ubuntu-1404">Ubuntu 14.04+</a>, and <a href="#mac-osx-1011">Mac OSX</a>.</p>
-<h3 id="aws">AWS</h3>
-<p>If you want to try Autolab or Tango without any installation, we have a pre-built AMI you can deploy on AWS' free tier. To deploy it, follow the official <a href="https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/">EC2 Launch Instructions</a>. Make sure that you</p>
-<ol>
-<li>
-<p>Select 'Autolab vx.x.x' as the ami. You can find this in the community amis tab.</p>
-</li>
-<li>
-<p>Make sure you're using atleast a 30GB volume on the Add Storage tab.</p>
-</li>
-<li>
-<p>On the Configure Security Group tab, add rules to allow ports 80 and 8600.</p>
-</li>
-</ol>
-<p>Once your EC2 Instance is up, you can ssh into it using <code>ssh -i &lt;aws_key&gt;.pem ubuntu@&lt;Public DNS&gt;</code> and follow the instructions in readme.txt</p>
+<p>Currently, we have support for installing Autolab on <a href="#ubuntu-1404">Ubuntu 14.04+</a>, and <a href="#mac-osx-1011">Mac OSX</a>.</p>
 <h3 id="mac-osx-1011">Mac OSX 10.11+</h3>
 <p>Follow the step-by-step instructions below:</p>
 <ol>
@@ -1017,19 +975,8 @@ bundle <span class="nb">exec</span> rake db:migrate
 <p>Now you are all set to start using Autolab! Visit the <a href="/docs/instructors">Guide for Instructors</a> and <a href="/docs/lab">Guide for Lab Authors</a> pages for more info.</p>
 </li>
 </ol>
-<h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
-<p>There are two ways to install Autolab on Ubuntu.</p>
-<p><strong>Option 1</strong></p>
-<p>The recommended way is to use the <a href="/one-click">OneClick option</a>. This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.</p>
-<p><strong>Option 2</strong></p>
-<p>Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, run the following script:</p>
-<div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
-</pre></div>
-
-
-<p>When the script runs, you will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a>. Once finished, <a href="/tango">install Tango</a>.</p>
-<h3 id="ubuntu-1804-rails-5-upgrade">Ubuntu 18.04+ (rails-5-upgrade)</h3>
-<p>This set of instruction is meant to install the currently in-development version of AutoLab located at <a href="https://github.com/autolab/Autolab/tree/rails-5-upgrade">rails-5-upgrade</a> on 18.04 LTS.</p>
+<h3 id="ubuntu-1804">Ubuntu 18.04+</h3>
+<p>This set of instruction is meant to install of AutoLab v2.40 located on Ubuntu 18.04 LTS.</p>
 <ol>
 <li>
 <p>Upgrade system packages and installing prerequisites</p>
@@ -1045,8 +992,6 @@ sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison bu
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/
 git clone https://github.com/autolab/Autolab.git
 <span class="nb">cd</span> Autolab
-git checkout rails-5-upgrade
-git pull
 </pre></div>
 
 
@@ -1081,7 +1026,7 @@ rbenv install  <span class="sb">`</span>cat .ruby-version<span class="sb">`</spa
 
 </li>
 <li>
-<p>Installing MySQL. (If you would like to only use SQLite, which is for testing &amp; development only, you can skip this step.)
+<p>Installing MySQL. (If you would just like to test Autolab, then you can skip this step by using SQLite)
 Following instructions from <a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04">How to Install MySQL on Ubuntu</a>.</p>
 <div class="codehilite"><pre><span></span>sudo apt install mysql-server
 sudo mysql_secure_installation
