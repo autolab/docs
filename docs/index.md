@@ -93,6 +93,12 @@ Follow the step-by-step instructions below:
 
         $ which rake
         ~/.rbenv/shims/rake
+    Note that Mac OSX comes with its own installation of ruby. You might need to switch your ruby from
+    the system version to the rbenv installed version. One option is to add the following lines to ~/.bash_profile:
+    
+        :::bash
+        export RBENV_ROOT=<rbenv folder path on your local machine>
+        eval "$(rbenv init -)"
 
 5.  Install `bundler`:
 
@@ -402,7 +408,23 @@ bundle config build.libv8 --with-system-v8
 
 Run `bundle install` again
 
-If this still does not work, try exploring [this StackOverflow link](http://stackoverflow.com/questions/23536893/therubyracer-gemextbuilderror-error-failed-to-build-gem-native-extension)
+If this does not work, another option would be
+
+```bash
+bundle update libv8
+```
+
+Because updating libv8 has dependency on other gems, it might fail due to a need to update other gems. Just do
+
+```bash
+bundle update <gem>
+```
+
+according to the error messages until all gems are up to date.
+
+Run `bundle install` again
+
+If neither of these works, try exploring [this StackOverflow link](http://stackoverflow.com/questions/23536893/therubyracer-gemextbuilderror-error-failed-to-build-gem-native-extension)
 
 #### Can't connect to local MySQL server through socket
 Make sure you've started the MySQL server and double-check the socket in `config/database.yml`
