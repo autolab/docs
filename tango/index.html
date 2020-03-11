@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tango" tabindex="1" class="md-skip">
+      <a href="#tango" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -121,9 +121,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-header-nav__button md-logo">
+        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" aria-label="Autolab Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../images/logo.svg" width="24" height="24">
+            <img alt="logo" src="../images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -152,7 +152,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -215,7 +215,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-nav__button md-logo">
       
-        <img src="../images/logo.svg" width="48" height="48">
+        <img alt="logo" src="../images/logo.svg" width="48" height="48">
       
     </a>
     Autolab Documentation
@@ -621,8 +621,8 @@
 <ol>
 <li>
 <p>Obtain the source code.</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/autolab/Tango.git<span class="p">;</span> <span class="nb">cd</span> Tango
-</pre></div>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/autolab/Tango.git<span class="p">;</span> <span class="nb">cd</span> Tango
+</code></pre></div>
 
 
 </li>
@@ -631,15 +631,15 @@
 </li>
 <li>
 <p>Create a <code>config.py</code> file from the given template.</p>
-<div class="codehilite"><pre><span></span>cp config.template.py config.py
-</pre></div>
+<div class="codehilite"><pre><span></span><code>cp config.template.py config.py
+</code></pre></div>
 
 
 </li>
 <li>
 <p>Create the course labs directory where job's output files will go, organized by key and lab name:</p>
-<div class="codehilite"><pre><span></span>mkdir courselabs
-</pre></div>
+<div class="codehilite"><pre><span></span><code>mkdir courselabs
+</code></pre></div>
 
 
 <p>By default the <code>COURSELABS</code> option in <code>config.py</code> points to the <code>courselabs</code> directory in the Tango directory.
@@ -655,39 +655,39 @@ Change this to specify another path if you wish.</p>
 </li>
 <li>
 <p>Run the following commands to setup the Tango dev environment inside the Tango directory. <a href="https://pip.pypa.io/en/stable/installing/">Install pip</a> if needed.</p>
-<div class="codehilite"><pre><span></span>$ pip install virtualenv
+<div class="codehilite"><pre><span></span><code>$ pip install virtualenv
 $ virtualenv .
 $ <span class="nb">source</span> bin/activate
 $ pip install -r requirements.txt
 $ mkdir volumes
-</pre></div>
+</code></pre></div>
 
 
 </li>
 <li>
 <p>Start Redis by running the following command:</p>
-<div class="codehilite"><pre><span></span>$ redis-server
-</pre></div>
+<div class="codehilite"><pre><span></span><code>$ redis-server
+</code></pre></div>
 
 
 </li>
 <li>
 <p>Run the following command to start the server (producer). If no port is given, the server will run on the port specified in <code>config.py</code> (default: 3000):</p>
-<div class="codehilite"><pre><span></span>python restful-tango/server.py &lt;port&gt;
+<div class="codehilite"><pre><span></span><code>python restful-tango/server.py &lt;port&gt;
 Open another terminal window and start the job manager <span class="o">(</span>consumer<span class="o">)</span>:
 
 :::bash
 python jobManager.py
-</pre></div>
+</code></pre></div>
 
 
 <p>For more information on the job producer/consumer model check out our <a href="http://autolab.github.io/2015/04/making-backend-scalable/">blog post</a></p>
 </li>
 <li>
 <p>Ensure Tango is running:</p>
-<div class="codehilite"><pre><span></span>$ curl localhost:&lt;port&gt;
+<div class="codehilite"><pre><span></span><code>$ curl localhost:&lt;port&gt;
 <span class="c1"># Hello, world! RESTful Tango here!</span>
-</pre></div>
+</code></pre></div>
 
 
 </li>
@@ -696,12 +696,12 @@ python jobManager.py
 </li>
 <li>
 <p>If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:</p>
-<div class="codehilite"><pre><span></span>cp config/autogradeConfig.rb.template config/autogradeConfig.rb
-</pre></div>
+<div class="codehilite"><pre><span></span><code>cp config/autogradeConfig.rb.template config/autogradeConfig.rb
+</code></pre></div>
 
 
 <p>Fill in the correct info for your Tango deployment, mainly the following:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Hostname for Tango RESTful API</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Hostname for Tango RESTful API</span>
 <span class="no">RESTFUL_HOST</span> <span class="o">=</span> <span class="s2">&quot;foo.bar.edu&quot;</span> <span class="c1">#(if you are running Tango locally, then it is just &quot;localhost&quot;)</span>
 
 <span class="c1"># Port for Tango RESTful API</span>
@@ -709,7 +709,7 @@ python jobManager.py
 
 <span class="c1"># Key for Tango RESTful API</span>
 <span class="no">RESTFUL_KEY</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 </li>
@@ -719,6 +719,7 @@ python jobManager.py
 </ol>
                 
                   
+                
                 
               
               
@@ -774,18 +775,18 @@ python jobManager.py
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Autolab" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Autolab" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://facebook.com/autolabproject" class="md-footer-social__link fa fa-facebook"></a>
+      <a href="https://facebook.com/autolabproject" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 
@@ -795,9 +796,9 @@ python jobManager.py
       
     </div>
     
-      <script src="../assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
     
   </body>
