@@ -6,6 +6,16 @@ Hosted on GitHub pages at <https://autolab.github.io/docs>. The built HTML files
 
 Uses the latest version (v1.0.4 as of writing) of the [Mkdocs](http://www.mkdocs.org/) documentation generator.
 
+To install mkdocs, run
+```bash
+pip install --user mkdocs
+```
+
+We rely on the `mkdocs-material` theme, which can be installed with
+```bash
+pip install --user mkdocs-material
+```
+
 To run and preview this locally, run:
 
 ```bash
