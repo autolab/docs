@@ -5,7 +5,7 @@ nav:
           - Getting Started: index.md
           - Guide for Instructors: instructors.md
           - Guide for Lab Authors: lab.md
-          - Advanced Features: features.md
+          - Features: features.md
     - Autolab API:
           - Overview: api-overview.md
           - Reference: api-interface.md
