@@ -6,6 +6,7 @@ Features Documented (Work in Progress):
 
 -   [Scoreboards](#scoreboards)
 -   [Embedded Forms](#embedded-forms)
+-   [MOSS Plagiarism Detection](#moss)
 
 ## Scoreboards
 
@@ -163,6 +164,7 @@ For the example form shown above, the JSON object will be as follows:
 
 Use this information to do any processing you need in Tango.If you find any problems, please file an issue on the [Autolab Github](https://github.com/autolab/Autolab).
 
+
 ## Annotations
 
 Annotations is a feature introduced as part of the Speedgrader update to Autolab. It allows instructors and TAs to quickly leave comments and grade code at the same time. 
@@ -197,3 +199,23 @@ A example would be, if the `max_score` of a problem is 10. A TA adds an annotati
 **Recommendation**
 It is much preferred to grade using annotations whenever possible,
 as it provides a better experience for the students who will be able to identify the exact line at which the mistake is made. Gradesheet should be used in situations where the modification is non-code related.
+
+
+## MOSS Plagiarism Detection Installation
+
+[MOSS (Measure Of Software Similarity)](https://theory.stanford.edu/~aiken/moss/) is a system for checking for plagiarism. MOSS can be setup on Autolab as follows:
+
+1. Obtain the script for MOSS based on the instructions given in [https://theory.stanford.edu/~aiken/moss/](https://theory.stanford.edu/~aiken/moss/).
+
+2. Create a directory called `vendor` at the root of your Autolab installation, i.e
+
+	```bash
+	cd <autolab_root>
+	mkdir -p vendor
+	```
+
+3. Copy the moss script into the `vendor` directory and name it `mossnet`
+
+	```bash
+	mv <path_to_moss_script> vendor/mossnet
+	```
