@@ -38,7 +38,7 @@
     
     
       
-        <title>Advanced Features - Autolab Documentation</title>
+        <title>Features - Autolab Documentation</title>
       
     
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Advanced Features
+                Features
               
             </span>
           
@@ -315,11 +315,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Advanced Features
+        Features
       </label>
     
-    <a href="./" title="Advanced Features" class="md-nav__link md-nav__link--active">
-      Advanced Features
+    <a href="./" title="Features" class="md-nav__link md-nav__link--active">
+      Features
     </a>
     
       
@@ -390,6 +390,40 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-behavior" class="md-nav__link">
+    Scoring Behavior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction-with-gradesheet" class="md-nav__link">
+    Interaction with Gradesheet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moss-plagiarism-detection-installation" class="md-nav__link">
+    MOSS Plagiarism Detection Installation
+  </a>
   
 </li>
       
@@ -658,6 +692,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-behavior" class="md-nav__link">
+    Scoring Behavior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction-with-gradesheet" class="md-nav__link">
+    Interaction with Gradesheet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moss-plagiarism-detection-installation" class="md-nav__link">
+    MOSS Plagiarism Detection Installation
+  </a>
+  
+</li>
+      
       
       
       
@@ -683,6 +751,7 @@
 <ul>
 <li><a href="#scoreboards">Scoreboards</a></li>
 <li><a href="#embedded-forms">Embedded Forms</a></li>
+<li><a href="#moss">MOSS Plagiarism Detection</a></li>
 </ul>
 <h2 id="scoreboards">Scoreboards</h2>
 <p>Scoreboards are a central concept of Autolab and are created by the output of <a href="/docs/lab/#writing-autograders">Autograders</a>. They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>).</p>
@@ -808,6 +877,46 @@
 
 
 <p>Use this information to do any processing you need in Tango.If you find any problems, please file an issue on the <a href="https://github.com/autolab/Autolab">Autolab Github</a>.</p>
+<h2 id="annotations">Annotations</h2>
+<p>Annotations is a feature introduced as part of the Speedgrader update to Autolab. It allows instructors and TAs to quickly leave comments and grade code at the same time. </p>
+<p><img alt="Annotation Form" src="/docs/images/annotations.png" /></p>
+<p>Hover over any line of the code and click on the green arrow, and the annotation form will appear. Add the comment, adjust the score, and select the targetted problem.</p>
+<div class="admonition attention">
+<p class="admonition-title">Non-Autograded Problems Only</p>
+<p>Note that annotations can only be added to non-autograded problems. Specifically, a problem is non-autograded if there is no assigned score for that problem in the json outputted by the autograder</p>
+</div>
+<h3 id="scoring-behavior">Scoring Behavior</h3>
+<p>There are two intended ways for course instructors to use the add annotation features. Deductions from maximum, or additions from zero.</p>
+<p><strong>Deductions from maximum</strong>
+Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question. Then when the grader is viewing the code, add negative score, such as <code>-5</code> into the score field, to deduct from the maximum. This use case is preferred when grading based on a rubric, and the score is deducted for each mistake.</p>
+<p>The maximum score can be <code>0</code> if the deductions are meant to be penalties, such as for poor code style or violation of library interfaces.</p>
+<p><strong>Additions from Zero</strong>
+Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question to <code>0</code>. When the grader is viewing the code, add positive scores, such as <code>5</code> to the score field, to add to the score. This use case is preferred when giving out bonus points.</p>
+<h3 id="interaction-with-gradesheet">Interaction with Gradesheet</h3>
+<p>We have kept the ability the edit the scores in the gradesheet, as we understand that there are instances in which editing the gradesheet directly is much more efficient and/or needed. However, this leads to an unintended interaction with the annotations.</p>
+<p>In particular, modifications on the gradesheet itself will override all changes made to a problem by annotations, but the annotations made will still remain. </p>
+<p>A example would be, if the <code>max_score</code> of a problem is 10. A TA adds an annotation with <code>-5</code> score to that problem (so the score is now 10-5=5). Then if the same TA or another TA changes the score to <code>8</code> on the gradesheet, the final score would be <code>8</code>.</p>
+<p><strong>Recommendation</strong>
+It is much preferred to grade using annotations whenever possible,
+as it provides a better experience for the students who will be able to identify the exact line at which the mistake is made. Gradesheet should be used in situations where the modification is non-code related.</p>
+<h2 id="moss-plagiarism-detection-installation">MOSS Plagiarism Detection Installation</h2>
+<p><a href="https://theory.stanford.edu/~aiken/moss/">MOSS (Measure Of Software Similarity)</a> is a system for checking for plagiarism. MOSS can be setup on Autolab as follows:</p>
+<ol>
+<li>
+<p>Obtain the script for MOSS based on the instructions given in <a href="https://theory.stanford.edu/~aiken/moss/">https://theory.stanford.edu/~aiken/moss/</a>.</p>
+</li>
+<li>
+<p>Create a directory called <code>vendor</code> at the root of your Autolab installation, i.e</p>
+<p><code>bash
+cd &lt;autolab_root&gt;
+mkdir -p vendor</code></p>
+</li>
+<li>
+<p>Copy the moss script into the <code>vendor</code> directory and name it <code>mossnet</code></p>
+<p><code>bash
+mv &lt;path_to_moss_script&gt; vendor/mossnet</code></p>
+</li>
+</ol>
                 
                   
                 
