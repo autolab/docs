@@ -158,7 +158,7 @@ HTML Form Reference:
         <option value="Python">Python</option>
         <option value="Java">Java</option>
     </select>
-</div
+</div>
 ```
 
 Navigate to the Basic section of editing an assessment (`/courses/<course>/assessments/<assessment>/edit`), check the check box, and upload the HTML file. Ensure you submit the form by clicking `Save` at the bottom of the page.
