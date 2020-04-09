@@ -186,7 +186,7 @@ Set a `max_score` either programmatically, or under `Edit Assessment > Problems`
 
 The maximum score can be `0` if the deductions are meant to be penalties, such as for poor code style or violation of library interfaces.
 
-**Additions from Zero**
+**Additions from zero**
 
 Set a `max_score` either programmatically, or under `Edit Assessment > Problems` for the particular non-autograded question to `0`. When the grader is viewing the code, add positive scores, such as `5` to the score field, to add to the score. This use case is preferred when giving out bonus points.
 
