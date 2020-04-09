@@ -197,7 +197,7 @@ We have kept the ability the edit the scores in the gradesheet, as we understand
 
 In particular, modifications on the gradesheet itself will override all changes made to a problem by annotations, but the annotations made will still remain. 
 
-A example would be, if the `max_score` of a problem is `10`. A TA adds an annotation with `-5` score to that problem (so the score is now `10-5=5`). Then if the same TA or another TA changes the score to `8` on the gradesheet, the final score would be `8`.
+A example would be, if the `max_score` of a problem is `10`. A grader adds an annotation with `-5` score to that problem (so the score is now `10-5=5`). Then if the same/another grader changes the score to `8` on the gradesheet, the final score would be `8`.
 
 **Recommendation**
 
