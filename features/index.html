@@ -751,6 +751,7 @@
 <ul>
 <li><a href="#scoreboards">Scoreboards</a></li>
 <li><a href="#embedded-forms">Embedded Forms</a></li>
+<li><a href="#annotations">Annotations</a></li>
 <li><a href="#moss">MOSS Plagiarism Detection</a></li>
 </ul>
 <h2 id="scoreboards">Scoreboards</h2>
@@ -890,12 +891,12 @@
 <p><strong>Deductions from maximum</strong></p>
 <p>Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question. Then when the grader is viewing the code, add negative score, such as <code>-5</code> into the score field, to deduct from the maximum. This use case is preferred when grading based on a rubric, and the score is deducted for each mistake.</p>
 <p>The maximum score can be <code>0</code> if the deductions are meant to be penalties, such as for poor code style or violation of library interfaces.</p>
-<p><strong>Additions from Zero</strong></p>
+<p><strong>Additions from zero</strong></p>
 <p>Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question to <code>0</code>. When the grader is viewing the code, add positive scores, such as <code>5</code> to the score field, to add to the score. This use case is preferred when giving out bonus points.</p>
 <h3 id="interaction-with-gradesheet">Interaction with Gradesheet</h3>
 <p>We have kept the ability the edit the scores in the gradesheet, as we understand that there are instances in which editing the gradesheet directly is much more efficient and/or needed. However, this leads to an unintended interaction with the annotations.</p>
 <p>In particular, modifications on the gradesheet itself will override all changes made to a problem by annotations, but the annotations made will still remain. </p>
-<p>A example would be, if the <code>max_score</code> of a problem is <code>10</code>. A TA adds an annotation with <code>-5</code> score to that problem (so the score is now <code>10-5=5</code>). Then if the same TA or another TA changes the score to <code>8</code> on the gradesheet, the final score would be <code>8</code>.</p>
+<p>A example would be, if the <code>max_score</code> of a problem is <code>10</code>. A grader adds an annotation with <code>-5</code> score to that problem (so the score is now <code>10-5=5</code>). Then if the same/another grader changes the score to <code>8</code> on the gradesheet, the final score would be <code>8</code>.</p>
 <p><strong>Recommendation</strong></p>
 <p>It is much preferred to grade using annotations whenever possible,
 as it provides a better experience for the students who will be able to identify the exact line at which the mistake is made. Gradesheet should be used in situations where the modification is non-code related.</p>
