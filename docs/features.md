@@ -69,7 +69,7 @@ This feature allows an instructor to create an assessment which does not require
 !!! attention "Tango Required"
 	Tango is needed to use this feature. Please install [Tango](/docs/tango/) and connect it to Autolab before proceeding.
 
-![Embedded Form](/docs/images/embedded_quiz.png)
+![Embedded Form](/docs/images/embedded_form_example.png)
 
 ### Creating an Embedded Form
 
@@ -97,11 +97,16 @@ HTML Form Reference:
 **Radio Button (For multiple choice)**
 
 ```html
-<div class="“row">
-    <input name="“question-3”" type="“radio”" value="“object”" id="“q3-1”" />
-    <label for="q3-1">Object</label>
-    <input name="“question-3”" type="“radio”" value="“boolean”" id="“q3-2”" />
-    <label for="“q3-2”">Boolean</label>
+<div class="row">
+    <label>
+       <input name="question-3" type="radio" value="object" id="q3-1" />
+       <span>Object</span>
+    </label>
+
+    <label>
+       <input name="question-2" type="radio" value="boolean" id="q3-2" />
+       <span>Boolean</span>
+    </label>
 </div>
 ```
 
@@ -118,27 +123,42 @@ HTML Form Reference:
 **Example Form (shown in screenshot above)**
 
 ```html
-<input type="text" name="question-1" id="q1" placeholder="What's your name?" />
-
-<div class="row">
-    <input name="question-2" type="radio" value="freshman" id="q3-1" />
-    <label for="q3-1">Freshman</label>
-
-    <input name="question-2" type="radio" value="sophomore" id="q3-2" />
-    <label for="q3-2">Sophomore</label>
-
-    <input name="question-2" type="radio" value="junior" id="q3-3" />
-    <label for="q3-3">Junior</label>
-
-    <input name="question-2" type="radio" value="senior" id="q3-4" />
-    <label for="q3-4">Senior</label>
+<div>
+    <h6>What's your name?</h6>
+    <input type="text" name="question-1" id="q1"/>
 </div>
-<label for="q4">What's your favorite language?</label>
-<select name="question-3" id="q4">
-    <option value="C">C</option>
-    <option value="Python">Python</option>
-    <option value="Java">Java</option>
-</select>
+
+<div>
+    <h6>Which year are you?</h6>
+    <div class="row">
+        <label>
+        <input name="question-2" type="radio" value="freshman" id="q3-1" />
+        <span>Freshman</span>
+        </label>
+        <label>
+        <input name="question-2" type="radio" value="sophomore" id="q3-2" />
+        <span>Sophomore</span>
+        </label>
+        <label>
+        <input name="question-2" type="radio" value="junior" id="q3-3" />
+        <span>Junior</span>
+        </label>
+        <label>
+        <input name="question-2" type="radio" value="senior" id="q3-4" />
+        <span>Senior</span>
+        </label>
+    </div>
+</div>
+
+<div>
+    <h6>What's your favorite language?</h6>
+
+    <select name="question-3" id="q4">
+        <option value="C">C</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+    </select>
+</div
 ```
 
 Navigate to the Basic section of editing an assessment (`/courses/<course>/assessments/<assessment>/edit`), check the check box, and upload the HTML file. Ensure you submit the form by clicking `Save` at the bottom of the page.
