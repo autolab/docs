@@ -6,6 +6,7 @@ Features Documented (Work in Progress):
 
 -   [Scoreboards](#scoreboards)
 -   [Embedded Forms](#embedded-forms)
+-   [Annotations](#annotations)
 -   [MOSS Plagiarism Detection](#moss)
 
 ## Scoreboards
