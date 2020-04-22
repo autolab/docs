@@ -18,7 +18,7 @@ Click on `Manage Autolab` (top-right navigation bar) > `Create New Course`. Fill
 
 ### Create an Autograded Lab Assessment. 
 Go into the course you have just created, click on `Install Assessment`. You can install a simple autograded lab, called hello lab.
-[Download hello.tar](https://github.com/autolab/Autolab/raw/rails-5-upgrade/examples/hello.tar) and install it using the `Import from Tarball` option. 
+[Download hello.tar](https://github.com/autolab/Autolab/raw/master/examples/hello.tar) and install it using the `Import from Tarball` option. 
 
 In the `hello` lab, students are asked to write a file called `hello.c`. The autograder checks that the submitted hello.c program compiles and runs with an exit status of zero. If so, the submission gets 100 points. Otherwise it gets 0 points. 
 
