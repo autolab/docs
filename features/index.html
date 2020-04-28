@@ -797,7 +797,7 @@
 <p class="admonition-title">Tango Required</p>
 <p>Tango is needed to use this feature. Please install <a href="/docs/tango/">Tango</a> and connect it to Autolab before proceeding.</p>
 </div>
-<p><img alt="Embedded Form" src="/docs/images/embedded_form_example.png" /></p>
+<p><img alt="Embedded Form" src="/docs/images/embedded_quiz.png" /></p>
 <h3 id="creating-an-embedded-form">Creating an Embedded Form</h3>
 <p>Create an HTML file with a combination of the following elements. The HTML file need only include form elements, because it will automatically be wrapped in a <code>&lt;form&gt;&lt;/form&gt;</code> block when it is rendered on the page.</p>
 <p>In order for the JSON string (the information passed to the grader) to be constructed properly, your form elements must follow the following conventions:</p>
@@ -817,16 +817,11 @@
 
 
 <p><strong>Radio Button (For multiple choice)</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-3&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;object&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Object<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;boolean&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Boolean<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;“row&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;“question-3”&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;“radio”&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;“object”&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;“q3-1”&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">&gt;</span>Object<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;“question-3”&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;“radio”&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;“boolean”&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;“q3-2”&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;“q3-2”&quot;</span><span class="p">&gt;</span>Boolean<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 
@@ -841,42 +836,27 @@
 
 
 <p><strong>Example Form (shown in screenshot above)</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>What&#39;s your name?<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q1&quot;</span><span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;What&#39;s your name?&quot;</span> <span class="p">/&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Which year are you?<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;freshman&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Freshman<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;sophomore&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Sophomore<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;junior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Junior<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;senior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Senior<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;freshman&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">&gt;</span>Freshman<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>What&#39;s your favorite language?<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;sophomore&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span><span class="p">&gt;</span>Sophomore<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-3&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q4&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;C&quot;</span><span class="p">&gt;</span>C<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Python&quot;</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Java&quot;</span><span class="p">&gt;</span>Java<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;junior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span><span class="p">&gt;</span>Junior<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;senior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span><span class="p">&gt;</span>Senior<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q4&quot;</span><span class="p">&gt;</span>What&#39;s your favorite language?<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-3&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q4&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;C&quot;</span><span class="p">&gt;</span>C<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Python&quot;</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Java&quot;</span><span class="p">&gt;</span>Java<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </code></pre></div>
 
 
@@ -908,17 +888,17 @@
 </div>
 <h3 id="scoring-behavior">Scoring Behavior</h3>
 <p>There are two intended ways for course instructors to use the add annotation features. Deductions from maximum, or additions from zero.</p>
-<p><strong>Deductions from maximum</strong></p>
-<p>Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question. Then when the grader is viewing the code, add negative score, such as <code>-5</code> into the score field, to deduct from the maximum. This use case is preferred when grading based on a rubric, and the score is deducted for each mistake.</p>
+<p><strong>Deductions from maximum</strong>
+Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question. Then when the grader is viewing the code, add negative score, such as <code>-5</code> into the score field, to deduct from the maximum. This use case is preferred when grading based on a rubric, and the score is deducted for each mistake.</p>
 <p>The maximum score can be <code>0</code> if the deductions are meant to be penalties, such as for poor code style or violation of library interfaces.</p>
-<p><strong>Additions from zero</strong></p>
-<p>Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question to <code>0</code>. When the grader is viewing the code, add positive scores, such as <code>5</code> to the score field, to add to the score. This use case is preferred when giving out bonus points.</p>
+<p><strong>Additions from Zero</strong>
+Set a <code>max_score</code> either programmatically, or under <code>Edit Assessment &gt; Problems</code> for the particular non-autograded question to <code>0</code>. When the grader is viewing the code, add positive scores, such as <code>5</code> to the score field, to add to the score. This use case is preferred when giving out bonus points.</p>
 <h3 id="interaction-with-gradesheet">Interaction with Gradesheet</h3>
 <p>We have kept the ability the edit the scores in the gradesheet, as we understand that there are instances in which editing the gradesheet directly is much more efficient and/or needed. However, this leads to an unintended interaction with the annotations.</p>
 <p>In particular, modifications on the gradesheet itself will override all changes made to a problem by annotations, but the annotations made will still remain. </p>
-<p>A example would be, if the <code>max_score</code> of a problem is <code>10</code>. A grader adds an annotation with <code>-5</code> score to that problem (so the score is now <code>10-5=5</code>). Then if the same/another grader changes the score to <code>8</code> on the gradesheet, the final score would be <code>8</code>.</p>
-<p><strong>Recommendation</strong></p>
-<p>It is much preferred to grade using annotations whenever possible,
+<p>A example would be, if the <code>max_score</code> of a problem is 10. A TA adds an annotation with <code>-5</code> score to that problem (so the score is now 10-5=5). Then if the same TA or another TA changes the score to <code>8</code> on the gradesheet, the final score would be <code>8</code>.</p>
+<p><strong>Recommendation</strong>
+It is much preferred to grade using annotations whenever possible,
 as it provides a better experience for the students who will be able to identify the exact line at which the mistake is made. Gradesheet should be used in situations where the modification is non-code related.</p>
 <h2 id="moss-plagiarism-detection-installation">MOSS Plagiarism Detection Installation</h2>
 <p><a href="https://theory.stanford.edu/~aiken/moss/">MOSS (Measure Of Software Similarity)</a> is a system for checking for plagiarism. MOSS can be setup on Autolab as follows:</p>

@@ -359,13 +359,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#docker-development-rails-5-docker-dev" class="md-nav__link">
-    Docker (Development) (rails-5-docker-dev)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -722,13 +715,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#docker-development-rails-5-docker-dev" class="md-nav__link">
-    Docker (Development) (rails-5-docker-dev)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -813,7 +799,7 @@
 <p>(NOTE: the email doesn't need to be real here)</p>
 <h3 id="create-an-autograded-lab-assessment">Create an Autograded Lab Assessment.</h3>
 <p>Go into the course you have just created, click on <code>Install Assessment</code>. You can install a simple autograded lab, called hello lab.
-<a href="https://github.com/autolab/Autolab/raw/master/examples/hello.tar">Download hello.tar</a> and install it using the <code>Import from Tarball</code> option. </p>
+<a href="https://github.com/autolab/Autolab/raw/rails-5-upgrade/examples/hello.tar">Download hello.tar</a> and install it using the <code>Import from Tarball</code> option. </p>
 <p>In the <code>hello</code> lab, students are asked to write a file called <code>hello.c</code>. The autograder checks that the submitted hello.c program compiles and runs with an exit status of zero. If so, the submission gets 100 points. Otherwise it gets 0 points. </p>
 <p><strong>Try submitting to the autograded hello lab</strong></p>
 <ol>
@@ -842,12 +828,11 @@
 <p>Because it defaults to accepting <code>.c</code> files, we would like to change it to <code>*.pdf</code>. Click on <code>Edit Assessment</code> &gt; <code>Handin</code> and then change the <code>Handin filename</code> to <code>handin.pdf</code> instead of <code>handin.c</code> and save the changes</p>
 <p><strong>Try submitting to the pdf homework asssessment.</strong></p>
 <ol>
-<li>Submit a <code>.pdf</code> file. 
-<a href="https://www.vision.ee.ethz.ch/publications/papers/articles/eth_biwi_00546.pdf" target="_blank">Download Blank PDF</a></li>
+<li>Submit a <code>.pdf</code> file.</li>
 <li>Look at your submission using the magnifying glass icon</li>
 </ol>
 <h3 id="grading-submissions">Grading submissions</h3>
-<p>Click on <code>Grade Submissions</code>, and then the arrow button to open up student submissions. For details on the relevant features for an Instructor, go to <a href="/docs/instructor">Guide for Instructor</a></p>
+<p>Click on <code>Grade Submissions</code>, and then the arrow button to open up student submissions. For details on the relevant features for an Instructor, go to <a href="/docs/instructors">Guide for Instructor</a></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) <a href="/docs/tango">Tango</a>, the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.</p>
 <p>Currently, we have support for installing Autolab on <a href="#ubuntu-1804">Ubuntu 18.04+</a>, and <a href="#mac-osx-1011">Mac OSX</a>.</p>
@@ -989,7 +974,7 @@ bundle <span class="nb">exec</span> rake db:migrate
 <p>Upgrade system packages and installing prerequisites</p>
 <div class="codehilite"><pre><span></span><code>sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline6-dev libncurses5-dev libgdbm5 libgdbm-dev libmysqlclient-dev libjansson-dev ctags
+sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libgdbm5 libgdbm-dev libmysqlclient-dev libjansson-dev ctags
 </code></pre></div>
 
 
@@ -1085,22 +1070,22 @@ cp config/autogradeConfig.rb.template config/autogradeConfig.rb
 <p>(Using MySQL) Editing Database YML.
 Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is <code>user1</code>, and your password is <code>123456</code>, then your yml would be</p>
 <div class="codehilite"><pre><span></span><code><span class="n">development</span><span class="o">:</span>
-<span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
-<span class="n">database</span><span class="o">:</span> <span class="n">autolab_development</span>
-<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
-<span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
-<span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
-<span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
-<span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+    <span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
+    <span class="n">database</span><span class="o">:</span> <span class="n">autolab_development</span>
+    <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+    <span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
+    <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
+    <span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
+    <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
 
 <span class="n">test</span><span class="o">:</span>
-<span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
-<span class="n">database</span><span class="o">:</span> <span class="n">autolab_test</span>
-<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
-<span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
-<span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
-<span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
-<span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+    <span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
+    <span class="n">database</span><span class="o">:</span> <span class="n">autolab_test</span>
+    <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+    <span class="n">username</span><span class="o">:</span> <span class="n">user1</span>
+    <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
+    <span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
+    <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
 </code></pre></div>
 
 
@@ -1109,16 +1094,16 @@ Change the <username> and <password> fields in config/database.yml to the userna
 <p>(Using SQLite) Editing Database YML.
 Comment out the configurations meant for MySQL in config/database.yml, and insert the following</p>
 <div class="codehilite"><pre><span></span><code><span class="n">development</span><span class="o">:</span>
-<span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
-<span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_development</span>
-<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
-<span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
+    <span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
+    <span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_development</span>
+    <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+    <span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
 
 <span class="n">test</span><span class="o">:</span>
-<span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
-<span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_test</span>
-<span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
-<span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
+    <span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
+    <span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_test</span>
+    <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+    <span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
 </code></pre></div>
 
 
@@ -1177,43 +1162,36 @@ bundle <span class="nb">exec</span> rails s -p <span class="m">3000</span> --bin
 <p>Now you are all set to start using Autolab! Visit the <a href="/docs/instructors">Guide for Instructors</a> and <a href="/docs/lab">Guide for Lab Authors</a> pages for more info.</p>
 </li>
 </ol>
-<h3 id="docker-development-rails-5-docker-dev">Docker (Development) (rails-5-docker-dev)</h3>
-<p>This sets up a development setup of Autolab, Tango, and Redis locally with Docker Compose.</p>
-<ol>
-<li>
-<p>First ensure that Docker is installed</p>
-<div class="codehilite"><pre><span></span><code>docker --version
-</code></pre></div>
+<!-- Removed pending docker fix
+### Docker (Development) (rails-5-docker-dev)
+This sets up a development setup of Autolab, Tango, and Redis locally with Docker Compose.
 
+1. First ensure that Docker is installed
 
-</li>
-<li>
-<p>Cloning Autolab repo from Github to ~/Autolab, checkout to
-   rails-5-docker-dev branch</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/
-git clone https://github.com/autolab/Autolab.git
-<span class="nb">cd</span> Autolab
-git checkout rails-5-docker-dev
-git pull
-</code></pre></div>
+        :::bash
+        docker --version
 
+2. Cloning Autolab repo from Github to ~/Autolab, checkout to
+   rails-5-docker-dev branch
 
-</li>
-<li>
-<p>Start Docker Compose</p>
-<div class="codehilite"><pre><span></span><code>docker-compose up -d <span class="c1"># detached mode</span>
-</code></pre></div>
+        :::bash
+        cd ~/
+        git clone https://github.com/autolab/Autolab.git
+        cd Autolab
+        git checkout rails-5-docker-dev
+        git pull
 
+3. Start Docker Compose
 
-</li>
-<li>
-<p>View your running containers</p>
-<div class="codehilite"><pre><span></span><code>docker ps
-</code></pre></div>
+        ::bash
+        docker-compose up -d # detached mode
 
+4. View your running containers
 
-</li>
-</ol>
+        ::bash
+        docker ps
+-->
+
 <h2 id="faq">FAQ</h2>
 <p>This is a general list of questions that we get often. If you find a solution to an issue not mentioned here,
 please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;">&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;</a></p>
