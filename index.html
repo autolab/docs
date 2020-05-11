@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.30686662.css">
       
         <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,12 +53,12 @@
       
     
     
-      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-the-autolab-docs" tabindex="0" class="md-skip">
+      <a href="#welcome-to-the-autolab-docs" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -121,9 +121,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" aria-label="Autolab Documentation" class="md-header-nav__button md-logo">
+        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-header-nav__button md-logo">
           
-            <img alt="logo" src="images/logo.svg" width="24" height="24">
+            <img src="images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -152,7 +152,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -215,7 +215,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-nav__button md-logo">
       
-        <img alt="logo" src="images/logo.svg" width="48" height="48">
+        <img src="images/logo.svg" width="48" height="48">
       
     </a>
     Autolab Documentation
@@ -799,20 +799,20 @@
 <p>(NOTE: the email doesn't need to be real here)</p>
 <h3 id="create-an-autograded-lab-assessment">Create an Autograded Lab Assessment.</h3>
 <p>Go into the course you have just created, click on <code>Install Assessment</code>. You can install a simple autograded lab, called hello lab.
-<a href="https://github.com/autolab/Autolab/raw/rails-5-upgrade/examples/hello.tar">Download hello.tar</a> and install it using the <code>Import from Tarball</code> option. </p>
+<a href="https://github.com/autolab/Autolab/raw/master/examples/hello.tar">Download hello.tar</a> and install it using the <code>Import from Tarball</code> option. </p>
 <p>In the <code>hello</code> lab, students are asked to write a file called <code>hello.c</code>. The autograder checks that the submitted hello.c program compiles and runs with an exit status of zero. If so, the submission gets 100 points. Otherwise it gets 0 points. </p>
 <p><strong>Try submitting to the autograded hello lab</strong></p>
 <ol>
 <li>
 <p>Create and submit a <code>hello.c</code> file. </p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#hello.c</span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
-        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="codehilite"><pre><span></span>#<span class="nv">hello</span>.<span class="nv">c</span>
+#<span class="k">include</span> <span class="o">&lt;</span><span class="nv">stdio</span>.<span class="nv">h</span><span class="o">&gt;</span>
+<span class="nv">int</span> <span class="nv">main</span><span class="ss">()</span>
+{
+        <span class="nv">printf</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Hello, World!</span><span class="s2">&quot;</span><span class="ss">)</span><span class="c1">;</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="c1">;</span>
+}
+</pre></div>
 
 
 </li>
@@ -844,56 +844,56 @@
 </li>
 <li>
 <p>Install <a href="https://github.com/sstephenson/ruby-build">ruby-build</a> as an rbenv plugin:</p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-</code></pre></div>
+<div class="codehilite"><pre><span></span>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</pre></div>
 
 
 <p>Restart your shell at this point in order to start using your newly installed rbenv</p>
 </li>
 <li>
 <p>Clone the Autolab repo into home directory and enter it:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/
 git clone https://github.com/autolab/Autolab.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> Autolab
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Install the correct version of ruby:</p>
-<div class="codehilite"><pre><span></span><code>rbenv install <span class="k">$(</span>cat .ruby-version<span class="k">)</span>
-</code></pre></div>
+<div class="codehilite"><pre><span></span>rbenv install <span class="k">$(</span>cat .ruby-version<span class="k">)</span>
+</pre></div>
 
 
 <p>At this point, confirm that <code>rbenv</code> is working (you might need to restart your shell):</p>
-<div class="codehilite"><pre><span></span><code>$ which ruby
+<div class="codehilite"><pre><span></span>$ which ruby
 ~/.rbenv/shims/ruby
 
 $ which rake
 ~/.rbenv/shims/rake
-</code></pre></div>
+</pre></div>
 
 
 <p>Note that Mac OSX comes with its own installation of ruby. You might need to switch your ruby from
 the system version to the rbenv installed version. One option is to add the following lines to ~/.bash_profile:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">RBENV_ROOT</span><span class="o">=</span>&lt;rbenv folder path on your <span class="nb">local</span> machine&gt;
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RBENV_ROOT</span><span class="o">=</span>&lt;rbenv folder path on your <span class="nb">local</span> machine&gt;
 <span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>rbenv init -<span class="k">)</span><span class="s2">&quot;</span>
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Install <code>bundler</code>:</p>
-<div class="codehilite"><pre><span></span><code>gem install bundler
+<div class="codehilite"><pre><span></span>gem install bundler
 rbenv rehash
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Install the required gems (run the following commands in the cloned Autolab repo):</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> bin
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> bin
 bundle install
-</code></pre></div>
+</pre></div>
 
 
 <p>Refer to the <a href="#faq">FAQ</a> for issues installing gems</p>
@@ -907,56 +907,56 @@ bundle install
 </li>
 <li>
 <p>Configure your database:</p>
-<div class="codehilite"><pre><span></span><code>cp config/database.yml.template config/database.yml
-</code></pre></div>
+<div class="codehilite"><pre><span></span>cp config/database.yml.template config/database.yml
+</pre></div>
 
 
 <p>Edit <code>database.yml</code> with the correct credentials for your chosen database. Refer to the <a href="#faq">FAQ</a> for any issues.</p>
 </li>
 <li>
 <p>Configure school/organization specific information (new feature):</p>
-<div class="codehilite"><pre><span></span><code>cp config/school.yml.template config/school.yml
-</code></pre></div>
+<div class="codehilite"><pre><span></span>cp config/school.yml.template config/school.yml
+</pre></div>
 
 
 <p>Edit <code>school.yml</code> with your school/organization specific names and emails</p>
 </li>
 <li>
 <p>Configure the Devise Auth System with a unique key (run these commands exactly - leave <code>&lt;YOUR-SECRET-KEY&gt;</code> as it is):</p>
-<div class="codehilite"><pre><span></span><code>cp config/initializers/devise.rb.template config/initializers/devise.rb
+<div class="codehilite"><pre><span></span>cp config/initializers/devise.rb.template config/initializers/devise.rb
 sed -i <span class="s2">&quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot;</span> config/initializers/devise.rb
-</code></pre></div>
+</pre></div>
 
 
 <p>Fill in <code>&lt;YOUR_WEBSITE&gt;</code> in the <code>config/initializers/devise.rb</code> file. To skip this step for now, fill with <code>foo.bar</code>.</p>
 </li>
 <li>
 <p>Create and initialize the database tables:</p>
-<div class="codehilite"><pre><span></span><code>bundle <span class="nb">exec</span> rake db:create
+<div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rake db:create
 bundle <span class="nb">exec</span> rake db:migrate
-</code></pre></div>
+</pre></div>
 
 
 <p>Do not forget to use <code>bundle exec</code> in front of every rake/rails command.</p>
 </li>
 <li>
 <p>Populate dummy data (development only):</p>
-<div class="codehilite"><pre><span></span><code>bundle <span class="nb">exec</span> rake autolab:populate
-</code></pre></div>
+<div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rake autolab:populate
+</pre></div>
 
 
 </li>
 <li>
 <p>Start the rails server:</p>
-<div class="codehilite"><pre><span></span><code>bundle <span class="nb">exec</span> rails s -p <span class="m">3000</span>
-</code></pre></div>
+<div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rails s -p <span class="m">3000</span>
+</pre></div>
 
 
 </li>
 <li>
 <p>Go to localhost:3000 and login with <code>Developer Login</code>:</p>
-<div class="codehilite"><pre><span></span><code>Email: <span class="s2">&quot;admin@foo.bar&quot;</span>.
-</code></pre></div>
+<div class="codehilite"><pre><span></span>Email: <span class="s2">&quot;admin@foo.bar&quot;</span>.
+</pre></div>
 
 
 </li>
@@ -972,25 +972,25 @@ bundle <span class="nb">exec</span> rake db:migrate
 <ol>
 <li>
 <p>Upgrade system packages and installing prerequisites</p>
-<div class="codehilite"><pre><span></span><code>sudo apt-get update
+<div class="codehilite"><pre><span></span>sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libgdbm5 libgdbm-dev libmysqlclient-dev libjansson-dev ctags
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Cloning Autolab repo from Github to ~/Autolab</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/
 git clone https://github.com/autolab/Autolab.git
 <span class="nb">cd</span> Autolab
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Setting up rbenv and ruby-build plugin</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
 <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bashrc
@@ -998,29 +998,29 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
 ~/.rbenv/bin/rbenv init
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Installing Ruby (Based on ruby version)</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> Autolab
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
 rbenv install  <span class="sb">`</span>cat .ruby-version<span class="sb">`</span>
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Installing SQLite</p>
-<div class="codehilite"><pre><span></span><code>sudo apt-get install sqlite3 libsqlite3-dev
-</code></pre></div>
+<div class="codehilite"><pre><span></span>sudo apt-get install sqlite3 libsqlite3-dev
+</pre></div>
 
 
 </li>
 <li>
 <p>Installing MySQL. (If you would just like to test Autolab, then you can skip this step by using SQLite)
 Following instructions from <a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04">How to Install MySQL on Ubuntu</a>.</p>
-<div class="codehilite"><pre><span></span><code>sudo apt install mysql-server
+<div class="codehilite"><pre><span></span>sudo apt install mysql-server
 sudo mysql_secure_installation
 
 &gt; There will be a few questions asked during the MySQL setup.
@@ -1030,46 +1030,46 @@ sudo mysql_secure_installation
 * Disallow Root Login Remotely? Y
 * Remove Test Database and Access to it? Y
 * Reload Privilege Tables Now? Y
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>(If you are using MySQL) Create a new user with access to <code>autolab_test</code> and <code>autolab_development</code> databases. Because a password rather than auth_socket is needed, we need to ensure that user uses <code>mysql_native_password</code></p>
-<div class="codehilite"><pre><span></span><code>sudo mysql
+<div class="codehilite"><pre><span></span>sudo mysql
 mysql&gt; CREATE USER <span class="s1">&#39;user1&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span>
 mysql&gt; FLUSH PRIVILEGES<span class="p">;</span>
 mysql&gt; exit<span class="p">;</span>
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Installing Rails</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> Autolab
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
 gem install bundler
 rbenv rehash
 bundle install
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Initializing Autolab Configs</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> Autolab
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
 cp config/database.yml.template config/database.yml
 cp config/school.yml.template config/school.yml
 cp config/initializers/devise.rb.template config/initializers/devise.rb
 sed -i <span class="s2">&quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot;</span> config/initializers/devise.rb
 cp config/autogradeConfig.rb.template config/autogradeConfig.rb
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>(Using MySQL) Editing Database YML.
 Change the <username> and <password> fields in config/database.yml to the username and password that has been set up for the mysql. For example if your username is <code>user1</code>, and your password is <code>123456</code>, then your yml would be</p>
-<div class="codehilite"><pre><span></span><code><span class="n">development</span><span class="o">:</span>
+<div class="codehilite"><pre><span></span><span class="n">development</span><span class="o">:</span>
     <span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
     <span class="n">database</span><span class="o">:</span> <span class="n">autolab_development</span>
     <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
@@ -1086,14 +1086,14 @@ Change the <username> and <password> fields in config/database.yml to the userna
     <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
     <span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
     <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>(Using SQLite) Editing Database YML.
 Comment out the configurations meant for MySQL in config/database.yml, and insert the following</p>
-<div class="codehilite"><pre><span></span><code><span class="n">development</span><span class="o">:</span>
+<div class="codehilite"><pre><span></span><span class="n">development</span><span class="o">:</span>
     <span class="n">adapter</span><span class="o">:</span> <span class="n">sqlite3</span>
     <span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_development</span>
     <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
@@ -1104,51 +1104,51 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
     <span class="n">database</span><span class="o">:</span> <span class="n">db</span><span class="o">/</span><span class="n">autolab_test</span>
     <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
     <span class="n">timeout</span><span class="o">:</span> <span class="mi">5000</span>
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Granting permissions on the databases. Setting global sql mode is important to relax the rules of mysql when it comes to group by mode</p>
-<div class="codehilite"><pre><span></span><code><span class="o">(</span>access mysql using your root first to grant permissions<span class="o">)</span>
+<div class="codehilite"><pre><span></span><span class="o">(</span>access mysql using your root first to grant permissions<span class="o">)</span>
 mysql&gt; grant all privileges on autolab_development.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
 mysql&gt; grant all privileges on autolab_test.* to <span class="s1">&#39;&lt;username&gt;&#39;</span>@localhost<span class="p">;</span>
 mysql&gt; SET GLOBAL <span class="nv">sql_mode</span><span class="o">=(</span>SELECT REPLACE<span class="o">(</span>@@sql_mode,<span class="s1">&#39;ONLY_FULL_GROUP_BY&#39;</span>,<span class="s1">&#39;&#39;</span><span class="o">))</span><span class="p">;</span>
 mysql&gt; <span class="nb">exit</span>
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Initializing Autolab Database</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> Autolab
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
 bundle <span class="nb">exec</span> rake db:create
 bundle <span class="nb">exec</span> rake db:reset
 bundle <span class="nb">exec</span> rake db:migrate
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Populating sample course &amp; students</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> Autolab
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
 bundle <span class="nb">exec</span> rake autolab:populate
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Run Autolab!</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> Autolab
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> Autolab
 bundle <span class="nb">exec</span> rails s -p <span class="m">3000</span> --binding<span class="o">=</span><span class="m">0</span>.0.0.0
-</code></pre></div>
+</pre></div>
 
 
 </li>
 <li>
 <p>Visit localhost:3000 on your browser to view your local deployment of Autolab, and login with <code>Developer Login</code></p>
-<div class="codehilite"><pre><span></span><code><span class="c">Email: &quot;admin@foo.bar&quot;</span>
-</code></pre></div>
+<div class="codehilite"><pre><span></span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;admin@foo.bar&quot;</span><span class="w"></span>
+</pre></div>
 
 
 </li>
@@ -1197,46 +1197,46 @@ This sets up a development setup of Autolab, Tango, and Redis locally with Docke
 please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;">&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;</a></p>
 <h4 id="ubuntu-script-bugs">Ubuntu Script Bugs</h4>
 <p>If you get the following error</p>
-<div class="codehilite"><pre><span></span><code>Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release
+<div class="codehilite"><pre><span></span>Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release
 Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#39;</span> in Release file <span class="o">(</span>Wrong sources.list entry or malformed file<span class="o">)</span>
-</code></pre></div>
+</pre></div>
 
 
 <p>then follow the solution in <a href="http://askubuntu.com/questions/743814/unable-to-find-expected-entry-main-binary-i386-packages-chrome">this post</a>.</p>
 <h4 id="where-do-i-find-the-mysql-username-and-password">Where do I find the MySQL username and password?</h4>
 <p>If this is your first time logging into MySQL, your username is 'root'. You may also need to set the root password:</p>
 <p>Start the server:</p>
-<div class="codehilite"><pre><span></span><code>sudo /usr/local/mysql/support-files/mysql.server start
-</code></pre></div>
+<div class="codehilite"><pre><span></span>sudo /usr/local/mysql/support-files/mysql.server start
+</pre></div>
 
 
 <p>Set the password:</p>
-<div class="codehilite"><pre><span></span><code>mysqladmin -u root password <span class="s2">&quot;[New_Password]&quot;</span>
-</code></pre></div>
+<div class="codehilite"><pre><span></span>mysqladmin -u root password <span class="s2">&quot;[New_Password]&quot;</span>
+</pre></div>
 
 
 <p>If you lost your root password, refer to the <a href="http://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html">MySQL wiki</a></p>
 <h4 id="bundle-install-errors">Bundle Install Errors</h4>
 <p>This happens as gems get updated. These fixes are gem-specific, but two common ones are</p>
 <p><code>eventmachine</code></p>
-<div class="codehilite"><pre><span></span><code>bundle config build.eventmachine --with-cppflags<span class="o">=</span>-I/usr/local/opt/openssl/include
-</code></pre></div>
+<div class="codehilite"><pre><span></span>bundle config build.eventmachine --with-cppflags<span class="o">=</span>-I/usr/local/opt/openssl/include
+</pre></div>
 
 
 <p><code>libv8</code></p>
-<div class="codehilite"><pre><span></span><code>bundle config build.libv8 --with-system-v8
-</code></pre></div>
+<div class="codehilite"><pre><span></span>bundle config build.libv8 --with-system-v8
+</pre></div>
 
 
 <p>Run <code>bundle install</code> again</p>
 <p>If this does not work, another option would be</p>
-<div class="codehilite"><pre><span></span><code>bundle update libv8
-</code></pre></div>
+<div class="codehilite"><pre><span></span>bundle update libv8
+</pre></div>
 
 
 <p>Because updating libv8 has dependency on other gems, it might fail due to a need to update other gems. Just do</p>
-<div class="codehilite"><pre><span></span><code>bundle update &lt;gem&gt;
-</code></pre></div>
+<div class="codehilite"><pre><span></span>bundle update &lt;gem&gt;
+</pre></div>
 
 
 <p>according to the error messages until all gems are up to date.</p>
@@ -1250,7 +1250,6 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
 <p>If <code>mysql</code> complains that the password is expired, follow the instructions on the second answer on <a href="http://stackoverflow.com/questions/33326065/unable-to-access-mysql-after-it-automatically-generated-a-temporary-password">this post</a></p>
                 
                   
-                
                 
               
               
@@ -1292,18 +1291,18 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Autolab" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Autolab" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://facebook.com/autolabproject" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+      <a href="https://facebook.com/autolabproject" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 
@@ -1313,9 +1312,9 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
       
     </div>
     
-      <script src="assets/javascripts/application.c33a9706.js"></script>
+      <script src="assets/javascripts/application.c648116f.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
       
     
   </body>
