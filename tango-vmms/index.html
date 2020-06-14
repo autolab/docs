@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#api" tabindex="1" class="md-skip">
+      <a href="#api" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -121,9 +121,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-header-nav__button md-logo">
+        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" aria-label="Autolab Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../images/logo.svg" width="24" height="24">
+            <img alt="logo" src="../images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -152,7 +152,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -215,7 +215,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-nav__button md-logo">
       
-        <img src="../images/logo.svg" width="48" height="48">
+        <img alt="logo" src="../images/logo.svg" width="48" height="48">
       
     </a>
     Autolab Documentation
@@ -721,50 +721,50 @@
 <h2 id="api">API</h2>
 <p>The functions necessary to implement the API are documented here. Note that for certain implementations, some of these methods will be no-ops since the VMMS doesn't require any particular instructions to perform the specified actions. Furthermore, throughout this document, we use the term "VM" liberally to represent any container-like object on which Tango jobs may be run.</p>
 <h3 id="initializevm">initializeVM</h3>
-<div class="codehilite"><pre><span></span><span class="n">initializeVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">initializeVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Creates a new VM instance for the VMMS based on the fields of <code>vm</code>, which is a <code>TangoMachine</code> object defined in <code>tangoObjects.py</code>.</p>
 <h3 id="waitvm">waitVM</h3>
-<div class="codehilite"><pre><span></span><span class="n">waitVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">max_secs</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">waitVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">max_secs</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Waits at most <code>max_secs</code> for a VM to be ready to run jobs. Returns an error if the VM is not ready after <code>max_secs</code>.</p>
 <h3 id="copyin">copyIn</h3>
-<div class="codehilite"><pre><span></span><span class="n">copyIn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">inputFiles</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">copyIn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">inputFiles</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Copies the input files for a job into the VM. <code>inputFiles</code> is a list of <code>InputFile</code> objects defined in <code>tangoObjects.py</code>. For each <code>InputFile</code> object, <code>file.localFile</code> is the name of the file on the Tango host machine and <code>file.destFile</code> is what the name of the file should be on the VM.</p>
 <h3 id="runjob">runJob</h3>
-<div class="codehilite"><pre><span></span><span class="n">runJob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">runTimeout</span><span class="p">,</span> <span class="n">maxOutputFileSize</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">runJob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">runTimeout</span><span class="p">,</span> <span class="n">maxOutputFileSize</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Runs the autodriver binary on the VM. The autodriver runs <code>make</code> on the VM (which in turn runs the job via the <code>Makefile</code> that was provided as a part of the input files for the job). The output from the autodriver most likely should be redirected to some feedback file to be used in the next method of the API.</p>
 <h3 id="copyout">copyOut</h3>
-<div class="codehilite"><pre><span></span><span class="n">copyOut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">destFile</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">copyOut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">destFile</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Copies the output file for the job out of the VM into <code>destFile</code> on the Tango host machine.</p>
 <h3 id="destroyvm">destroyVM</h3>
-<div class="codehilite"><pre><span></span><span class="n">destroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">destroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Removes a VM from the Tango system.</p>
 <h3 id="safedestroyvm">safeDestroyVM</h3>
-<div class="codehilite"><pre><span></span><span class="n">safeDestroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">safeDestroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Removes a VM from the Tango system and makes sure that it has been removed.</p>
 <h3 id="getvms">getVMs</h3>
-<div class="codehilite"><pre><span></span><span class="n">getVMs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">getVMs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Returns a complete list of VMs associated with this Tango system.</p>
@@ -773,25 +773,25 @@
 <ol>
 <li>
 <p>Install docker on host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
-<div class="codehilite"><pre><span></span>$ docker ps <span class="c1"># CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code>$ docker ps <span class="c1"># CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span>
+</code></pre></div>
 
 
 </li>
 <li>
 <p>Build base Docker image from root Tango directory.</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> path/to/Tango
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> path/to/Tango
 docker build -t autograding_image vmms/
 docker images autograding_image    <span class="c1"># Check if image built</span>
-</pre></div>
+</code></pre></div>
 
 
 </li>
 <li>
 <p>Update <code>VMMS_NAME</code> in <code>config.py</code>.</p>
-<div class="codehilite"><pre><span></span><span class="c1"># in config.py</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># in config.py</span>
 <span class="n">VMMS_NAME</span> <span class="o">=</span> <span class="s2">&quot;localDocker&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 </li>
@@ -807,10 +807,10 @@ docker images autograding_image    <span class="c1"># Check if image built</span
 </li>
 <li>
 <p>Add AWS Credentials to a file called <code>~/.boto</code> using the following format:</p>
-<div class="codehilite"><pre><span></span><span class="o">[</span>Credentials<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>Credentials<span class="o">]</span>
     <span class="nv">aws_access_key_id</span> <span class="o">=</span> MYAMAZONTESTKEY12345
     <span class="nv">aws_secret_access_key</span> <span class="o">=</span> myawssecretaccesskey12345
-</pre></div>
+</code></pre></div>
 
 
 <p>Tango uses the <a href="http://boto.cloudhackers.com/en/latest/">Boto</a> Python package to interface with Amazon Web Services</p>
@@ -820,29 +820,29 @@ docker images autograding_image    <span class="c1"># Check if image built</span
 </li>
 <li>
 <p>Copy the directory and contents of <code>autodriver/</code> in the Tango repo into the EC2 VM. For more help connecting to the EC2 instance follow <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html#AccessingInstancesLinuxSCP">this guide</a></p>
-<div class="codehilite"><pre><span></span>chmod <span class="m">400</span> /path/my-key-pair.pem
+<div class="codehilite"><pre><span></span><code>chmod <span class="m">400</span> /path/my-key-pair.pem
 scp -i /path/my-key-pair.pem -r autodriver/ ubuntu@&lt;ec2-host-name&gt;.compute-1.amazonaws.com:~/
-</pre></div>
+</code></pre></div>
 
 
 <p>The autodriver is used as a sandbox environment to run the job inside the VM. It limits Disk I/O, Disk Usage, monitors security, and controls other valuable <code>sudo</code> level resources.</p>
 </li>
 <li>
 <p>In the EC2 VM, compile the autodriver.</p>
-<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> autodriver/
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> autodriver/
 $ make clean<span class="p">;</span> make
 $ cp -p autodriver /usr/bin/autodriver
-</pre></div>
+</code></pre></div>
 
 
 </li>
 <li>
 <p>Create the <code>autograde</code> Linux user and directory. All jobs will be run under this user.</p>
-<div class="codehilite"><pre><span></span>$ useradd autograde
+<div class="codehilite"><pre><span></span><code>$ useradd autograde
 $ mkdir autograde
 $ chown autograde autograde
 $ chown :autograde autograde
-</pre></div>
+</code></pre></div>
 
 
 </li>
@@ -851,7 +851,7 @@ $ chown :autograde autograde
 </li>
 <li>
 <p>Exit the EC2 instance and edit the following values in <code>config.py</code> in the Tango directory.</p>
-<div class="codehilite"><pre><span></span><span class="c1"># VMMS to use. Must be set to a VMMS implemented in vmms/ before</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># VMMS to use. Must be set to a VMMS implemented in vmms/ before</span>
 <span class="c1"># starting Tango.  Options are: &quot;localDocker&quot;, &quot;distDocker&quot;,</span>
 <span class="c1"># &quot;tashiSSH&quot;, and &quot;ec2SSH&quot;</span>
 <span class="nv">VMMS_NAME</span> <span class="o">=</span> <span class="s2">&quot;ec2SSH&quot;</span>
@@ -868,7 +868,7 @@ $ chown :autograde autograde
 <span class="nv">SECURITY_KEY_NAME</span> <span class="o">=</span> <span class="s1">&#39;my-key-pair&#39;</span>    <span class="c1"># Name of the key file. Ex: if file name is &#39;my-key-pair.pem&#39;, fill value with &#39;my-key-pair&#39;</span>
 <span class="nv">TANGO_RESERVATION_ID</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>           <span class="c1"># Leave as 1</span>
 <span class="nv">INSTANCE_RUNNING</span> <span class="o">=</span> <span class="m">16</span>                <span class="c1"># Status code of a running instance, leave as 16</span>
-</pre></div>
+</code></pre></div>
 
 
 </li>
@@ -878,6 +878,7 @@ $ chown :autograde autograde
 </ol>
                 
                   
+                
                 
               
               
@@ -933,18 +934,18 @@ $ chown :autograde autograde
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Autolab" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Autolab" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://facebook.com/autolabproject" class="md-footer-social__link fa fa-facebook"></a>
+      <a href="https://facebook.com/autolabproject" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 
@@ -954,7 +955,7 @@ $ chown :autograde autograde
       
     </div>
     
-      <script src="../assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

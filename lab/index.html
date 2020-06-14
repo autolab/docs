@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#guide-for-lab-authors" tabindex="1" class="md-skip">
+      <a href="#guide-for-lab-authors" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -121,9 +121,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-header-nav__button md-logo">
+        <a href="https://autolab.github.io/docs/" title="Autolab Documentation" aria-label="Autolab Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../images/logo.svg" width="24" height="24">
+            <img alt="logo" src="../images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -152,7 +152,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -215,7 +215,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://autolab.github.io/docs/" title="Autolab Documentation" class="md-nav__button md-logo">
       
-        <img src="../images/logo.svg" width="48" height="48">
+        <img alt="logo" src="../images/logo.svg" width="48" height="48">
       
     </a>
     Autolab Documentation
@@ -847,14 +847,14 @@
 <p>An <em>autograder</em> is a program that takes a student's work as input, and generates some quantitative evaluation of that work as output. The student's work consists of one or more source files written in an arbitrary programming language.
 The autograder processes these files and generates arbitrary text lines on stdout. The last text line on stdout must be a JSON string, called an <em>autoresult</em>, that assigns an autograded score to one or more problems, and optionally, generates the scoreboard entries for this submission.</p>
 <p>The JSON autoresult is a "scores" hash that assigns a numerical score to one or more problems, and an optional "scoreboard" array that provides the scoreboard entries for this submission. For example,</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;Prob1&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;Prob2&quot;</span><span class="p">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">}</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span> <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;Prob1&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;Prob2&quot;</span><span class="p">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">}</span>
+</code></pre></div>
 
 
 <p>assigns 10 points to "Prob1" and 5 points to "Prob2" for this submission. The names of the problems must exactly match the names of the problems for this lab on the Autolab web site. Not all problems need to be autograded. For example, there might be a problem for this assessment called "Style" that you grade manually after the due date.</p>
 <p>If you used the Autolab web site to configure a scoreboard for this lab with three columns called "Prob1", "Prob2", and "Total", then the autoresult might be:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;Prob1&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;Prob2&quot;</span><span class="p">:</span> <span class="mi">5</span> <span class="p">},</span> <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span> <span class="p">}</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span> <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;Prob1&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;Prob2&quot;</span><span class="p">:</span> <span class="mi">5</span> <span class="p">},</span> <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span> <span class="p">}</span>
+</code></pre></div>
 
 
 <p>By convention, an autograder accepts an optional <code>-A</code> command line argument that tells it to emit the JSON autoresult. So if you run the autograder outside of the context of Autolab, you can suppress the autoresult line by calling the autograder without the <code>-A</code> argument.</p>
@@ -907,7 +907,7 @@ The autograder processes these files and generates arbitrary text lines on stdou
 <h3 id="directory-structure">Directory Structure</h3>
 <p>Autolab expects to find the <code>autograde-Makefile</code>and <code>autograde.tar</code> files in the <code>hello</code> lab directory, but otherwise places no constraints on the contents and organization of this directory. However, based on our experience, we strongly recommend a directory structure with the following form:</p>
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/README">hello/README</a>:</p>
-<div class="codehilite"><pre><span></span><span class="gh">#</span> Basic files created by the lab author
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> Basic files created by the lab author
 
 Makefile Builds the lab from src/
 README  
@@ -930,13 +930,13 @@ handin/ All students handin files
 hello.rb Config file
 hello.yml Database properties that persist from semester to semester
 log.txt Log of autograded submissions
-</pre></div>
+</code></pre></div>
 
 
 <p>The key idea with this directory structure is to place <em>all</em> code for the lab in the <code>src</code> directory, including the autograding code and any starter code handed out to students in the handout directory (<code>hello-handout.tar</code> in this example). Keeping all hard state in the <code>src</code> directory helps limit inconsistencies.</p>
 <p>The main makefile creates <code>hello-handout</code> by copying files from <code>src</code>, and then tars it up:</p>
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/Makefile">hello/Makefile</a>:</p>
-<div class="codehilite"><pre><span></span><span class="c">#</span>
+<div class="codehilite"><pre><span></span><code><span class="c">#</span>
 <span class="c"># Makefile to manage the example Hello Lab</span>
 <span class="c">#</span>
 
@@ -979,7 +979,7 @@ log.txt Log of autograded submissions
     make clean
     rm -f log.txt
     rm -rf handin/*
-</pre></div>
+</code></pre></div>
 
 
 <p>Filenames are disambiguated by appending <code>-handout</code>, which is stripped when they are copied to the handout directory. For example, <code>src/hello.c</code> is the instructor's solution file, and <code>src/hello.c-handout</code> is the starter code that is given to the students in <code>hello-handout/hello.c</code>. And <code>src/README</code> is the README for the src directory and <code>src/README-handout</code> is the README that is handed out to students in <code>hello-handout/README</code>.</p>
@@ -988,61 +988,61 @@ log.txt Log of autograded submissions
 <p>The <a href="https://github.com/autolab/Autolab/tree/master/examples/hello/src">hello/src/</a> directory
 contains <em>all</em> of the code files for the Hello Lab, including the files that are handed out to students:</p>
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/src/README">hello/src/README</a>:</p>
-<div class="codehilite"><pre><span></span># <span class="nv">Autograder</span> <span class="nv">and</span> <span class="nv">solution</span> <span class="nv">files</span>
-<span class="nv">Makefile</span>                <span class="nv">Makefile</span> <span class="nv">and</span> ...
-<span class="nv">README</span>                  ... <span class="nv">README</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">directory</span>
-<span class="nv">driver</span>.<span class="nv">sh</span><span class="o">*</span>              <span class="nv">Autograder</span>
-<span class="nv">hello</span>.<span class="nv">c</span>                 <span class="nv">Solution</span> <span class="nv">hello</span>.<span class="nv">c</span> <span class="nv">file</span>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Autograder</span> <span class="k">and</span> <span class="n">solution</span> <span class="n">files</span>
+<span class="n">Makefile</span>                <span class="n">Makefile</span> <span class="k">and</span> <span class="p">...</span>
+<span class="n">README</span>                  <span class="p">...</span> <span class="n">README</span> <span class="k">for</span> <span class="n">this</span> <span class="n">directory</span>
+<span class="n">driver</span><span class="p">.</span><span class="n">sh</span><span class="o">*</span>              <span class="n">Autograder</span>
+<span class="n">hello</span><span class="p">.</span><span class="k">c</span>                 <span class="n">Solution</span> <span class="n">hello</span><span class="p">.</span><span class="k">c</span> <span class="n">file</span>
 
-# <span class="nv">Files</span> <span class="nv">that</span> <span class="nv">are</span> <span class="nv">handed</span> <span class="nv">out</span> <span class="nv">to</span> <span class="nv">students</span>
-<span class="nv">Makefile</span><span class="o">-</span><span class="nv">handout</span>        <span class="nv">Makefile</span> <span class="nv">and</span> ...
-<span class="nv">README</span><span class="o">-</span><span class="nv">handout</span>          ... <span class="nv">README</span> <span class="nv">handed</span> <span class="nv">out</span> <span class="nv">to</span> <span class="nv">students</span>
-<span class="nv">hello</span>.<span class="nv">c</span><span class="o">-</span><span class="nv">handout</span>         <span class="nv">Blank</span> <span class="nv">hello</span>.<span class="nv">c</span> <span class="nv">file</span> <span class="nv">handed</span> <span class="nv">out</span> <span class="nv">to</span> <span class="nv">students</span>
-</pre></div>
+<span class="o">#</span> <span class="n">Files</span> <span class="n">that</span> <span class="k">are</span> <span class="n">handed</span> <span class="k">out</span> <span class="k">to</span> <span class="n">students</span>
+<span class="n">Makefile</span><span class="o">-</span><span class="n">handout</span>        <span class="n">Makefile</span> <span class="k">and</span> <span class="p">...</span>
+<span class="n">README</span><span class="o">-</span><span class="n">handout</span>          <span class="p">...</span> <span class="n">README</span> <span class="n">handed</span> <span class="k">out</span> <span class="k">to</span> <span class="n">students</span>
+<span class="n">hello</span><span class="p">.</span><span class="k">c</span><span class="o">-</span><span class="n">handout</span>         <span class="n">Blank</span> <span class="n">hello</span><span class="p">.</span><span class="k">c</span> <span class="n">file</span> <span class="n">handed</span> <span class="k">out</span> <span class="k">to</span> <span class="n">students</span>
+</code></pre></div>
 
 
 <h3 id="handout-directory">Handout Directory</h3>
 <p>The <a href="https://github.com/autolab/Autolab/tree/master/examples/hello/hello-handout/">hello/hello-handout/</a> directory
 contains the files that the students will use to work on the lab. It contains no hard state, and is populated entirely with files from <code>hello/src</code>:</p>
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/hello-handout/README">hello/hello-handout/README</a>:</p>
-<div class="codehilite"><pre><span></span><span class="n">For</span> <span class="n">this</span> <span class="n">lab</span>, <span class="n">you</span> <span class="n">should</span> <span class="nb">write</span> <span class="n">a</span> <span class="n">tiny</span> <span class="n">C</span> <span class="n">program</span>, <span class="n">called</span> <span class="s">&quot;hello.c&quot;</span>,
-<span class="n">that</span> <span class="n">prints</span> <span class="s">&quot;hello, world&quot;</span> <span class="nb">to</span> <span class="n">stdout</span> <span class="o">and</span> <span class="n">then</span> <span class="n">indicates</span> <span class="n">success</span> <span class="nb">by</span>
-<span class="n">exiting</span> <span class="n">with</span> <span class="n">a</span> <span class="n">status</span> <span class="k">of</span> <span class="n">zero</span>.
+<div class="codehilite"><pre><span></span><code><span class="n">For</span> <span class="n">this</span> <span class="n">lab</span>, <span class="n">you</span> <span class="n">should</span> <span class="nb">write</span> <span class="n">a</span> <span class="n">tiny</span> <span class="n">C</span> <span class="n">program</span>, <span class="n">called</span> <span class="s">&quot;hello.c&quot;</span>,
+<span class="n">that</span> <span class="n">prints</span> <span class="s">&quot;hello, world&quot;</span> <span class="nb">to</span> <span class="nb">stdout</span> <span class="o">and</span> <span class="nb">then</span> <span class="n">indicates</span> <span class="n">success</span> <span class="n">by</span>
+<span class="n">exiting</span> <span class="k">with</span> <span class="n">a</span> <span class="nb">status</span> <span class="nb">of</span> <span class="n">zero</span>.
 
 <span class="n">To</span> <span class="n">test</span> <span class="n">your</span> <span class="n">work:</span>
 $ <span class="k">make</span> <span class="n">clean</span>; <span class="k">make</span>; ./<span class="n">hello</span>
 
-<span class="n">To</span> <span class="nb">run</span> <span class="n">the</span> <span class="n">same</span> <span class="n">autograder</span> <span class="n">that</span> <span class="n">Autolab</span> <span class="k">will</span> <span class="k">use</span> <span class="k">when</span> <span class="n">you</span> <span class="n">submit:</span>
+<span class="n">To</span> <span class="nb">run</span> <span class="n">the</span> <span class="n">same</span> <span class="n">autograder</span> <span class="n">that</span> <span class="n">Autolab</span> <span class="n">will</span> <span class="k">use</span> <span class="k">when</span> <span class="n">you</span> <span class="n">submit:</span>
 $ ./<span class="n">driver</span>.<span class="n">sh</span>
 
 <span class="n">Files:</span>
-<span class="n">README</span>          <span class="n">This</span> <span class="n">file</span>
+<span class="n">README</span>          <span class="n">This</span> <span class="nb">file</span>
 <span class="n">Makefile</span>        <span class="n">Compiles</span> <span class="n">hello</span>.<span class="n">c</span>
 <span class="n">driver</span>.<span class="n">sh</span>       <span class="n">Autolab</span> <span class="n">autograder</span>
-<span class="n">hello</span>.<span class="n">c</span>         <span class="n">Empty</span> <span class="n">C</span> <span class="n">file</span> <span class="n">that</span> <span class="n">you</span> <span class="k">will</span> <span class="n">edit</span>
-</pre></div>
+<span class="n">hello</span>.<span class="n">c</span>         <span class="n">Empty</span> <span class="n">C</span> <span class="nb">file</span> <span class="n">that</span> <span class="n">you</span> <span class="n">will</span> <span class="n">edit</span>
+</code></pre></div>
 
 
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/hello-handout/Makefile">hello/hello-handout/Makefile</a> contains the rules that compile the student source code:</p>
-<div class="codehilite"><pre><span></span><span class="c"># Student makefile for the Hello Lab</span>
+<div class="codehilite"><pre><span></span><code><span class="c"># Student makefile for the Hello Lab</span>
 <span class="nf">all</span><span class="o">:</span>
     gcc hello.c -o hello
 
 <span class="nf">clean</span><span class="o">:</span>
     rm -rf *~ hello
-</pre></div>
+</code></pre></div>
 
 
 <p>To compile and run their code, students type:</p>
-<div class="codehilite"><pre><span></span>$ make clean<span class="p">;</span> make
+<div class="codehilite"><pre><span></span><code>$ make clean<span class="p">;</span> make
 $ ./hello
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="autograder">Autograder</h3>
 <p>The autograder for the Hello Lab is a trivially simple bash script called <code>driver.sh</code> that compiles and runs <code>hello.c</code> and verifies that it returns with an exit status of zero:</p>
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/src/driver.sh">hello/src/driver.sh</a></p>
-<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># driver.sh - The simplest autograder we could think of. It checks</span>
 <span class="c1">#   that students can write a C program that compiles, and then</span>
@@ -1072,11 +1072,11 @@ $ ./hello
 <span class="k">fi</span>
 
 <span class="nb">exit</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>For example:</p>
-<div class="codehilite"><pre><span></span>$ ./driver.sh
+<div class="codehilite"><pre><span></span><code>$ ./driver.sh
 <span class="c1"># Compiling hello.c</span>
 <span class="c1"># rm -rf *~ hello</span>
 <span class="c1"># gcc hello.c -o hello</span>
@@ -1084,7 +1084,7 @@ $ ./hello
 <span class="c1"># Hello, world</span>
 <span class="c1"># Success: ./hello runs with an exit status of 0</span>
 <span class="c1"># {&quot;scores&quot;: {&quot;Correctness&quot;: 100}}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Notice that the autograder expects the <code>hello</code> lab on the Autolab front-end to have been defined with a problem called "Correctness", with a maximum value of 100 points. If you forget to define the problems listed in the JSON autoresult, scores will still be logged, but they won't be posted to the database.</p>
@@ -1092,35 +1092,35 @@ $ ./hello
 <p>Autolab requires two <em>autograding files</em> called <code>autograde.tar</code>, which contains all of the code required by the autograder, and <code>autograde-Makefile</code>, which runs the autograder on the autograding image when each submission is graded.</p>
 <p>For the Hello Lab, <code>autograde.tar</code> is simply a copy of the <code>hello-handout.tar</code> file that is handed out to students. And here is the corresponding
 <a href="https://github.com/autolab/Autolab/tree/master/examples/hello/autograde-Makefile">hello/autograde-makefile</a>:</p>
-<div class="codehilite"><pre><span></span><span class="nf">all</span><span class="o">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">all</span><span class="o">:</span>
     tar xvf autograde.tar
     cp hello.c hello-handout
     <span class="o">(</span><span class="nb">cd</span> hello-handout<span class="p">;</span> ./driver.sh<span class="o">)</span>
 
 <span class="nf">clean</span><span class="o">:</span>
     rm -rf *~ hello-handout
-</pre></div>
+</code></pre></div>
 
 
 <p>The makefile expands <code>autograde.tar</code> into <code>hello-handout</code>, copies <code>hello.c</code> (the submission file) into <code>hello-handout</code>, changes directory to <code>hello-handout</code>, builds the autograder, and then runs it.</p>
 <h3 id="test-directory">Test Directory</h3>
 <p>For our labs, we like to setup a test directory (called <code>test-autograder</code> in this example), that allows us to test our <code>autograde-Makefile</code> and <code>autograde-tar</code> files by simulating Autolab's behavior on the autograding instance. The <code>test-autograder</code> directory has the following form:</p>
-<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> test-autograder
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> test-autograder
 $ ls -l
 <span class="c1"># total 3</span>
 <span class="c1"># lrwxr-xr-x 1 droh users  21 Aug  4 16:43 Makefile -&gt; autograde-Makefile</span>
 <span class="c1"># lrwxr-xr-x 1 droh users  16 Aug  4 16:43 autograde.tar -&gt; autograde.tar</span>
 <span class="c1"># -rw-rw-r-- 1 droh users 113 Aug  4 16:44 hello.c</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>To simulate Autolab's behavior on an autograding instance:</p>
-<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> test-autograder <span class="o">&amp;&amp;</span> make clean <span class="o">&amp;&amp;</span> make
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> test-autograder <span class="o">&amp;&amp;</span> make clean <span class="o">&amp;&amp;</span> make
 <span class="c1"># Running ./hello</span>
 <span class="c1"># Hello, world</span>
 <span class="c1"># Success: ./hello runs with an exit status of 0</span>
 <span class="c1"># {&quot;scores&quot;: {&quot;Correctness&quot;: 100}}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="writeup-directory">Writeup directory</h3>
@@ -1130,6 +1130,7 @@ $ ls -l
 <p>Autolab always shows the stdout output of running make, even when the program crashed or timed out. However, when it does crash and the expected autoresult json string is not appended to the output, parsing of the last line will fail. If this happens, any stdout output that is longer than 10,000 lines will be discarded (Note that this limit does not apply when the autoresult json is valid).</p>
                 
                   
+                
                 
               
               
@@ -1185,18 +1186,18 @@ $ ls -l
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Autolab" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Autolab" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://facebook.com/autolabproject" class="md-footer-social__link fa fa-facebook"></a>
+      <a href="https://facebook.com/autolabproject" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 
@@ -1206,7 +1207,7 @@ $ ls -l
       
     </div>
     
-      <script src="../assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
