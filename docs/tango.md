@@ -78,7 +78,8 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
 
         :::bash
         python restful-tango/server.py <port>
-        Open another terminal window and start the job manager (consumer):
+
+    Open another terminal window and start the job manager (consumer):
 
         :::bash
         python jobManager.py
