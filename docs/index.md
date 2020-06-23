@@ -261,6 +261,8 @@ Change the <username> and <password> fields in config/database.yml to the userna
             password: '123456'
             socket: /var/run/mysqld/mysqld.sock
             host: localhost
+            variables:
+                sql_mode: NO_ENGINE_SUBSTITUTION
 
         test:
             adapter: mysql2
@@ -270,6 +272,8 @@ Change the <username> and <password> fields in config/database.yml to the userna
             password: '123456'
             socket: /var/run/mysqld/mysqld.sock
             host: localhost
+            variables:
+                sql_mode: NO_ENGINE_SUBSTITUTION
 
 11. (Using SQLite) Editing Database YML.
 Comment out the configurations meant for MySQL in config/database.yml, and insert the following
