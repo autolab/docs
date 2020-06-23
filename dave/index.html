@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://autolab.github.io/docs/tango/">
+        <link rel="canonical" href="https://autolab.github.io/docs/dave/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Getting Started - Autolab Documentation</title>
+        <title>Dave - Autolab Documentation</title>
       
     
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tango" tabindex="0" class="md-skip">
+      <a href="#dave" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Getting Started
+                Dave
               
             </span>
           
@@ -391,12 +391,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Tango
@@ -412,62 +410,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Getting Started
-      </label>
-    
-    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../tango/" title="Getting Started" class="md-nav__link">
       Getting Started
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -557,22 +504,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#on-the-historical-and-cultural-significance-of-dave-and-the-consequences-thereof" class="md-nav__link">
+    On the historical and cultural significance of "Dave", and the consequences thereof
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#on-the-interactions-of-tango-and-autolab" class="md-nav__link">
+    On the interactions of Tango and Autolab
+  </a>
   
 </li>
       
@@ -592,139 +533,23 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Autolab/autolab/edit/master/docs/tango.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Autolab/autolab/edit/master/docs/dave.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="tango">Tango</h1>
-<p>Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for <a href="/docs/">Autolab</a> and has been extensively used for autograding programming assignments. It is also open source and hosted on <a href="https://www.github.com/autolab/Tango">Github</a>.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>A brief overview of the Tango respository:</p>
-<ul>
-<li><code>tango.py</code> - Main tango server</li>
-<li><code>jobQueue.py</code> - Manages the job queue</li>
-<li><code>jobManager.py</code> - Assigns jobs to free VMs</li>
-<li><code>worker.py</code> - Shepherds a job through its execution</li>
-<li><code>preallocator.py</code> - Manages pools of VMs</li>
-<li><code>vmms/</code> - VMMS library implementations</li>
-<li><code>restful-tango/</code> - HTTP server layer on the main Tango</li>
-</ul>
-<p>Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS) API. Tango currently has support for running jobs in <a href="https://www.docker.com/">Docker</a> containers (<strong>recommended</strong>), <a href="http://opencirrus.intel-research.net/tashi/">Tashi VMs</a>, or <a href="https://aws.amazon.com/ec2">Amazon EC2</a>.</p>
-<p>For more information about the different Tango components, go to the following pages:</p>
-<ul>
-<li><a href="/docs/tango-rest/">REST API docs</a></li>
-<li><a href="/docs/tango-vmms/">VMMS API docs</a></li>
-<li><a href="http://autolab.github.io/2015/04/making-backend-scalable/">Tango Architecture Overview</a></li>
-<li><a href="/docs/tango-deploy/">Deploying Tango</a></li>
-</ul>
-<h3 id="installation">Installation</h3>
-<p>This guide shows how to setup Tango in a <strong>development environment</strong>. Use the <a href="/docs/tango-deploy/">deploying Tango</a> guide for installing in a <strong>production environment</strong>.</p>
-<ol>
-<li>
-<p>Obtain the source code.</p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/autolab/Tango.git<span class="p">;</span> <span class="nb">cd</span> Tango
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Install Redis following <a href="http://redis.io/topics/quickstart">this guide</a>. By default, Tango uses Redis as a stateless job queue. Learn more <a href="http://autolab.github.io/2015/04/making-backend-scalable/">here</a>.</p>
-</li>
-<li>
-<p>Create a <code>config.py</code> file from the given template.</p>
-<div class="codehilite"><pre><span></span><code>cp config.template.py config.py
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Create the course labs directory where job's output files will go, organized by key and lab name:</p>
-<div class="codehilite"><pre><span></span><code>mkdir courselabs
-</code></pre></div>
-
-
-<p>By default the <code>COURSELABS</code> option in <code>config.py</code> points to the <code>courselabs</code> directory in the Tango directory.
-Change this to specify another path if you wish.</p>
-</li>
-<li>
-<p>Set up a VMMS for Tango to use.</p>
-<ul>
-<li><a href="/docs/tango-vmms/#docker-vmms-setup">Docker</a> (<strong>recommended</strong>)</li>
-<li><a href="/docs/tango-vmms/#amazon-ec2-vmms-setup">Amazon EC2</a></li>
-<li>TashiVMMS (deprecated)</li>
-</ul>
-</li>
-<li>
-<p>Run the following commands to setup the Tango dev environment inside the Tango directory. <a href="https://pip.pypa.io/en/stable/installing/">Install pip</a> if needed.</p>
-<div class="codehilite"><pre><span></span><code>$ pip install virtualenv
-$ virtualenv .
-$ <span class="nb">source</span> bin/activate
-$ pip install -r requirements.txt
-$ mkdir volumes
-</code></pre></div>
-
-
-</li>
-<li>
-<p>If you are using Docker, set <code>DOCKER_VOLUME_PATH</code> in <code>config.py</code> to be the path to the <code>volumes</code> directory you just created.</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">DOCKER_VOLUME_PATH</span> <span class="o">=</span> <span class="s2">&quot;/path/to/Tango/volumes/&quot;</span>
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Start Redis by running the following command:</p>
-<div class="codehilite"><pre><span></span><code>$ redis-server
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Run the following command to start the server (producer). If no port is given, the server will run on the port specified in <code>config.py</code> (default: 3000):</p>
-<div class="codehilite"><pre><span></span><code>python restful-tango/server.py &lt;port&gt;
-</code></pre></div>
-
-
-<p>Open another terminal window and start the job manager (consumer):</p>
-<div class="codehilite"><pre><span></span><code>python jobManager.py
-</code></pre></div>
-
-
-<p>For more information on the job producer/consumer model check out our <a href="http://autolab.github.io/2015/04/making-backend-scalable/">blog post</a></p>
-</li>
-<li>
-<p>Ensure Tango is running:</p>
-<div class="codehilite"><pre><span></span><code>$ curl localhost:&lt;port&gt;
-<span class="c1"># Hello, world! RESTful Tango here!</span>
-</code></pre></div>
-
-
-</li>
-<li>
-<p>You can test the Tango setup using the <a href="/docs/tango-cli/">command line client</a>.</p>
-</li>
-<li>
-<p>If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:</p>
-<div class="codehilite"><pre><span></span><code>cp config/autogradeConfig.rb.template config/autogradeConfig.rb
-</code></pre></div>
-
-
-<p>Fill in the correct info for your Tango deployment, mainly the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Hostname for Tango RESTful API</span>
-<span class="no">RESTFUL_HOST</span> <span class="o">=</span> <span class="s2">&quot;foo.bar.edu&quot;</span> <span class="c1">#(if you are running Tango locally, then it is just &quot;localhost&quot;)</span>
-
-<span class="c1"># Port for Tango RESTful API</span>
-<span class="no">RESTFUL_PORT</span> <span class="o">=</span> <span class="s2">&quot;3000&quot;</span>
-
-<span class="c1"># Key for Tango RESTful API</span>
-<span class="no">RESTFUL_KEY</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
-</code></pre></div>
-
-
-</li>
-<li>
-<p>To deploy Tango in a standalone production environment, use this <a href="/docs/tango-deploy/">guide</a></p>
-</li>
-</ol>
+                <h1 id="dave">Dave</h1>
+<h2 id="on-the-historical-and-cultural-significance-of-dave-and-the-consequences-thereof">On the historical and cultural significance of "Dave", and the consequences thereof</h2>
+<p>Okay, so we use the word "dave" as a variable name in a few places because we
+think it's funny (and come on, you do too). The word "dave", though, doesn't
+really describe anything except Dave, and changing the variable names to
+something more descriptive would require changing a lot of stuff across
+a ton of our repositories.</p>
+<p>So, uhhh, writing docs is easier.</p>
+<p>Here's what "dave" means:</p>
+<h2 id="on-the-interactions-of-tango-and-autolab">On the interactions of Tango and Autolab</h2>
+<p>By now, we know that Tango and Autolab are two different things (Or at least,
+I'm pretty sure they are). But, when Tango and Autolab exchange submissions, they
+need a value to identify unique submissions.</p>
+<p>Hence "dave".</p>
                 
                   
                 
@@ -742,41 +567,6 @@ $ mkdir volumes
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../api-managing-authorized-apps/" title="Managing Authorized Apps" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Managing Authorized Apps
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../tango-cli/" title="Tango CLI" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Tango CLI
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

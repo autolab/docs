@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -1077,6 +1077,8 @@ Change the <username> and <password> fields in config/database.yml to the userna
     <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
     <span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
     <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+    <span class="n">variables</span><span class="o">:</span>
+        <span class="n">sql_mode</span><span class="o">:</span> <span class="n">NO_ENGINE_SUBSTITUTION</span>
 
 <span class="n">test</span><span class="o">:</span>
     <span class="n">adapter</span><span class="o">:</span> <span class="n">mysql2</span>
@@ -1086,6 +1088,8 @@ Change the <username> and <password> fields in config/database.yml to the userna
     <span class="n">password</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
     <span class="n">socket</span><span class="o">:</span> <span class="sr">/var/run/mysqld/</span><span class="n">mysqld</span><span class="o">.</span><span class="na">sock</span>
     <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+    <span class="n">variables</span><span class="o">:</span>
+        <span class="n">sql_mode</span><span class="o">:</span> <span class="n">NO_ENGINE_SUBSTITUTION</span>
 </code></pre></div>
 
 
@@ -1315,7 +1319,7 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
     
       <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
     
   </body>
