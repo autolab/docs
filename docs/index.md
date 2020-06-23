@@ -48,12 +48,11 @@ Because it defaults to accepting `.c` files, we would like to change it to `*.pd
 
 **Try submitting to the pdf homework asssessment.**
 
-1. Submit a `.pdf` file. 
-<a href="https://www.vision.ee.ethz.ch/publications/papers/articles/eth_biwi_00546.pdf" target="_blank">Download Blank PDF</a>
+1. Submit a `.pdf` file.
 2. Look at your submission using the magnifying glass icon
 
 ### Grading submissions
-Click on `Grade Submissions`, and then the arrow button to open up student submissions. For details on the relevant features for an Instructor, go to [Guide for Instructor](/docs/instructor)
+Click on `Grade Submissions`, and then the arrow button to open up student submissions. For details on the relevant features for an Instructor, go to [Guide for Instructor](/docs/instructors)
 
 ## Getting Started
 
@@ -177,7 +176,7 @@ This set of instruction is meant to install of AutoLab v2.40 on Ubuntu 18.04 LTS
         :::bash
         sudo apt-get update
         sudo apt-get upgrade
-        sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline6-dev libncurses5-dev libgdbm5 libgdbm-dev libmysqlclient-dev libjansson-dev ctags
+        sudo apt-get install build-essential git libffi-dev zlib1g-dev autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev libncurses5-dev libgdbm5 libgdbm-dev libmysqlclient-dev libjansson-dev ctags
 
 2. Cloning Autolab repo from Github to ~/Autolab
 
@@ -255,38 +254,38 @@ Change the <username> and <password> fields in config/database.yml to the userna
 
         :::yml
         development:
-        adapter: mysql2
-        database: autolab_development
-        pool: 5
-        username: user1
-        password: '123456'
-        socket: /var/run/mysqld/mysqld.sock
-        host: localhost
+            adapter: mysql2
+            database: autolab_development
+            pool: 5
+            username: user1
+            password: '123456'
+            socket: /var/run/mysqld/mysqld.sock
+            host: localhost
 
         test:
-        adapter: mysql2
-        database: autolab_test
-        pool: 5
-        username: user1
-        password: '123456'
-        socket: /var/run/mysqld/mysqld.sock
-        host: localhost
+            adapter: mysql2
+            database: autolab_test
+            pool: 5
+            username: user1
+            password: '123456'
+            socket: /var/run/mysqld/mysqld.sock
+            host: localhost
 
 11. (Using SQLite) Editing Database YML.
 Comment out the configurations meant for MySQL in config/database.yml, and insert the following
 
         :::yml
         development:
-        adapter: sqlite3
-        database: db/autolab_development
-        pool: 5
-        timeout: 5000
+            adapter: sqlite3
+            database: db/autolab_development
+            pool: 5
+            timeout: 5000
 
         test:
-        adapter: sqlite3
-        database: db/autolab_test
-        pool: 5
-        timeout: 5000
+            adapter: sqlite3
+            database: db/autolab_test
+            pool: 5
+            timeout: 5000
 
 12. Granting permissions on the databases. Setting global sql mode is important to relax the rules of mysql when it comes to group by mode
 
@@ -327,7 +326,7 @@ Comment out the configurations meant for MySQL in config/database.yml, and inser
 
 18. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/docs/instructors) and [Guide for Lab Authors](/docs/lab) pages for more info.
 
-
+<!-- Removed pending docker fix
 ### Docker (Development) (rails-5-docker-dev)
 This sets up a development setup of Autolab, Tango, and Redis locally with Docker Compose.
 
@@ -356,7 +355,7 @@ This sets up a development setup of Autolab, Tango, and Redis locally with Docke
 
         ::bash
         docker ps
-
+-->
 
 ## FAQ
 
