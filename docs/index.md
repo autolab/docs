@@ -26,7 +26,7 @@ In the `hello` lab, students are asked to write a file called `hello.c`. The aut
 
 1. Create and submit a `hello.c` file. 
        
-        #hello.c
+        //hello.c
         #include <stdio.h>
         int main()
         {
