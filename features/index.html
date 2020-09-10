@@ -362,8 +362,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#semantic-feedback-multi-staged" class="md-nav__link">
-    Semantic Feedback (Multi-Staged)
+  <a href="#semantic-feedback-multi-stage" class="md-nav__link">
+    Semantic Feedback (Multi-Stage)
   </a>
   
 </li>
@@ -702,8 +702,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#semantic-feedback-multi-staged" class="md-nav__link">
-    Semantic Feedback (Multi-Staged)
+  <a href="#semantic-feedback-multi-stage" class="md-nav__link">
+    Semantic Feedback (Multi-Stage)
   </a>
   
 </li>
@@ -885,7 +885,7 @@
 
 <p>We would add <code>["Test Results"]</code> to the stages key. Then we would add to the  corresponding <code>Test Results</code> key an object containing all the test case results. In this case <code>Build</code> and <code>Run</code> were used, but you can use other names for the test cases as well.</p>
 <p><img alt="Semantic with Test Cases" src="/docs/images/feedback/semantic_with_test_case.gif" /></p>
-<h3 id="semantic-feedback-multi-staged">Semantic Feedback (Multi-Staged)</h3>
+<h3 id="semantic-feedback-multi-stage">Semantic Feedback (Multi-Stage)</h3>
 <p>Using the same manner in which we add a <code>Test Stage</code> in the previous section, we can adapt it to create as many stages as we want. The following example has three different stages, namely <code>Build</code>, <code>Test</code> and <code>Timing</code>, but you can use other names for the stages as well.</p>
 <p><strong>Actual JSON to be outputted</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;_presentation&quot;</span><span class="p">:</span> <span class="s2">&quot;semantic&quot;</span><span class="p">,</span> <span class="nt">&quot;stages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Build&quot;</span><span class="p">,</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span> <span class="s2">&quot;Timing&quot;</span><span class="p">],</span> <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;Add Things&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;passed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span> <span class="nt">&quot;Return Values&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;passed&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nt">&quot;hint&quot;</span><span class="p">:</span> <span class="s2">&quot;You need to return 1&quot;</span><span class="p">}},</span> <span class="nt">&quot;Build&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;compile&quot;</span> <span class="p">:</span> <span class="p">{</span><span class="nt">&quot;passed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span> <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;passed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}},</span> <span class="nt">&quot;Timing&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;Stage 1 (ms)&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;Stage 2 (ms)&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}</span>
