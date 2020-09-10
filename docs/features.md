@@ -71,7 +71,7 @@ We would add `["Test Results"]` to the stages key. Then we would add to the  cor
 
 ![Semantic with Test Cases](/docs/images/feedback/semantic_with_test_case.gif)
 
-### Semantic Feedback (Multi-Staged)
+### Semantic Feedback (Multi-Stage)
 
 Using the same manner in which we add a `Test Stage` in the previous section, we can adapt it to create as many stages as we want. The following example has three different stages, namely `Build`, `Test` and `Timing`, but you can use other names for the stages as well.
 
