@@ -340,3 +340,7 @@ The `hello/writeup` contains the detailed lab writeup, either html or pdf file, 
 #### Why is Autolab not displaying my stdout output?
 
 Autolab always shows the stdout output of running make, even when the program crashed or timed out. However, when it does crash and the expected autoresult json string is not appended to the output, parsing of the last line will fail. If this happens, any stdout output that is longer than 10,000 lines will be discarded (Note that this limit does not apply when the autoresult json is valid).
+
+#### Is there a way to formatting the feedback provided to the students
+
+Yes there is, by using the [formatted feedback feature](/docs/features/#formatted-feedback). 
