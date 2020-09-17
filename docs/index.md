@@ -439,3 +439,13 @@ The default socket location is `/tmp/mysql.sock`.
 You can reset it following the instructions on [this Stack Overflow post](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-os-x)
 
 If `mysql` complains that the password is expired, follow the instructions on the second answer on [this post](http://stackoverflow.com/questions/33326065/unable-to-access-mysql-after-it-automatically-generated-a-temporary-password)
+
+#### MySQL Syntax Error
+
+If you get the following error
+
+```bash
+Mysql2::Error: You have an error in your SQL syntax
+```
+
+this may be an issue with using an incompatible version of MySQL. Try switching to MySQL 5.7 if you are currently using a different version.
