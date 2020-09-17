@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -921,7 +921,7 @@ The autograder processes these files and generates arbitrary text lines on stdou
 <h3 id="directory-structure">Directory Structure</h3>
 <p>Autolab expects to find the <code>autograde-Makefile</code>and <code>autograde.tar</code> files in the <code>hello</code> lab directory, but otherwise places no constraints on the contents and organization of this directory. However, based on our experience, we strongly recommend a directory structure with the following form:</p>
 <p><a href="https://github.com/autolab/Autolab/tree/master/examples/hello/README">hello/README</a>:</p>
-<div class="codehilite"><pre><span></span><code><span class="gh">#</span> Basic files created by the lab author
+<div class="codehilite"><pre><span></span><code><span class="gh"># Basic files created by the lab author</span>
 
 Makefile Builds the lab from src/
 README  
@@ -930,7 +930,7 @@ src/ Contains all src files and solutions
 test-autograder/ For testing autograder offline
 writeup/ Lab writeup that students view from Autolab
 
-<span class="gh">#</span> Files created by running make
+<span class="gh"># Files created by running make</span>
 
 hello-handout/ The directory that is handed out to students, created
 using files from src/.
@@ -938,7 +938,7 @@ hello-handout.tar Archive of hello-handout directory
 autograde.tar File that is copied to the autograding instance
 (along with autograde-Makefile and student handin file)
 
-<span class="gh">#</span> Files created and managed by Autolab
+<span class="gh"># Files created and managed by Autolab</span>
 
 handin/ All students handin files
 hello.rb Config file
@@ -1225,7 +1225,7 @@ $ ls -l
     
       <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
       
     
   </body>

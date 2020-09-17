@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -407,6 +407,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mysql-syntax-error" class="md-nav__link">
+    MySQL Syntax Error
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -759,6 +766,13 @@
           <li class="md-nav__item">
   <a href="#i-forgot-my-mysql-root-password" class="md-nav__link">
     I forgot my MySQL root password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql-syntax-error" class="md-nav__link">
+    MySQL Syntax Error
   </a>
   
 </li>
@@ -1252,6 +1266,13 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
 <h4 id="i-forgot-my-mysql-root-password">I forgot my MySQL root password</h4>
 <p>You can reset it following the instructions on <a href="http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-os-x">this Stack Overflow post</a></p>
 <p>If <code>mysql</code> complains that the password is expired, follow the instructions on the second answer on <a href="http://stackoverflow.com/questions/33326065/unable-to-access-mysql-after-it-automatically-generated-a-temporary-password">this post</a></p>
+<h4 id="mysql-syntax-error">MySQL Syntax Error</h4>
+<p>If you get the following error</p>
+<div class="codehilite"><pre><span></span><code>Mysql2::Error: You have an error in your SQL syntax
+</code></pre></div>
+
+
+<p>this may be an issue with using an incompatible version of MySQL. Try switching to MySQL 5.7 if you are currently using a different version.</p>
                 
                   
                 
@@ -1319,7 +1340,7 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
     
       <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"."}})</script>
       
     
   </body>
